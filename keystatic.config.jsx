@@ -12,21 +12,17 @@ const CATEGORIES = [
 ];
 
 // Storage:
-// - En desarrollo: local (escribe a /src/content/posts)
-// - En producción con Keystatic Cloud: añadir KEYSTATIC_GITHUB_REPO y KEYSTATIC_STORAGE_KIND=github
-//   más la app de Keystatic Cloud para OAuth + uploads.
+// - En desarrollo (local): escribe directamente en src/content/posts/
+// - En producción: KEYSTATIC_STORAGE_KIND=cloud  →  Keystatic Cloud
+//   (vertebra-studio/vinculatumente en https://keystatic.cloud)
 const storage =
-  process.env.KEYSTATIC_STORAGE_KIND === 'github' && process.env.KEYSTATIC_GITHUB_REPO
-    ? { kind: 'github', repo: process.env.KEYSTATIC_GITHUB_REPO }
-    : process.env.KEYSTATIC_STORAGE_KIND === 'cloud'
+  process.env.KEYSTATIC_STORAGE_KIND === 'cloud'
     ? { kind: 'cloud' }
     : { kind: 'local' };
 
 export default config({
   storage,
-  cloud: process.env.KEYSTATIC_CLOUD_PROJECT
-    ? { project: process.env.KEYSTATIC_CLOUD_PROJECT }
-    : undefined,
+  cloud: { project: 'vertebra-studio/vinculatumente' },
   ui: {
     brand: { name: 'Vincula Tu Mente · CMS' },
     navigation: {
