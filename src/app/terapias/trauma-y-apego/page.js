@@ -35,6 +35,7 @@ export default function TraumaApegoPage() {
           title="Sanar heridas,"
           titleEm="construir apegos seguros"
           desc="Un trabajo especializado y respetuoso para procesar el dolor del pasado, regular tus emociones y reconstruir una sensación de seguridad contigo y con los demás."
+          photo="/media/imagenDeprueba3.jpg"
           phIcon="◎"
           phLabel="Foto · Trauma y apego"
           phDesc="Imagen serena y simbólica sobre calma y sanación. Formato horizontal."

@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="footer-brand">
             <p className="footer-wordmark">Vincula Tu Mente</p>
             <p className="footer-tagline">Psicología y Sexología</p>
-            <p className="subtitle">Psicóloga y sexóloga. Te acompaño en relaciones y vínculos, infancia y adolescencia, trauma y apego, y sexología. Alcalá de Henares y online.</p>
+            <p className="subtitle">Psicóloga y sexóloga. Te acompaño en relaciones y vínculos, infancia y adolescencia, trauma y apego, y sexología. Online en toda España.</p>
             <div style={{ display: 'flex', gap: '8px', marginBottom: '20px', flexWrap: 'wrap', marginTop: '5px' }}>
               <span style={{ fontSize: '0.78rem', letterSpacing: '0.5px', fontWeight: 600, padding: '4px 12px', borderRadius: '50px', border: '1px solid rgba(255,255,255,0.3)', color: 'rgba(255,255,255,0.85)' }}>
                 Nº Colegiada M-43581
@@ -35,6 +35,7 @@ export default function Footer() {
               <li><Link href="/#sobre-mi">Sobre mí</Link></li>
               <li><Link href="/#terapias">Terapias</Link></li>
               <li><Link href="/#compromiso">Cómo trabajo</Link></li>
+              <li><Link href="/talleres">Talleres</Link></li>
               <li><Link href="/blog">Blog</Link></li>
               <li><Link href="/#faq">Preguntas frecuentes</Link></li>
               <li><Link href="/contacto">Contacto</Link></li>
@@ -56,9 +57,13 @@ export default function Footer() {
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
                 @vinculatumente
               </a>
+              <a href="https://www.linkedin.com/in/villalba-maria" target="_blank" rel="noopener noreferrer">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="4" /><line x1="8" y1="11" x2="8" y2="16" /><line x1="8" y1="8" x2="8" y2="8.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 0 0-4 0" /></svg>
+                LinkedIn
+              </a>
               <span style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.82rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
-                Alcalá de Henares y online
+                Online en toda España
               </span>
             </div>
           </div>
@@ -76,7 +81,7 @@ export default function Footer() {
         <div className="footer-bottom">
           <div className="footer-bottom-flex">
             <p>© {new Date().getFullYear()} Vincula Tu Mente — María Villalba López. Todos los derechos reservados.</p>
-            <p className="credit-text">Psicóloga y sexóloga en Alcalá de Henares y online</p>
+            <p className="credit-text">Psicóloga y sexóloga online en toda España</p>
           </div>
         </div>
       </div>

@@ -53,7 +53,6 @@ export default function Header({ solid = false }) {
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <ul>
             <li><Link href="/" onClick={close}>Inicio</Link></li>
-            <li><Link href="/#sobre-mi" onClick={close}>Sobre mí</Link></li>
             <li className={`has-dropdown ${isMobileDropdownOpen ? 'mobile-dropdown-open' : ''}`}>
               <Link href="/#terapias" className="dropdown-trigger" onClick={handleDropdownClick}>
                 Terapias <span className={`arrow ${isMobileDropdownOpen ? 'rotated' : ''}`}>▾</span>
@@ -67,9 +66,8 @@ export default function Header({ solid = false }) {
                 </div>
               </div>
             </li>
-            <li><Link href="/#compromiso" onClick={close}>Cómo trabajo</Link></li>
+            <li><Link href="/talleres" onClick={close}>Talleres</Link></li>
             <li><Link href="/blog" onClick={close}>Blog</Link></li>
-            <li><Link href="/#faq" onClick={close}>FAQ</Link></li>
             <li><Link href="/contacto" onClick={close}>Contacto</Link></li>
             <li className="mobile-cta">
               <Link href="/contacto" className="btn-cta" onClick={close}>Reservar cita</Link>

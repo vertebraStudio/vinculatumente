@@ -9,12 +9,12 @@ import CookieBanner from "@/components/CookieBanner";
 // ============================================================
 export const metadata = {
   metadataBase: new URL("https://vinculatumente.es"),
-  title: "Vincula Tu Mente | Psicóloga y Sexóloga en Alcalá de Henares | María Villalba",
-  description: "María Villalba, psicóloga y sexóloga en Alcalá de Henares y online en toda España. Especialista en relaciones y vínculos, infanto-juvenil, trauma y apego, y sexología. Pide tu cita.",
+  title: "Vincula Tu Mente | Psicóloga y Sexóloga Online | María Villalba",
+  description: "María Villalba, psicóloga y sexóloga online en toda España. Especialista en relaciones y vínculos, infanto-juvenil, trauma y apego, y sexología. Pide tu cita.",
   keywords: [
-    "psicóloga Alcalá de Henares",
-    "sexóloga Alcalá de Henares",
-    "terapia de pareja Alcalá de Henares",
+    "psicóloga online España",
+    "sexóloga online",
+    "terapia de pareja online",
     "psicología infantojuvenil",
     "trauma y apego",
     "terapia online España",
@@ -24,7 +24,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Vincula Tu Mente | María Villalba · Psicóloga y Sexóloga",
-    description: "Un espacio seguro para comprenderte, aceptarte y vivir relaciones más sanas y conscientes. Alcalá de Henares y online.",
+    description: "Un espacio seguro para comprenderte, aceptarte y vivir relaciones más sanas y conscientes. Online en toda España.",
     url: "https://vinculatumente.es",
     siteName: "Vincula Tu Mente",
     locale: "es_ES",
@@ -49,14 +49,7 @@ export default function RootLayout({ children }) {
     "areaServed": "ES",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Alcalá de Henares",
-      "addressRegion": "Madrid",
       "addressCountry": "ES"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 40.4818,
-      "longitude": -3.3643
     },
     "knowsAbout": [
       "Psicología", "Sexología", "Terapia de pareja",

@@ -35,6 +35,7 @@ export default function InfantoJuvenilPage() {
           title="Acompañamiento para"
           titleEm="niñas, niños y adolescentes"
           desc="Apoyo emocional y terapéutico para acompañar a los más jóvenes en su desarrollo y bienestar, con cercanía, juego y herramientas adaptadas a cada edad."
+          photo="/media/infantoHeader.jpg"
           phIcon="✦"
           phLabel="Foto · Infanto-juvenil"
           phDesc="Imagen de infancia/adolescencia, sin rostro identificable. Formato horizontal."

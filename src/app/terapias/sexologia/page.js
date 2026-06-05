@@ -35,6 +35,7 @@ export default function SexologiaPage() {
           title="Vive tu sexualidad"
           titleEm="con libertad y sin juicios"
           desc="Un espacio para explorar tu sexualidad desde el respeto, el placer y la información. Hablar de sexo es hablar de salud, bienestar y de ti."
+          photo="/media/sexologiaHeader.jpg"
           phIcon="❀"
           phLabel="Foto · Sexología"
           phDesc="Imagen delicada y respetuosa sobre bienestar sexual. Formato horizontal."

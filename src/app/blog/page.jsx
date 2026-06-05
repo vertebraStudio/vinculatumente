@@ -1,7 +1,13 @@
 import Link from 'next/link';
+import { Suspense } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import BlogSearch from '@/components/BlogSearch';
 import { getAllPosts, categoryLabel, formatDate } from '@/lib/posts';
+
+function normalize(str) {
+  return str?.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '') ?? '';
+}
 
 export const metadata = {
   title: 'Blog | Vincula Tu Mente | María Villalba',
@@ -17,10 +23,21 @@ export const metadata = {
   },
 };
 
-export default async function BlogIndexPage() {
-  const posts = await getAllPosts();
-  const featured = posts.find((p) => p.featured) || posts[0];
-  const rest = posts.filter((p) => p.slug !== (featured && featured.slug));
+export default async function BlogIndexPage({ searchParams }) {
+  const query = normalize((await searchParams)?.q ?? '');
+  const allPosts = await getAllPosts();
+
+  const posts = query
+    ? allPosts.filter((p) =>
+        normalize(p.title).includes(query) ||
+        normalize(p.excerpt).includes(query) ||
+        normalize(categoryLabel(p.category)).includes(query) ||
+        (p.tags || []).some((t) => normalize(t).includes(query))
+      )
+    : allPosts;
+
+  const featured = !query && (posts.find((p) => p.featured) || posts[0]);
+  const rest = featured ? posts.filter((p) => p.slug !== featured.slug) : posts;
 
   return (
     <>
@@ -47,6 +64,9 @@ export default async function BlogIndexPage() {
               Espacio para hablar de salud mental, vínculos y sexualidad desde un
               enfoque cercano, riguroso y libre de juicios.
             </p>
+            <Suspense>
+              <BlogSearch defaultValue={(await searchParams)?.q ?? ''} />
+            </Suspense>
           </div>
         </section>
 
@@ -54,7 +74,10 @@ export default async function BlogIndexPage() {
           <div className="container">
             {posts.length === 0 ? (
               <div className="blog-empty">
-                <p>Pronto compartiré aquí los primeros artículos. Mientras tanto, puedes seguirme en <a href="https://www.instagram.com/vinculatumente/" target="_blank" rel="noopener noreferrer">@vinculatumente</a>.</p>
+                {query
+                  ? <p>No hay artículos que coincidan con <strong>"{(await searchParams)?.q}"</strong>. Prueba con otra búsqueda.</p>
+                  : <p>Pronto compartiré aquí los primeros artículos. Mientras tanto, puedes seguirme en <a href="https://www.instagram.com/vinculatumente/" target="_blank" rel="noopener noreferrer">@vinculatumente</a>.</p>
+                }
               </div>
             ) : (
               <>

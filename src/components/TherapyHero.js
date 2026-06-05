@@ -9,7 +9,7 @@ import Link from 'next/link';
 //   background: url('/media/[foto].jpg') center/cover;
 // ============================================================
 
-export default function TherapyHero({ category, title, titleEm, desc, phIcon = '🖼️', phLabel = 'Foto de terapia', phDesc = 'Imagen representativa de esta especialidad.' }) {
+export default function TherapyHero({ category, title, titleEm, desc, photo, phIcon = '🖼️', phLabel = 'Foto de terapia', phDesc = 'Imagen representativa de esta especialidad.' }) {
   return (
     <section className="page-hero-split">
       {/* Definición del borde líquido (ondulado) que separa foto y contenido */}
@@ -22,12 +22,19 @@ export default function TherapyHero({ category, title, titleEm, desc, phIcon = '
       </svg>
 
       {/* Foto de fondo (mitad derecha, con corte líquido) */}
-      <div className="hero-bg-photo" role="img" aria-label={phLabel}>
-        <span className="hero-bg-ph">
-          <span className="hero-bg-icon">{phIcon}</span>
-          <span className="hero-bg-label">{phLabel}</span>
-          <span className="hero-bg-desc">{phDesc}</span>
-        </span>
+      <div
+        className="hero-bg-photo"
+        role="img"
+        aria-label={phLabel}
+        style={photo ? { backgroundImage: `url('${photo}')`, backgroundSize: 'cover', backgroundPosition: 'center' } : undefined}
+      >
+        {!photo && (
+          <span className="hero-bg-ph">
+            <span className="hero-bg-icon">{phIcon}</span>
+            <span className="hero-bg-label">{phLabel}</span>
+            <span className="hero-bg-desc">{phDesc}</span>
+          </span>
+        )}
       </div>
 
       <div className="hero-split-inner">

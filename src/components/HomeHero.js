@@ -43,8 +43,6 @@ export default function HomeHero() {
           <div className="hero-meta">
             <span><strong>Online</strong> en toda España</span>
             <span className="meta-dot">·</span>
-            <span>Consulta en <strong>Alcalá de Henares</strong></span>
-            <span className="meta-dot">·</span>
             <span>Col. <strong>M-43581</strong></span>
           </div>
         </div>
@@ -53,15 +51,7 @@ export default function HomeHero() {
         <div className="hero-visual">
           <span className="visual-ring" aria-hidden="true" />
           <div className="hero-photo">
-            {/*
-              FOTO DE MARÍA — retrato vertical, cercano y cálido.
-              Sustituye este bloque por:
-              <img src="/media/maria.jpg" alt="María Villalba, psicóloga y sexóloga" className="hero-photo-img" />
-            */}
-            <div className="hero-photo-ph">
-              <span className="ph-mark">M</span>
-              <span className="ph-text">Foto de María<br /><small>retrato vertical</small></span>
-            </div>
+            <img src="/media/maria-profile-2.png" alt="María Villalba, psicóloga y sexóloga" className="hero-photo-img" />
           </div>
           <div className="hero-floating-card">
             <span className="fc-heart">♡</span>

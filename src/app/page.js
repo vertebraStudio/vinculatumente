@@ -1,10 +1,9 @@
-'use client';
-
-import { useState } from 'react';
 import Header from "@/components/Header";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import HomeHero from "@/components/HomeHero";
+import FormationAccordion from "@/components/FormationAccordion";
+import HomeBlogSection from "@/components/HomeBlogSection";
 import Link from 'next/link';
 
 // Iconos de línea finos (estilo coherente con la marca)
@@ -31,8 +30,7 @@ const compromiso = [
   { icon: 'people', title: 'Acompañamiento personalizado', desc: 'Diseñamos un proceso adaptado a ti y a tu ritmo. No estás solx en esto: avanzamos juntxs.' },
 ];
 
-export default function Home() {
-  const [expandedSection, setExpandedSection] = useState(0);
+export default async function Home() {
 
   return (
     <>
@@ -51,13 +49,7 @@ export default function Home() {
             <div className="about-grid">
               <div className="about-image-wrapper reveal" style={{ position: 'relative' }}>
                 <div className="about-image" style={{ overflow:'hidden', display:'flex', alignItems:'center', justifyContent:'center', borderRadius:'52% 48% 46% 54% / 48% 52% 48% 52%', position:'relative', zIndex:2, boxShadow:'0 24px 50px rgba(168,123,160,0.22)' }}>
-                  <div className="img-placeholder" style={{ minHeight: '420px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '16px', padding: '30px' }}>
-                    <span className="ph-icon" style={{ fontSize: '2.5rem', opacity: 0.6 }}>🖼️</span>
-                    <span className="ph-label" style={{ fontSize: '0.9rem', letterSpacing: '0.06em', fontWeight: 700 }}>Foto de María</span>
-                    <span className="ph-desc" style={{ fontSize: '0.8rem', opacity: 0.8, maxWidth: '240px', lineHeight: '1.6' }}>
-                      Retrato cercano y profesional.<br />Fondo neutro o cálido.<br />Orientación vertical.
-                    </span>
-                  </div>
+                  <img src="/media/maria-profile-3.png" alt="María Villalba, psicóloga y sexóloga" style={{ width:'100%', height:'100%', objectFit:'cover', display:'block' }} />
                 </div>
               </div>
 
@@ -113,19 +105,6 @@ export default function Home() {
             </div>
           </div>
 
-          <style jsx>{`
-            .trayectoria-grid { display:grid; grid-template-columns:1fr 1.1fr; gap:80px; align-items:center; }
-            .trayectoria-subtitle { font-size:0.85rem; font-weight:600; letter-spacing:2px; color:var(--accent); text-transform:uppercase; margin-bottom:15px; display:block; }
-            .trayectoria-title { font-size:2.6rem; line-height:1.25; color:var(--text); margin-bottom:24px; font-family:'Playfair Display',serif; }
-            .trayectoria-text { font-size:1.05rem; line-height:1.7; color:var(--text); margin-bottom:20px; }
-            .trayectoria-list { display:flex; flex-direction:column; gap:24px; }
-            .trayectoria-card { background:var(--glass); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); padding:28px 32px; display:flex; align-items:center; gap:24px; border:1px solid rgba(201, 168, 197,0.25); border-radius:16px; transition:transform 0.3s ease,border-color 0.3s ease,box-shadow 0.3s ease; }
-            .trayectoria-card:hover { transform:translateY(-3px); border-color:var(--accent); box-shadow:0 10px 25px rgba(201, 168, 197,0.18); }
-            .trayectoria-card-icon { flex-shrink:0; display:inline-flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:50%; background:var(--primary-light); color:var(--accent); }
-            .trayectoria-card-title { font-size:1.1rem; margin-bottom:4px; color:var(--text); font-family:'Playfair Display',serif; font-weight:600; line-height:1.35; }
-            .trayectoria-card-desc { font-size:0.9rem; color:var(--text-muted); margin:0; }
-            @media (max-width:992px) { .trayectoria-grid { grid-template-columns:1fr; gap:48px; } .trayectoria-title { font-size:2.2rem; } }
-          `}</style>
 
         </section>
 
@@ -141,30 +120,11 @@ export default function Home() {
                 <h2 className="section-title therapy-title">Mi forma de acompañarte</h2>
                 <p>Te acompaño a <strong>comprenderte, aceptarte y vivir relaciones más sanas y conscientes</strong>, integrando lo emocional y lo sexual como parte de un mismo bienestar.</p>
                 <p>Cada proceso es único. Partimos de tu historia y tus objetivos para diseñar un acompañamiento personalizado, con herramientas prácticas que puedas aplicar en tu vida cotidiana.</p>
-                <p>Atiendo de forma <strong>presencial en Alcalá de Henares</strong> y <strong>online</strong> desde cualquier punto de España, con la misma cercanía y confidencialidad.</p>
+                <p>Atiendo de forma <strong>online</strong> desde cualquier punto de España, con la misma cercanía y confidencialidad.</p>
               </div>
               <div className="formation-box glass" style={{ border:'1px solid #e8dce6', padding:'30px' }}>
                 <h3 style={{ color:'var(--text)', marginBottom:'24px' }}>Formación continua</h3>
-                <div style={{ display:'flex', flexDirection:'column', gap:'16px' }}>
-                  {[
-                    { icon:'cap', label:'Postgrados', idx:0, content:'• Máster en Sexología: Terapia Sexual y de Pareja\n• Máster en Psicología General Sanitaria\n• Máster en Psicología Infanto-Juvenil\n• Máster en Terapias de Tercera Generación' },
-                    { icon:'award', label:'Especializaciones', idx:1, content:'• Terapia EMDR (Niveles I y II)\n• Trauma y apego · Modelo Barnahus\n• Psicología afirmativa LGTBIQA+\n• Perspectiva de género e igualdad' },
-                    { icon:'message', label:'Áreas de trabajo', idx:2, content:'• Ansiedad, autoestima, duelo y gestión emocional\n• Sexualidad y relaciones de pareja\n• Acompañamiento a niñas, niños y adolescentes\n• Educación emocional y sexual' },
-                  ].map(({ icon, label, idx, content }) => (
-                    <div key={idx} style={{ border:'1px solid rgba(201, 168, 197,0.25)', borderRadius:'12px', backgroundColor:'rgba(255,255,255,0.5)', overflow:'hidden', transition:'all 0.3s cubic-bezier(0.4,0,0.2,1)', boxShadow: expandedSection === idx ? '0 4px 15px rgba(0,0,0,0.04)' : 'none' }}>
-                      <button onClick={() => setExpandedSection(expandedSection === idx ? null : idx)} style={{ width:'100%', display:'flex', alignItems:'center', justifyContent:'space-between', padding:'18px 20px', background:'none', border:'none', cursor:'pointer', textAlign:'left' }}>
-                        <div style={{ display:'flex', alignItems:'center', gap:'14px' }}>
-                          <span className="formation-icon" style={{ margin:0, width:'40px', height:'40px', color:'var(--accent)' }}>{lineIcons[icon]}</span>
-                          <strong style={{ fontSize:'1.05rem', color:'var(--text)' }}>{label}</strong>
-                        </div>
-                        <span style={{ fontSize:'1.4rem', color:'var(--primary)', fontWeight:'300', lineHeight:'1', userSelect:'none' }}>{expandedSection === idx ? '−' : '+'}</span>
-                      </button>
-                      <div style={{ maxHeight: expandedSection === idx ? '320px' : '0px', opacity: expandedSection === idx ? 1 : 0, transition:'all 0.3s cubic-bezier(0.4,0,0.2,1)', overflow:'hidden' }}>
-                        <div style={{ padding:'0 20px 20px 74px', color:'var(--text-muted)', fontSize:'0.92rem', lineHeight:'1.7', whiteSpace:'pre-line' }}>{content}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <FormationAccordion />
               </div>
             </div>
 
@@ -196,18 +156,6 @@ export default function Home() {
             </div>
           </div>
 
-          <style jsx>{`
-            .terapia-intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; margin-bottom:70px; }
-            .terapia-cards-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
-            .therapy-mini-card { border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.06); transition:transform 0.3s ease,box-shadow 0.3s ease; display:block; overflow:hidden; }
-            .therapy-mini-card:hover { transform:translateY(-6px); box-shadow:0 12px 30px rgba(168,123,160,0.18); }
-            @media (max-width:992px) { .terapia-cards-grid { grid-template-columns:repeat(2,1fr); } }
-            @media (max-width:768px) {
-              .terapia-intro-grid { grid-template-columns:1fr; gap:32px; margin-bottom:40px; }
-              .therapy-title { text-align:left; }
-            }
-            @media (max-width:560px) { .terapia-cards-grid { grid-template-columns:1fr; gap:16px; } }
-          `}</style>
 
         </section>
 
@@ -238,28 +186,10 @@ export default function Home() {
             </div>
           </div>
 
-          <style jsx>{`
-            .compromiso { position:relative; overflow:hidden; background:linear-gradient(165deg, #F8EFF6 0%, #EEDDEB 55%, #E4CCE1 100%); }
-            .soft-blob { position:absolute; width:520px; height:520px; top:-180px; right:-140px; border-radius:50%; filter:blur(80px); background:radial-gradient(circle, rgba(255,255,255,0.6), rgba(255,255,255,0) 70%); z-index:1; pointer-events:none; }
-            .compromiso-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; margin-bottom:64px; }
-            .compromiso-card { background:#fff; padding:46px 38px; box-shadow:0 18px 40px rgba(168,123,160,0.14); transition:transform 0.4s cubic-bezier(0.2,0.8,0.2,1), box-shadow 0.4s ease, border-radius 0.5s ease; }
-            .compromiso-card:nth-child(1) { border-radius:38% 62% 63% 37% / 49% 41% 59% 51%; }
-            .compromiso-card:nth-child(2) { border-radius:63% 37% 52% 48% / 56% 49% 51% 44%; }
-            .compromiso-card:nth-child(3) { border-radius:48% 52% 38% 62% / 56% 44% 56% 44%; }
-            .compromiso-card:nth-child(4) { border-radius:55% 45% 57% 43% / 43% 57% 43% 57%; }
-            .compromiso-card:hover { transform:translateY(-8px); box-shadow:0 26px 50px rgba(168,123,160,0.24); border-radius:50% 50% 48% 52% / 50% 48% 52% 50%; }
-            .compromiso-icon { display:inline-flex; align-items:center; justify-content:center; width:52px; height:52px; border-radius:50%; background:var(--primary-light); color:var(--accent); margin-bottom:18px; }
-            .compromiso-title { font-family:'Playfair Display',serif; font-size:1.18rem; color:var(--text); margin-bottom:10px; line-height:1.3; }
-            .compromiso-desc { font-size:0.92rem; color:var(--text-muted); line-height:1.65; margin:0; }
-            .compromiso-quote { max-width:760px; margin:0 auto; text-align:center; background:rgba(255,255,255,0.7); backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,0.8); border-radius:46% 54% 48% 52% / 62% 44% 56% 38%; padding:64px 92px; position:relative; box-shadow:0 18px 44px rgba(168,123,160,0.16); }
-            .quote-mark { font-family:'Playfair Display',serif; font-size:3.5rem; color:var(--primary); line-height:0; display:block; height:30px; }
-            .compromiso-quote p { font-family:'Playfair Display',serif; font-style:italic; font-size:1.5rem; line-height:1.5; color:var(--text); margin:0 0 16px; }
-            .quote-author { font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--accent); font-weight:600; }
-            @media (max-width:992px) { .compromiso-grid { grid-template-columns:repeat(2,1fr); } }
-            @media (max-width:768px) { .compromiso-quote p { font-size:1.25rem; } .compromiso-quote { border-radius:30px; padding:40px 28px; } }
-            @media (max-width:560px) { .compromiso-grid { grid-template-columns:1fr; } }
-          `}</style>
         </section>
+
+        {/* BLOG */}
+        <HomeBlogSection />
 
         {/* FAQ */}
         <FAQ />

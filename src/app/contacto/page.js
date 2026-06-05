@@ -3,8 +3,8 @@ import Footer from "@/components/Footer";
 import ContactHero from "./ContactHero";
 
 export const metadata = {
-  title: "Contacto | Vincula Tu Mente | Psicóloga y Sexóloga en Alcalá de Henares",
-  description: "Contacta con María Villalba, psicóloga y sexóloga en Alcalá de Henares y online. Reserva tu primera cita o resuelve tus dudas por WhatsApp, teléfono o email.",
+  title: "Contacto | Vincula Tu Mente | Psicóloga y Sexóloga Online",
+  description: "Contacta con María Villalba, psicóloga y sexóloga online. Reserva tu primera cita o resuelve tus dudas por WhatsApp, teléfono o email.",
 };
 
 export default function ContactoPage() {
@@ -137,22 +137,15 @@ export default function ContactoPage() {
                   Modalidad de atención
                 </h2>
                 <p style={{ lineHeight: '1.9', fontSize: '1rem', marginBottom: '24px', color: 'var(--text-muted)' }}>
-                  Puedes elegir la opción que mejor se adapte a ti. Ambas mantienen la misma cercanía, rigor y confidencialidad.
+                  Las sesiones son online, lo que te permite acceder al acompañamiento desde cualquier punto de España con la misma cercanía, rigor y confidencialidad.
                 </p>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px' }}>
-                  <div style={{ background: 'var(--off-white)', border: '1px solid #eadce6', borderRadius: '16px', padding: '24px' }}>
-                    <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '46px', height: '46px', borderRadius: '50%', background: 'var(--primary-light)', color: 'var(--accent)', marginBottom: '14px' }}>
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9,22 9,12 15,12 15,22" /></svg>
-                    </span>
-                    <p style={{ fontWeight: 600, color: 'var(--text)', margin: '0 0 6px', fontFamily: "'Playfair Display', serif", fontSize: '1.1rem' }}>Presencial</p>
-                    <p style={{ fontSize: '0.92rem', color: 'var(--text-muted)', margin: 0, lineHeight: 1.6 }}>Consulta en Alcalá de Henares, un espacio seguro y acogedor.</p>
-                  </div>
-                  <div style={{ background: 'var(--off-white)', border: '1px solid #eadce6', borderRadius: '16px', padding: '24px' }}>
-                    <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '46px', height: '46px', borderRadius: '50%', background: 'var(--primary-light)', color: 'var(--accent)', marginBottom: '14px' }}>
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
-                    </span>
-                    <p style={{ fontWeight: 600, color: 'var(--text)', margin: '0 0 6px', fontFamily: "'Playfair Display', serif", fontSize: '1.1rem' }}>Online</p>
-                    <p style={{ fontSize: '0.92rem', color: 'var(--text-muted)', margin: 0, lineHeight: 1.6 }}>Sesiones por videollamada desde cualquier punto de España.</p>
+                <div style={{ background: 'var(--off-white)', border: '1px solid #eadce6', borderRadius: '16px', padding: '24px', display: 'flex', alignItems: 'flex-start', gap: '18px' }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '46px', height: '46px', borderRadius: '50%', background: 'var(--primary-light)', color: 'var(--accent)', flexShrink: 0 }}>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+                  </span>
+                  <div>
+                    <p style={{ fontWeight: 600, color: 'var(--text)', margin: '0 0 6px', fontFamily: "'Playfair Display', serif", fontSize: '1.1rem' }}>Sesiones online</p>
+                    <p style={{ fontSize: '0.92rem', color: 'var(--text-muted)', margin: 0, lineHeight: 1.6 }}>Por videollamada, desde cualquier lugar de España. Sin desplazamientos, con toda la comodidad y privacidad de tu espacio.</p>
                   </div>
                 </div>
               </div>
@@ -189,7 +182,7 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <p style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--text)', margin: '0 0 2px' }}>Ubicación</p>
-                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: 0, lineHeight: 1.6 }}>Alcalá de Henares (Madrid)<br />y terapia online en toda España</p>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: 0, lineHeight: 1.6 }}>Online en toda España</p>
                   </div>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>

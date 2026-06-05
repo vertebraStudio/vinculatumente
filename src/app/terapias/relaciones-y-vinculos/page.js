@@ -35,6 +35,7 @@ export default function RelacionesVinculosPage() {
           title="Construye relaciones"
           titleEm="más sanas y conscientes"
           desc="Un espacio para entender cómo te vinculas, sanar las dinámicas que te hacen daño y construir relaciones más auténticas contigo y con quienes te rodean."
+          photo="/media/relacionesHeader.jpg"
           phIcon="♡"
           phLabel="Foto · Relaciones y vínculos"
           phDesc="Imagen cálida sobre conexión y relaciones. Formato horizontal."
