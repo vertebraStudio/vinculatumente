@@ -166,6 +166,33 @@ export default async function Home() {
 
         </section>
 
+        {/* TALLERES BANNER */}
+        <section style={{ background: 'linear-gradient(135deg, var(--accent) 0%, #8B5E87 100%)', padding: '70px 5%', position: 'relative', overflow: 'hidden' }}>
+          <span aria-hidden="true" style={{ position:'absolute', top:'-60px', right:'-60px', width:'320px', height:'320px', borderRadius:'50%', background:'rgba(255,255,255,0.05)', pointerEvents:'none' }} />
+          <span aria-hidden="true" style={{ position:'absolute', bottom:'-80px', left:'10%', width:'240px', height:'240px', borderRadius:'50%', background:'rgba(255,255,255,0.04)', pointerEvents:'none' }} />
+          <div className="container" style={{ position:'relative', zIndex:2, display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:'32px' }}>
+            <div style={{ flex:'1', minWidth:'280px' }}>
+              <span style={{ display:'inline-flex', alignItems:'center', gap:'8px', fontSize:'0.72rem', fontWeight:600, letterSpacing:'0.18em', textTransform:'uppercase', color:'rgba(255,255,255,0.7)', marginBottom:'14px' }}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Talleres y Formación
+              </span>
+              <h2 style={{ fontFamily:"'Playfair Display', serif", fontSize:'clamp(1.6rem, 3vw, 2.2rem)', fontWeight:600, color:'#fff', margin:'0 0 12px', lineHeight:1.2 }}>
+                ¿Buscas formación para tu equipo,<br />centro o entidad?
+              </h2>
+              <p style={{ fontSize:'1rem', color:'rgba(255,255,255,0.82)', lineHeight:1.75, margin:0, maxWidth:'520px' }}>
+                Diseño talleres, charlas y programas formativos sobre sexualidad, vínculos, salud mental e igualdad. Presencial, online o híbrido, adaptados a tu grupo y objetivos.
+              </p>
+            </div>
+            <div style={{ display:'flex', flexDirection:'column', gap:'12px', alignItems:'flex-start' }}>
+              <Link href="/talleres" className="talleres-banner-cta">
+                Ver talleres y formaciones
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              </Link>
+              <span style={{ fontSize:'0.78rem', color:'rgba(255,255,255,0.6)', paddingLeft:'4px' }}>Presencial · Online · Híbrido</span>
+            </div>
+          </div>
+        </section>
+
         {/* CÓMO TRABAJO / MI COMPROMISO */}
         <section id="compromiso" className="compromiso">
           <span className="soft-blob" aria-hidden="true" />

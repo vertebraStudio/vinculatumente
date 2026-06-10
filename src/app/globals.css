@@ -1146,3 +1146,27 @@ footer {
   .post-author-card { grid-template-columns: 1fr; text-align: left; }
   .pac-avatar { margin-bottom: 4px; }
 }
+
+/* ── Talleres banner CTA (homepage) ── */
+.talleres-banner-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  background: #fff;
+  color: var(--accent);
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  white-space: nowrap;
+}
+.talleres-banner-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.26);
+}
