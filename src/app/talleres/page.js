@@ -117,47 +117,43 @@ export default function TalleresPage() {
         <section style={{ backgroundColor: 'var(--white)', padding: '60px 5%' }}>
           <div className="container">
             <div className="talleres-intro-grid">
-              {[
-                {
-                  icon: '✦', label: 'Formato flexible',
-                  desc: (
-                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, width: '100%', display: 'flex', flexDirection: 'column' }}>
-                      {[
-                        ['Píldoras formativas', '1,5 – 2h'],
-                        ['Talleres generales', '3 – 4h'],
-                        ['Formaciones para empresas', '2h'],
-                        ['Programas estructurados', 'paquete cerrado'],
-                      ].map(([name, duration]) => (
-                        <li key={name} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px', padding: '10px 0', borderBottom: '1px solid rgba(201,168,197,0.2)' }}>
-                          <span style={{ fontSize: '0.9rem', color: 'var(--text)', fontWeight: 500 }}>{name}</span>
-                          <span style={{ fontSize: '0.78rem', fontWeight: 600, color: 'var(--accent)', backgroundColor: 'rgba(201,168,197,0.15)', padding: '3px 10px', borderRadius: '50px', whiteSpace: 'nowrap' }}>{duration}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )
-                },
-                { icon: '◎', label: 'Contenido a medida', desc: 'Cada intervención se diseña según el perfil del grupo, el contexto y los objetivos.' },
-                { icon: '♡', label: 'Enfoque riguroso', desc: 'Basado en evidencia científica, perspectiva de género y psicología afirmativa.' },
-                { icon: '⊙', label: 'Presencial u online', desc: 'Talleres presenciales en centros educativos, empresas y entidades, con posibilidad de formato online o híbrido.' },
-              ].map((item, i) => (
-                <div key={item.label} className="talleres-intro-item">
-                  {i === 0 ? (
-                    <>
-                      <div className="talleres-intro-header">
-                        <span className="talleres-intro-icon">{item.icon}</span>
-                        <h3 className="talleres-intro-label">{item.label}</h3>
-                      </div>
-                      <div className="talleres-intro-desc">{item.desc}</div>
-                    </>
-                  ) : (
-                    <>
-                      <span className="talleres-intro-icon">{item.icon}</span>
-                      <h3 className="talleres-intro-label">{item.label}</h3>
-                      <div className="talleres-intro-desc">{item.desc}</div>
-                    </>
-                  )}
+
+              {/* Fila 1 — Formato flexible (ancho completo, horizontal) */}
+              <div className="talleres-formato-card">
+                <div className="talleres-formato-left">
+                  <span className="talleres-intro-icon">✦</span>
+                  <h3 className="talleres-intro-label">Formato flexible</h3>
                 </div>
-              ))}
+                <div className="talleres-formato-cols">
+                  {[
+                    ['Píldoras formativas', '1,5 – 2h'],
+                    ['Talleres generales', '3 – 4h'],
+                    ['Formaciones para empresas', '2h'],
+                    ['Programas estructurados', 'paquete cerrado'],
+                  ].map(([name, duration]) => (
+                    <div key={name} className="talleres-formato-col">
+                      <span className="talleres-formato-col-name">{name}</span>
+                      <span className="talleres-formato-col-duration">{duration}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Fila 2 — 3 tarjetas en fila */}
+              <div className="talleres-intro-cards">
+                {[
+                  { icon: '◎', label: 'Contenido a medida', desc: 'Cada intervención se diseña según el perfil del grupo, el contexto y los objetivos.' },
+                  { icon: '♡', label: 'Enfoque riguroso', desc: 'Basado en evidencia científica, perspectiva de género y psicología afirmativa.' },
+                  { icon: '⊙', label: 'Presencial u online', desc: 'Talleres presenciales en centros educativos, empresas y entidades, con posibilidad de formato online o híbrido.' },
+                ].map((item) => (
+                  <div key={item.label} className="talleres-intro-item">
+                    <span className="talleres-intro-icon">{item.icon}</span>
+                    <h3 className="talleres-intro-label">{item.label}</h3>
+                    <p className="talleres-intro-desc">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+
             </div>
           </div>
         </section>
@@ -279,31 +275,51 @@ export default function TalleresPage() {
         .btn-talleres-ghost:hover { color: var(--accent); }
 
         .talleres-intro-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 16px;
+          display: flex; flex-direction: column; gap: 16px;
         }
-        .talleres-intro-item {
-          display: flex; flex-direction: column; gap: 12px; padding: 26px 24px;
+        /* Fila 1: Formato flexible horizontal */
+        .talleres-formato-card {
+          display: flex; align-items: center; gap: 0;
+          padding: 28px 32px;
           background: var(--off-white); border-radius: 20px;
           border: 1px solid rgba(201,168,197,0.2);
         }
-        .talleres-intro-item:first-child {
-          grid-column: 1 / -1;
-          flex-direction: row;
-          align-items: center;
-          gap: 40px;
-          padding: 28px 32px;
-        }
-        .talleres-intro-item:first-child .talleres-intro-header {
+        .talleres-formato-left {
           display: flex; flex-direction: column; gap: 6px;
-          flex-shrink: 0; width: 160px;
+          flex-shrink: 0; min-width: 170px;
+          padding-right: 32px;
+          border-right: 1px solid rgba(201,168,197,0.25);
         }
-        .talleres-intro-item:first-child .talleres-intro-desc {
-          flex: 1;
+        .talleres-formato-cols {
+          flex: 1; display: flex; align-items: center;
+        }
+        .talleres-formato-col {
+          flex: 1; display: flex; flex-direction: column;
+          align-items: center; gap: 8px;
+          padding: 8px 20px;
+          border-right: 1px solid rgba(201,168,197,0.2);
+        }
+        .talleres-formato-col:last-child { border-right: none; }
+        .talleres-formato-col-name {
+          font-size: 0.86rem; color: var(--text); font-weight: 500;
+          text-align: center; line-height: 1.35;
+        }
+        .talleres-formato-col-duration {
+          font-size: 0.75rem; font-weight: 600; color: var(--accent);
+          background: rgba(201,168,197,0.15); padding: 3px 11px;
+          border-radius: 50px; white-space: nowrap;
+        }
+        /* Fila 2: 3 tarjetas en fila */
+        .talleres-intro-cards {
+          display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+        }
+        .talleres-intro-item {
+          display: flex; flex-direction: column; gap: 10px; padding: 26px 24px;
+          background: var(--off-white); border-radius: 20px;
+          border: 1px solid rgba(201,168,197,0.2);
         }
         .talleres-intro-icon { font-size: 1.4rem; color: var(--accent); }
-        .talleres-intro-label { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--text); margin: 0; }
+        .talleres-intro-label { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--text); margin: 0 0 4px; }
         .talleres-intro-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; margin: 0; }
 
         .talleres-block {
@@ -363,9 +379,12 @@ export default function TalleresPage() {
         }
 
         @media (max-width: 860px) {
-          .talleres-intro-grid { grid-template-columns: 1fr; }
-          .talleres-intro-item:first-child { grid-column: auto; flex-direction: column; gap: 12px; }
-          .talleres-intro-item:first-child .talleres-intro-header { width: auto; }
+          .talleres-formato-card { flex-direction: column; align-items: flex-start; gap: 20px; }
+          .talleres-formato-left { border-right: none; padding-right: 0; padding-bottom: 16px; border-bottom: 1px solid rgba(201,168,197,0.25); width: 100%; }
+          .talleres-formato-cols { flex-wrap: wrap; width: 100%; }
+          .talleres-formato-col { flex: 1 1 45%; border-right: none; padding: 10px 8px; border-bottom: 1px solid rgba(201,168,197,0.15); }
+          .talleres-formato-col:nth-child(3), .talleres-formato-col:nth-child(4) { border-bottom: none; }
+          .talleres-intro-cards { grid-template-columns: 1fr; }
           .talleres-block { grid-template-columns: 1fr; direction: ltr; }
           .talleres-block-header { padding: 32px 24px; }
           .talleres-block-list { padding: 24px 24px; }
