@@ -118,7 +118,7 @@ export default function TalleresPage() {
           <div className="container">
             <div className="talleres-intro-grid">
               {[
-                { icon: '✦', label: 'Formato flexible', desc: 'Píldoras de 20-30 min, talleres de 1,5-2 h, formaciones de 3-4 h o programas modulares.' },
+                { icon: '✦', label: 'Formato flexible', desc: 'Píldoras formativas (1,5-2h) · Talleres generales (3-4h) · Formaciones para empresas (2h) · Programas estructurados con paquetes cerrados.' },
                 { icon: '◎', label: 'Contenido a medida', desc: 'Cada intervención se diseña según el perfil del grupo, el contexto y los objetivos.' },
                 { icon: '♡', label: 'Enfoque riguroso', desc: 'Basado en evidencia científica, perspectiva de género y psicología afirmativa.' },
                 { icon: '⊙', label: 'Presencial u online', desc: 'Talleres presenciales en centros educativos, empresas y entidades, con posibilidad de formato online o híbrido.' },
