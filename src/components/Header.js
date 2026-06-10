@@ -116,7 +116,7 @@ export default function Header({ solid = false }) {
 
         :global(.logo-link) { display: flex !important; align-items: center !important; gap: 13px !important; }
         .logo-mark { flex-shrink: 0; width: 50px; height: 50px; border-radius: 50%; overflow: hidden; background: #fff; border: 1px solid rgba(168,123,160,0.25); box-shadow: 0 4px 12px rgba(168,123,160,0.18); display: inline-flex; align-items: center; justify-content: center; transition: width 0.4s ease, height 0.4s ease; }
-        .logo-mark img { width: 118%; height: 118%; object-fit: cover; display: block; }
+        .logo-mark img { width: 84%; height: 84%; object-fit: contain; display: block; }
         .header.scrolled .logo-mark { width: 44px; height: 44px; }
         .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
         .logo-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 600; color: var(--text); letter-spacing: 0.01em; }
