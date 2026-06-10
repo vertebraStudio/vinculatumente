@@ -48,6 +48,7 @@ export default function SexologiaPage() {
           ]}
           senales={senales}
           herramientas={herramientas}
+          ctaNote="Consulta sexológica presencial en Alcalá de Henares y online en toda España."
         />
       </main>
       <Footer />
