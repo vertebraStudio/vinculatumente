@@ -20,15 +20,15 @@ const faqs = [
   },
   {
     question: "¿En qué puedes ayudarme?",
-    answer: "Trabajo relaciones y vínculos, psicología infanto-juvenil, trauma y apego (con EMDR) y sexología. También ansiedad, autoestima, duelo, gestión emocional, perspectiva de género y diversidad."
+    answer: "Con personas adultas trabajo ansiedad, autoestima, duelo y gestión emocional; relaciones, vínculos y sexualidad; trauma y apego con terapia EMDR; y perspectiva de género y diversidad. Con niñas, niños y adolescentes ofrezco acompañamiento emocional adaptado a cada etapa del desarrollo, integrando a la familia en el proceso."
+  },
+  {
+    question: "¿Atiendes sesiones de pareja y relaciones afectivas?",
+    answer: "Sí. Acompaño todo tipo de vínculos afectivos: parejas, relaciones no monógamas, vínculos en transformación o en crisis. No hace falta etiquetarse ni ajustarse a un modelo concreto de relación. Trabajamos la comunicación, la intimidad, el deseo y los límites desde un enfoque afirmativo e inclusivo."
   },
   {
     question: "¿Trabajas con niñas, niños y adolescentes?",
     answer: "Sí. Acompaño a menores y adolescentes en su desarrollo y bienestar emocional, integrando a la familia en el proceso con pautas y orientación."
-  },
-  {
-    question: "¿Trabajas con parejas y relaciones afectivas?",
-    answer: "Sí. Acompaño procesos vinculares de todo tipo: parejas, relaciones no monógamas, vínculos en transformación o en crisis. Trabajo la comunicación, la intimidad y la sexualidad desde un enfoque afirmativo e inclusivo."
   },
   {
     question: "¿La consulta de sexología es un espacio seguro?",
