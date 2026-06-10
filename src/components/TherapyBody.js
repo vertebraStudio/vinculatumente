@@ -80,6 +80,8 @@ export default function TherapyBody({ introTitle, introParas = [], senales = [],
 
               <Link href="/contacto" className="ty-cta">Reservar mi cita →</Link>
 
+              <p className="ty-modalidad">Disponible en modalidad presencial y online.</p>
+
               <a href="https://www.instagram.com/vinculatumente/" target="_blank" rel="noopener noreferrer" className="ty-ig">@vinculatumente</a>
             </div>
           </div>
@@ -128,6 +130,7 @@ export default function TherapyBody({ introTitle, introParas = [], senales = [],
         .ty-mail { word-break: break-all; }
         :global(.ty-cta) { display: flex !important; align-items: center; justify-content: center; gap: 8px; margin-top: 8px; padding: 14px 20px; background: var(--accent); color: #fff !important; border-radius: 50px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: all 0.3s ease; }
         :global(.ty-cta:hover) { background: var(--primary); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(168,123,160,0.3); }
+        .ty-modalidad { text-align: center; font-size: 0.78rem; color: var(--text-muted); font-style: italic; margin: 2px 0 6px; }
         .ty-ig { text-align: center; font-size: 0.85rem; color: var(--accent); text-decoration: none; font-weight: 500; }
         .ty-ig:hover { text-decoration: underline; }
 
