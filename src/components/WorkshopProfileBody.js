@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import WorkshopCard from '@/components/WorkshopCard';
 
 // ============================================================
 // WorkshopProfileBody — Layout compartido para páginas de talleres
@@ -56,61 +57,9 @@ export default function WorkshopProfileBody({ profile, workshops }) {
 
             <div className="wkp-layout">
             <div className="workshop-grid">
-              {workshops.map((w, i) => {
-                const waUrl = `https://wa.me/34604807200?text=${encodeURIComponent(`Hola, me interesa el taller "${w.name}"`)}`;
-                return (
-                  <article key={i} className="workshop-card" style={{ borderTop: `3px solid ${accent}` }}>
-
-                    <div className="workshop-card-top">
-                      <h3 className="workshop-name">{w.name}</h3>
-                      <span className="workshop-chip" style={{ color: accent, background: `${color}` }}>
-                        {w.audience}
-                      </span>
-                    </div>
-
-                    <div className="workshop-block">
-                      <p className="workshop-label">Qué problema resuelve</p>
-                      <p className="workshop-problem">{w.problem}</p>
-                    </div>
-
-                    <div className="workshop-block">
-                      <p className="workshop-label">Qué se llevan los asistentes</p>
-                      <ul className="workshop-takeaways">
-                        {w.takeaways.map((t, j) => <li key={j}>{t}</li>)}
-                      </ul>
-                    </div>
-
-                    <div className="workshop-meta">
-                      <span className="workshop-meta-chip">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                        {w.duration}
-                      </span>
-                      <span className="workshop-meta-chip">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        {w.modality}
-                      </span>
-                      <span className="workshop-meta-chip" style={{ color: accent, borderColor: `${accent}40`, background: color }}>
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                        {w.price}
-                      </span>
-                    </div>
-
-                    <div className="workshop-cta-wrap">
-                      <a
-                        href={waUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn-workshop"
-                        style={{ background: accent }}
-                      >
-                        Solicitar este taller
-                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-                      </a>
-                    </div>
-
-                  </article>
-                );
-              })}
+              {workshops.map((w, i) => (
+                <WorkshopCard key={i} workshop={w} accent={accent} color={color} />
+              ))}
             </div>{/* /workshop-grid */}
 
             {/* TARJETA CONTACTO LATERAL */}
@@ -322,79 +271,9 @@ export default function WorkshopProfileBody({ profile, workshops }) {
         }
         .wkp-card-ig:hover { opacity: 0.75; }
 
-        /* --- Workshop cards --- */
+        /* --- Workshop cards grid (estilos de tarjeta viven en WorkshopCard.js) --- */
         .workshop-grid {
-          display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
-        }
-        .workshop-card {
-          background: #fff; border-radius: 16px;
-          border: 1px solid rgba(201,168,197,0.15);
-          overflow: hidden; display: flex; flex-direction: column;
-          box-shadow: 0 4px 18px rgba(168,123,160,0.06);
-          transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-        .workshop-card:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 14px 34px rgba(168,123,160,0.14);
-        }
-        .workshop-card-top { padding: 22px 24px 16px; }
-        .workshop-name {
-          font-family: 'Playfair Display', serif; font-size: 1.15rem;
-          color: var(--text); margin: 0 0 10px; line-height: 1.25;
-        }
-        .workshop-chip {
-          font-size: 0.75rem; font-weight: 600; padding: 4px 12px;
-          border-radius: 50px; display: inline-block;
-        }
-        .workshop-block {
-          padding: 14px 24px;
-          border-top: 1px solid rgba(201,168,197,0.1);
-        }
-        .workshop-label {
-          font-size: 0.67rem; text-transform: uppercase; letter-spacing: 0.12em;
-          font-weight: 700; color: var(--text-muted); margin: 0 0 6px;
-        }
-        .workshop-problem {
-          font-size: 0.86rem; color: var(--text-muted); line-height: 1.65;
-          margin: 0; font-style: italic;
-        }
-        .workshop-takeaways {
-          list-style: none; padding: 0; margin: 0;
-          display: flex; flex-direction: column; gap: 5px;
-        }
-        .workshop-takeaways li {
-          font-size: 0.86rem; color: var(--text);
-          padding-left: 20px; position: relative; line-height: 1.5;
-        }
-        .workshop-takeaways li::before {
-          content: '✓'; position: absolute; left: 0;
-          color: var(--accent); font-size: 0.75rem; font-weight: 700;
-        }
-        .workshop-meta {
-          padding: 14px 24px; border-top: 1px solid rgba(201,168,197,0.1);
-          display: flex; gap: 8px; flex-wrap: wrap;
-        }
-        .workshop-meta-chip {
-          display: inline-flex; align-items: center; gap: 5px;
-          font-size: 0.77rem; color: var(--text); background: var(--off-white);
-          padding: 4px 11px; border-radius: 50px;
-          border: 1px solid rgba(201,168,197,0.2);
-        }
-        .workshop-cta-wrap {
-          padding: 16px 24px 22px; margin-top: auto;
-          border-top: 1px solid rgba(201,168,197,0.08);
-        }
-        .btn-workshop {
-          display: inline-flex; align-items: center; gap: 7px;
-          padding: 11px 22px; color: #fff; border-radius: 50px;
-          font-size: 0.78rem; font-weight: 600; text-decoration: none;
-          letter-spacing: 0.06em; text-transform: uppercase;
-          transition: all 0.25s ease; box-shadow: 0 6px 16px rgba(168,123,160,0.22);
-        }
-        .btn-workshop:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 10px 24px rgba(168,123,160,0.34);
-          filter: brightness(1.06);
+          display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
         }
 
         @media (max-width: 1100px) {
