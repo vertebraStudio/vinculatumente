@@ -48,6 +48,7 @@ export default function RelacionesVinculosPage() {
           ]}
           senales={senales}
           herramientas={herramientas}
+          ctaNote="Disponible en modalidad presencial y online."
         />
       </main>
       <Footer />
