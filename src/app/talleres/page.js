@@ -109,10 +109,6 @@ export default function TalleresPage() {
                 <Link href="/contacto" className="btn-talleres-primary">Solicitar información</Link>
                 <a href="#bloques" className="btn-talleres-ghost">Ver bloques temáticos ↓</a>
               </div>
-              <p style={{ marginTop: '28px', fontSize: '0.82rem', fontStyle: 'italic', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', flexWrap: 'wrap' }}>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, color: 'var(--accent)' }}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Talleres presenciales en centros educativos, empresas y entidades, con posibilidad de formato online o híbrido.
-              </p>
             </div>
           </div>
         </section>
@@ -122,9 +118,10 @@ export default function TalleresPage() {
           <div className="container">
             <div className="talleres-intro-grid">
               {[
-                { icon: '✦', label: 'Formato flexible', desc: 'Píldoras de 20-30 min, talleres de 1,5-2 h, formaciones de 3-4 h o programas modulares. Presencial, online o híbrido.' },
+                { icon: '✦', label: 'Formato flexible', desc: 'Píldoras de 20-30 min, talleres de 1,5-2 h, formaciones de 3-4 h o programas modulares.' },
                 { icon: '◎', label: 'Contenido a medida', desc: 'Cada intervención se diseña según el perfil del grupo, el contexto y los objetivos.' },
                 { icon: '♡', label: 'Enfoque riguroso', desc: 'Basado en evidencia científica, perspectiva de género y psicología afirmativa.' },
+                { icon: '⊙', label: 'Presencial u online', desc: 'Talleres presenciales en centros educativos, empresas y entidades, con posibilidad de formato online o híbrido.' },
               ].map((item) => (
                 <div key={item.label} className="talleres-intro-item">
                   <span className="talleres-intro-icon">{item.icon}</span>
