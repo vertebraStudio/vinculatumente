@@ -121,19 +121,24 @@ export default function TalleresPage() {
                 {
                   icon: '✦', label: 'Formato flexible',
                   desc: (
-                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '5px', textAlign: 'left' }}>
-                      {[
-                        ['Píldoras formativas', '1,5 – 2h'],
-                        ['Talleres generales', '3 – 4h'],
-                        ['Formaciones para empresas', '2h'],
-                        ['Programas estructurados', 'paquete cerrado'],
-                      ].map(([name, duration]) => (
-                        <li key={name} style={{ display: 'flex', justifyContent: 'space-between', gap: '10px', fontSize: '0.83rem', color: 'var(--text-muted)', borderBottom: '1px solid rgba(201,168,197,0.2)', paddingBottom: '5px' }}>
-                          <span style={{ fontWeight: 500, color: 'var(--text)' }}>{name}</span>
-                          <span style={{ whiteSpace: 'nowrap', color: 'var(--accent)', fontWeight: 600 }}>{duration}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <>
+                      <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '5px', textAlign: 'left' }}>
+                        {[
+                          ['Píldoras formativas', '1,5 – 2h'],
+                          ['Talleres generales', '3 – 4h'],
+                          ['Formaciones para empresas', '2h'],
+                          ['Programas estructurados', 'paquete cerrado'],
+                        ].map(([name, duration]) => (
+                          <li key={name} style={{ display: 'flex', justifyContent: 'space-between', gap: '10px', fontSize: '0.88rem', color: 'var(--text-muted)', borderBottom: '1px solid rgba(201,168,197,0.2)', paddingBottom: '8px', paddingTop: '8px' }}>
+                            <span style={{ fontWeight: 500, color: 'var(--text)' }}>{name}</span>
+                            <span style={{ whiteSpace: 'nowrap', color: 'var(--accent)', fontWeight: 600 }}>{duration}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <p style={{ margin: 0, fontSize: '0.82rem', fontStyle: 'italic', color: 'var(--text-muted)', paddingTop: '4px' }}>
+                        Cada formato se adapta al grupo, al contexto y a los objetivos. Cuéntame qué necesitas y lo diseñamos juntas.
+                      </p>
+                    </>
                   )
                 },
                 { icon: '◎', label: 'Contenido a medida', desc: 'Cada intervención se diseña según el perfil del grupo, el contexto y los objetivos.' },
@@ -268,8 +273,8 @@ export default function TalleresPage() {
 
         .talleres-intro-grid {
           display: grid;
-          grid-template-columns: 1.5fr 1fr;
-          grid-template-rows: repeat(3, auto);
+          grid-template-columns: 1.4fr 1fr;
+          grid-template-rows: repeat(3, 1fr);
           gap: 16px;
         }
         .talleres-intro-item {
@@ -279,8 +284,8 @@ export default function TalleresPage() {
         }
         .talleres-intro-item:first-child {
           grid-row: 1 / 4;
-          justify-content: center;
-          padding: 36px 32px;
+          justify-content: space-between;
+          padding: 32px 32px;
         }
         .talleres-intro-icon { font-size: 1.4rem; color: var(--accent); }
         .talleres-intro-label { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--text); margin: 0; }
