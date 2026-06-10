@@ -121,19 +121,19 @@ export default function TalleresPage() {
                 {
                   icon: '✦', label: 'Formato flexible',
                   desc: (
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '12px', width: '100%' }}>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, width: '100%', display: 'flex', flexDirection: 'column' }}>
                       {[
                         ['Píldoras formativas', '1,5 – 2h'],
                         ['Talleres generales', '3 – 4h'],
                         ['Formaciones para empresas', '2h'],
                         ['Programas estructurados', 'paquete cerrado'],
                       ].map(([name, duration]) => (
-                        <div key={name} style={{ display: 'flex', flexDirection: 'column', gap: '6px', padding: '16px', background: 'rgba(255,255,255,0.7)', borderRadius: '12px', border: '1px solid rgba(201,168,197,0.25)' }}>
-                          <span style={{ fontSize: '0.92rem', fontWeight: 600, color: 'var(--text)' }}>{name}</span>
-                          <span style={{ fontSize: '0.82rem', color: 'var(--accent)', fontWeight: 600 }}>{duration}</span>
-                        </div>
+                        <li key={name} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px', padding: '10px 0', borderBottom: '1px solid rgba(201,168,197,0.2)' }}>
+                          <span style={{ fontSize: '0.9rem', color: 'var(--text)', fontWeight: 500 }}>{name}</span>
+                          <span style={{ fontSize: '0.78rem', fontWeight: 600, color: 'var(--accent)', backgroundColor: 'rgba(201,168,197,0.15)', padding: '3px 10px', borderRadius: '50px', whiteSpace: 'nowrap' }}>{duration}</span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   )
                 },
                 { icon: '◎', label: 'Contenido a medida', desc: 'Cada intervención se diseña según el perfil del grupo, el contexto y los objetivos.' },
