@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     question: "¿Cómo puedo pedir mi primera cita?",
-    answer: "Puedes escribirme por WhatsApp, llamarme o enviarme un email a hola@vinculatumente.com. Te responderé lo antes posible y resolveremos juntxs cualquier duda antes de empezar, sin compromiso."
+    answer: "Puedes escribirme por WhatsApp, llamarme o enviarme un email a vinculatumente@gmail.com. Te responderé lo antes posible y resolveremos juntxs cualquier duda antes de empezar, sin compromiso."
   },
   {
     question: "¿Qué duración tienen las sesiones?",
@@ -20,15 +20,15 @@ const faqs = [
   },
   {
     question: "¿En qué puedes ayudarme?",
-    answer: "Trabajo relaciones y vínculos, psicología infanto-juvenil, trauma y apego (con EMDR) y sexología. También ansiedad, autoestima, duelo, gestión emocional y terapia de pareja."
+    answer: "Trabajo relaciones y vínculos, psicología infanto-juvenil, trauma y apego (con EMDR) y sexología. También ansiedad, autoestima, duelo, gestión emocional, perspectiva de género y diversidad."
   },
   {
     question: "¿Trabajas con niñas, niños y adolescentes?",
     answer: "Sí. Acompaño a menores y adolescentes en su desarrollo y bienestar emocional, integrando a la familia en el proceso con pautas y orientación."
   },
   {
-    question: "¿Trabajas con parejas?",
-    answer: "Sí. Ofrezco terapia de pareja para mejorar la comunicación, la intimidad y la resolución de conflictos, así como acompañamiento sexológico."
+    question: "¿Trabajas con parejas y relaciones afectivas?",
+    answer: "Sí. Acompaño procesos vinculares de todo tipo: parejas, relaciones no monógamas, vínculos en transformación o en crisis. Trabajo la comunicación, la intimidad y la sexualidad desde un enfoque afirmativo e inclusivo."
   },
   {
     question: "¿La consulta de sexología es un espacio seguro?",

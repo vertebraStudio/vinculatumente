@@ -101,7 +101,7 @@ export default function TalleresPage() {
                 Talleres y Formación{' '}
                 <span className="eyebrow-line" />
               </span>
-              <h1 className="talleres-hero-title">Formación especializada<br /><em>para quienes acompañan</em></h1>
+              <h1 className="talleres-hero-title">Formación para adolescentes, familias y entidades<br /><em>que quieren transformar realidades</em></h1>
               <p className="talleres-hero-lead">
                 Talleres, charlas y programas formativos sobre sexualidad, vínculos, salud mental y cultura organizacional. Diseñados para empresas, centros educativos, entidades sociales y equipos profesionales.
               </p>
@@ -118,9 +118,9 @@ export default function TalleresPage() {
           <div className="container">
             <div className="talleres-intro-grid">
               {[
-                { icon: '✦', label: 'Formato flexible', desc: 'Charla puntual, taller de medio día o programa modular. Adaptado a tus necesidades.' },
+                { icon: '✦', label: 'Formato flexible', desc: 'Píldoras de 20-30 min, talleres de 1,5-2 h, formaciones de 3-4 h o programas modulares. Presencial, online o híbrido.' },
                 { icon: '◎', label: 'Contenido a medida', desc: 'Cada intervención se diseña según el perfil del grupo, el contexto y los objetivos.' },
-                { icon: '♡', label: 'Enfoque rigoroso', desc: 'Basado en evidencia científica, perspectiva de género y psicología afirmativa.' },
+                { icon: '♡', label: 'Enfoque riguroso', desc: 'Basado en evidencia científica, perspectiva de género y psicología afirmativa.' },
               ].map((item) => (
                 <div key={item.label} className="talleres-intro-item">
                   <span className="talleres-intro-icon">{item.icon}</span>
@@ -140,7 +140,7 @@ export default function TalleresPage() {
                 <span className="eyebrow-line" />Bloques temáticos<span className="eyebrow-line" />
               </span>
               <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2rem, 3vw, 2.8rem)', color: 'var(--text)', margin: '12px 0 0' }}>
-                ¿Sobre qué puedo formarte?
+                Propuestas formativas
               </h2>
             </div>
 

@@ -82,7 +82,7 @@ export default async function PostPage({ params }) {
       '@type': 'Organization',
       name: 'Vincula Tu Mente',
       url: SITE_URL,
-      logo: { '@type': 'ImageObject', url: `${SITE_URL}/media/Logo.jpeg` },
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}/media/vinculatumenteLogo.jpg` },
     },
     mainEntityOfPage: `${SITE_URL}/blog/${slug}`,
   };
@@ -148,7 +148,7 @@ export default async function PostPage({ params }) {
                 )}
 
                 <div className="post-author-card">
-                  <img src="/media/Logo.jpeg" alt="Vincula Tu Mente" className="pac-avatar" />
+                  <img src="/media/vinculatumenteLogo.jpg" alt="Vincula Tu Mente" className="pac-avatar" />
                   <div>
                     <p className="pac-name">María Villalba</p>
                     <p className="pac-role">Psicóloga y Sexóloga · Nº Col. M-43581</p>

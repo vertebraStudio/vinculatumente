@@ -73,7 +73,7 @@ export default async function Home() {
                 <span className="eyebrow"><span className="eyebrow-line" /><span className="eyebrow-ic">{lineIcons.cap}</span> Formación</span>
                 <h2 className="trayectoria-title">Una base académica sólida al servicio de tu bienestar</h2>
                 <p className="trayectoria-text">
-                  Me gradué en Psicología por la <strong>Universidad Europea Miguel de Cervantes</strong> y me especialicé con el <strong>Máster en Sexología</strong> (Universidad de Extremadura) y el <strong>Máster en Psicología General Sanitaria</strong>.
+                  Me gradué en Psicología por la <strong>Universidad Europea Miguel de Cervantes</strong> y me especialicé con el <strong>Máster en Sexología: Educación, Terapia Sexual y de Pareja</strong> (Universidad de Extremadura).
                 </p>
                 <p className="trayectoria-text">
                   Continúo formándome de forma permanente en <strong>terapia EMDR</strong>, <strong>psicología infanto-juvenil</strong>, trauma, apego y perspectiva de género, para acompañarte con un enfoque riguroso y actualizado.
@@ -83,8 +83,8 @@ export default async function Home() {
                 <div className="trayectoria-card glass">
                   <span className="trayectoria-card-icon">{lineIcons.cap}</span>
                   <div className="trayectoria-card-content">
-                    <h4 className="trayectoria-card-title">Grado en Psicología · Máster en Psicología General Sanitaria</h4>
-                    <p className="trayectoria-card-desc">U. Europea Miguel de Cervantes · U. Internacional de Valencia</p>
+                    <h4 className="trayectoria-card-title">Grado en Psicología</h4>
+                    <p className="trayectoria-card-desc">Universidad Europea Miguel de Cervantes</p>
                   </div>
                 </div>
                 <div className="trayectoria-card glass">
@@ -97,8 +97,15 @@ export default async function Home() {
                 <div className="trayectoria-card glass">
                   <span className="trayectoria-card-icon">{lineIcons.sparkle}</span>
                   <div className="trayectoria-card-content">
-                    <h4 className="trayectoria-card-title">Terapia EMDR (Niveles I y II) · Máster en Psicología Infanto-Juvenil</h4>
-                    <p className="trayectoria-card-desc">UNED · Especialización en trauma y apego</p>
+                    <h4 className="trayectoria-card-title">Terapia EMDR (Niveles I y II)</h4>
+                    <p className="trayectoria-card-desc">UNED · Trauma complejo y apego</p>
+                  </div>
+                </div>
+                <div className="trayectoria-card glass">
+                  <span className="trayectoria-card-icon">{lineIcons.user}</span>
+                  <div className="trayectoria-card-content">
+                    <h4 className="trayectoria-card-title">Máster en Psicología Infantil y Juvenil</h4>
+                    <p className="trayectoria-card-desc">Edeca · Acompañamiento a niñas, niños y adolescentes</p>
                   </div>
                 </div>
               </div>
@@ -120,7 +127,7 @@ export default async function Home() {
                 <h2 className="section-title therapy-title">Mi forma de acompañarte</h2>
                 <p>Te acompaño a <strong>comprenderte, aceptarte y vivir relaciones más sanas y conscientes</strong>, integrando lo emocional y lo sexual como parte de un mismo bienestar.</p>
                 <p>Cada proceso es único. Partimos de tu historia y tus objetivos para diseñar un acompañamiento personalizado, con herramientas prácticas que puedas aplicar en tu vida cotidiana.</p>
-                <p>Atiendo de forma <strong>online</strong> desde cualquier punto de España, con la misma cercanía y confidencialidad.</p>
+                <p>Atiendo de forma <strong>presencial en Alcalá de Henares</strong> y también <strong>online</strong> desde cualquier punto de España, manteniendo la misma cercanía, rigor y confidencialidad.</p>
               </div>
               <div className="formation-box glass" style={{ border:'1px solid #e8dce6', padding:'30px' }}>
                 <h3 style={{ color:'var(--text)', marginBottom:'24px' }}>Formación continua</h3>

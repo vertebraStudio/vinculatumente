@@ -41,7 +41,7 @@ export default function HomeHero() {
           </div>
 
           <div className="hero-meta">
-            <span><strong>Online</strong> en toda España</span>
+            <span>Consulta presencial en <strong>Alcalá de Henares</strong> y terapia <strong>online</strong> en toda España</span>
             <span className="meta-dot">·</span>
             <span>Col. <strong>M-43581</strong></span>
           </div>

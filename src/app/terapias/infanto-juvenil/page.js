@@ -18,8 +18,8 @@ const senales = [
 ];
 
 const herramientas = [
-  "Evaluación e intervención adaptada a cada etapa del desarrollo.",
-  "Educación y regulación emocional con recursos lúdicos y prácticos.",
+  "Regulación emocional con recursos lúdicos y prácticos adaptados a cada edad.",
+  "Educación emocional y desarrollo de habilidades sociales.",
   "Acompañamiento en autoestima, habilidades sociales y relaciones.",
   "Orientación y pautas para madres, padres y familias.",
   "Prevención y abordaje del acoso escolar y las autolesiones.",

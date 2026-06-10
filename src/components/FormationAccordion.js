@@ -12,9 +12,9 @@ const icons = {
 };
 
 const items = [
-  { icon: 'cap',     label: 'Postgrados',         content: '• Máster en Sexología: Terapia Sexual y de Pareja\n• Máster en Psicología General Sanitaria\n• Máster en Psicología Infanto-Juvenil\n• Máster en Terapias de Tercera Generación' },
-  { icon: 'award',   label: 'Especializaciones',   content: '• Terapia EMDR (Niveles I y II)\n• Trauma y apego · Modelo Barnahus\n• Psicología afirmativa LGTBIQA+\n• Perspectiva de género e igualdad' },
-  { icon: 'message', label: 'Áreas de trabajo',    content: '• Ansiedad, autoestima, duelo y gestión emocional\n• Sexualidad y relaciones de pareja\n• Acompañamiento a niñas, niños y adolescentes\n• Educación emocional y sexual' },
+  { icon: 'cap',     label: 'Postgrados',         content: '• Máster en Sexología: Educación, Terapia Sexual y de Pareja (U. Extremadura)\n• Máster en Terapias de Tercera Generación (CEP Psicología y Educación)\n• Máster en Psicología Infantil y Juvenil (Edeca)' },
+  { icon: 'award',   label: 'Especializaciones',   content: '• Terapia EMDR (Niveles I y II) — UNED\n• Intervención en Abuso Sexual Infantil y Barnahus\n• Psicología afirmativa LGTBIQA+\n• Perspectiva de género e igualdad\n• Técnico Especialista en TCA\n• Prevención del suicidio y autolesiones' },
+  { icon: 'message', label: 'Áreas de trabajo',    content: '• Ansiedad, autoestima, duelo y gestión emocional\n• Sexualidad, pareja y vínculos\n• Acompañamiento a niñas, niños y adolescentes\n• Trauma y apego\n• Perspectiva de género y diversidad' },
 ];
 
 export default function FormationAccordion() {

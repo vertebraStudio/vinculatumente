@@ -41,7 +41,7 @@ export default function Header({ solid = false }) {
         <div className="logo">
           <Link href="/" onClick={close} className="logo-link" aria-label="Vincula Tu Mente — Inicio">
             <span className="logo-mark">
-              <img src="/media/Logo.jpeg" alt="Vincula Tu Mente — María Villalba, psicóloga y sexóloga" />
+              <img src="/media/vinculatumenteLogo.jpg" alt="Vincula Tu Mente — María Villalba, psicóloga y sexóloga" />
             </span>
             <span className="logo-text">
               <span className="logo-name">Vincula Tu Mente</span>

@@ -30,10 +30,9 @@ export default function AvisoLegalPage() {
                   ["Titular", "María Villalba López"],
                   ["Actividad", "Psicóloga General Sanitaria y Sexóloga"],
                   ["Nº de Colegiada", "M-43581 (Colegio Oficial de la Psicología de Madrid)"],
-                  ["Registro Sanitario", "[Pendiente de facilitar por la titular]"],
                   ["Ámbito de atención", "Alcalá de Henares (Madrid) y terapia online en toda España"],
                   ["Teléfono", "+34 604 80 72 00"],
-                  ["Email", "hola@vinculatumente.com"],
+                  ["Email", "vinculatumente@gmail.com"],
                   ["Sitio web", "https://vinculatumente.es"],
                 ]} />
                 <p style={{ marginTop: '16px', fontSize: '0.92rem', fontStyle: 'italic' }}>

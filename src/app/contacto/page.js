@@ -3,8 +3,8 @@ import Footer from "@/components/Footer";
 import ContactHero from "./ContactHero";
 
 export const metadata = {
-  title: "Contacto | Vincula Tu Mente | Psicóloga y Sexóloga Online",
-  description: "Contacta con María Villalba, psicóloga y sexóloga online. Reserva tu primera cita o resuelve tus dudas por WhatsApp, teléfono o email.",
+  title: "Contacto | Vincula Tu Mente | Psicóloga y Sexóloga en Alcalá de Henares y Online",
+  description: "Contacta con María Villalba, psicóloga y sexóloga en Alcalá de Henares y online. Reserva tu primera cita o resuelve tus dudas por WhatsApp, teléfono o email.",
 };
 
 export default function ContactoPage() {
@@ -84,7 +84,7 @@ export default function ContactoPage() {
                   </a>
 
                   {/* Email */}
-                  <a href="mailto:hola@vinculatumente.com" style={{ display: 'flex', flexDirection: 'column', gap: '20px', padding: '28px 24px', borderRadius: '16px', backgroundColor: 'var(--white)', border: '1px solid #eadce6', textDecoration: 'none', transition: 'all 0.2s ease' }} className="contact-card-link">
+                  <a href="mailto:vinculatumente@gmail.com" style={{ display: 'flex', flexDirection: 'column', gap: '20px', padding: '28px 24px', borderRadius: '16px', backgroundColor: 'var(--white)', border: '1px solid #eadce6', textDecoration: 'none', transition: 'all 0.2s ease' }} className="contact-card-link">
                     <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
                       <div style={{ width: '46px', height: '46px', borderRadius: '50%', backgroundColor: 'var(--primary-light)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent)' }}>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
@@ -100,7 +100,7 @@ export default function ContactoPage() {
                       </p>
                     </div>
                     <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--accent)', marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '4px', wordBreak: 'break-all' }}>
-                      hola@vinculatumente.com →
+                      vinculatumente@gmail.com →
                     </span>
                   </a>
 
@@ -137,15 +137,26 @@ export default function ContactoPage() {
                   Modalidad de atención
                 </h2>
                 <p style={{ lineHeight: '1.9', fontSize: '1rem', marginBottom: '24px', color: 'var(--text-muted)' }}>
-                  Las sesiones son online, lo que te permite acceder al acompañamiento desde cualquier punto de España con la misma cercanía, rigor y confidencialidad.
+                  Puedes elegir la modalidad que mejor se adapte a ti. Las sesiones presenciales tienen lugar en Alcalá de Henares y las online están disponibles desde cualquier punto de España, con la misma cercanía, rigor y confidencialidad.
                 </p>
-                <div style={{ background: 'var(--off-white)', border: '1px solid #eadce6', borderRadius: '16px', padding: '24px', display: 'flex', alignItems: 'flex-start', gap: '18px' }}>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '46px', height: '46px', borderRadius: '50%', background: 'var(--primary-light)', color: 'var(--accent)', flexShrink: 0 }}>
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
-                  </span>
-                  <div>
-                    <p style={{ fontWeight: 600, color: 'var(--text)', margin: '0 0 6px', fontFamily: "'Playfair Display', serif", fontSize: '1.1rem' }}>Sesiones online</p>
-                    <p style={{ fontSize: '0.92rem', color: 'var(--text-muted)', margin: 0, lineHeight: 1.6 }}>Por videollamada, desde cualquier lugar de España. Sin desplazamientos, con toda la comodidad y privacidad de tu espacio.</p>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px' }}>
+                  <div style={{ background: 'var(--off-white)', border: '1px solid #eadce6', borderRadius: '16px', padding: '24px', display: 'flex', alignItems: 'flex-start', gap: '18px' }}>
+                    <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '46px', height: '46px', borderRadius: '50%', background: 'var(--primary-light)', color: 'var(--accent)', flexShrink: 0 }}>
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
+                    </span>
+                    <div>
+                      <p style={{ fontWeight: 600, color: 'var(--text)', margin: '0 0 6px', fontFamily: "'Playfair Display', serif", fontSize: '1.1rem' }}>Sesiones presenciales</p>
+                      <p style={{ fontSize: '0.92rem', color: 'var(--text-muted)', margin: 0, lineHeight: 1.6 }}>En consulta en Alcalá de Henares (Madrid). Un espacio cálido y confidencial para que te sientas cómodx desde el primer momento.</p>
+                    </div>
+                  </div>
+                  <div style={{ background: 'var(--off-white)', border: '1px solid #eadce6', borderRadius: '16px', padding: '24px', display: 'flex', alignItems: 'flex-start', gap: '18px' }}>
+                    <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '46px', height: '46px', borderRadius: '50%', background: 'var(--primary-light)', color: 'var(--accent)', flexShrink: 0 }}>
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+                    </span>
+                    <div>
+                      <p style={{ fontWeight: 600, color: 'var(--text)', margin: '0 0 6px', fontFamily: "'Playfair Display', serif", fontSize: '1.1rem' }}>Sesiones online</p>
+                      <p style={{ fontSize: '0.92rem', color: 'var(--text-muted)', margin: 0, lineHeight: 1.6 }}>Por videollamada, desde cualquier lugar de España. Sin desplazamientos, con toda la comodidad y privacidad de tu espacio.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -158,7 +169,7 @@ export default function ContactoPage() {
               {/* Perfil */}
               <div style={{ backgroundColor: 'var(--white)', border: '1px solid #eadce6', borderRadius: '16px', padding: '24px', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '16px' }}>
-                  <img src="/media/Logo.jpeg" alt="Vincula Tu Mente" style={{ width: '52px', height: '52px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0, mixBlendMode: 'multiply' }} />
+                  <img src="/media/vinculatumenteLogo.jpg" alt="Vincula Tu Mente" style={{ width: '52px', height: '52px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0, mixBlendMode: 'multiply' }} />
                   <div>
                     <p style={{ fontWeight: 600, fontSize: '0.95rem', color: 'var(--text)', margin: 0 }}>María Villalba</p>
                     <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', margin: 0 }}>Psicóloga y sexóloga</p>
@@ -182,7 +193,7 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <p style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--text)', margin: '0 0 2px' }}>Ubicación</p>
-                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: 0, lineHeight: 1.6 }}>Online en toda España</p>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: 0, lineHeight: 1.6 }}>Alcalá de Henares, Madrid · Online en toda España</p>
                   </div>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
@@ -190,8 +201,8 @@ export default function ContactoPage() {
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><polyline points="12,7 12,12 15.5,14" /></svg>
                   </div>
                   <div>
-                    <p style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--text)', margin: '0 0 2px' }}>Horario</p>
-                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: 0, lineHeight: 1.6 }}>Lunes a viernes: 9:00 - 15:00<br />Miércoles: 9:00 - 21:00</p>
+                    <p style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--text)', margin: '0 0 2px' }}>Disponibilidad</p>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: 0, lineHeight: 1.6 }}>Escríbeme y buscamos un horario que se adapte a ti.</p>
                   </div>
                 </div>
               </div>

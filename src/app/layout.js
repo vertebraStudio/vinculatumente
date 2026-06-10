@@ -9,9 +9,11 @@ import CookieBanner from "@/components/CookieBanner";
 // ============================================================
 export const metadata = {
   metadataBase: new URL("https://vinculatumente.es"),
-  title: "Vincula Tu Mente | Psicóloga y Sexóloga Online | María Villalba",
-  description: "María Villalba, psicóloga y sexóloga online en toda España. Especialista en relaciones y vínculos, infanto-juvenil, trauma y apego, y sexología. Pide tu cita.",
+  title: "Vincula Tu Mente | Psicóloga y Sexóloga en Alcalá de Henares y Online | María Villalba",
+  description: "María Villalba, psicóloga y sexóloga en Alcalá de Henares y online en toda España. Especialista en relaciones y vínculos, infanto-juvenil, trauma y apego, y sexología. Pide tu cita.",
   keywords: [
+    "psicóloga Alcalá de Henares",
+    "sexóloga Alcalá de Henares",
     "psicóloga online España",
     "sexóloga online",
     "terapia de pareja online",
@@ -23,8 +25,8 @@ export const metadata = {
     canonical: "https://vinculatumente.es",
   },
   openGraph: {
-    title: "Vincula Tu Mente | María Villalba · Psicóloga y Sexóloga",
-    description: "Un espacio seguro para comprenderte, aceptarte y vivir relaciones más sanas y conscientes. Online en toda España.",
+    title: "Vincula Tu Mente | María Villalba · Psicóloga y Sexóloga en Alcalá de Henares",
+    description: "Un espacio seguro para comprenderte, aceptarte y vivir relaciones más sanas y conscientes. Consulta presencial en Alcalá de Henares y online en toda España.",
     url: "https://vinculatumente.es",
     siteName: "Vincula Tu Mente",
     locale: "es_ES",
@@ -40,15 +42,17 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "Psychologist",
     "name": "Vincula Tu Mente — María Villalba",
-    "image": "https://vinculatumente.es/media/Logo.jpeg",
+    "image": "https://vinculatumente.es/media/vinculatumenteLogo.jpg",
     "@id": "https://vinculatumente.es",
     "url": "https://vinculatumente.es",
     "telephone": "+34 604 80 72 00",
-    "email": "hola@vinculatumente.com",
+    "email": "vinculatumente@gmail.com",
     "priceRange": "€€",
     "areaServed": "ES",
     "address": {
       "@type": "PostalAddress",
+      "addressLocality": "Alcalá de Henares",
+      "addressRegion": "Madrid",
       "addressCountry": "ES"
     },
     "knowsAbout": [
