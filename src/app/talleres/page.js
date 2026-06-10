@@ -118,7 +118,24 @@ export default function TalleresPage() {
           <div className="container">
             <div className="talleres-intro-grid">
               {[
-                { icon: '✦', label: 'Formato flexible', desc: 'Píldoras formativas (1,5-2h) · Talleres generales (3-4h) · Formaciones para empresas (2h) · Programas estructurados con paquetes cerrados.' },
+                {
+                  icon: '✦', label: 'Formato flexible',
+                  desc: (
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '5px', textAlign: 'left' }}>
+                      {[
+                        ['Píldoras formativas', '1,5 – 2h'],
+                        ['Talleres generales', '3 – 4h'],
+                        ['Formaciones para empresas', '2h'],
+                        ['Programas estructurados', 'paquete cerrado'],
+                      ].map(([name, duration]) => (
+                        <li key={name} style={{ display: 'flex', justifyContent: 'space-between', gap: '10px', fontSize: '0.83rem', color: 'var(--text-muted)', borderBottom: '1px solid rgba(201,168,197,0.2)', paddingBottom: '5px' }}>
+                          <span style={{ fontWeight: 500, color: 'var(--text)' }}>{name}</span>
+                          <span style={{ whiteSpace: 'nowrap', color: 'var(--accent)', fontWeight: 600 }}>{duration}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )
+                },
                 { icon: '◎', label: 'Contenido a medida', desc: 'Cada intervención se diseña según el perfil del grupo, el contexto y los objetivos.' },
                 { icon: '♡', label: 'Enfoque riguroso', desc: 'Basado en evidencia científica, perspectiva de género y psicología afirmativa.' },
                 { icon: '⊙', label: 'Presencial u online', desc: 'Talleres presenciales en centros educativos, empresas y entidades, con posibilidad de formato online o híbrido.' },
@@ -126,7 +143,7 @@ export default function TalleresPage() {
                 <div key={item.label} className="talleres-intro-item">
                   <span className="talleres-intro-icon">{item.icon}</span>
                   <h3 className="talleres-intro-label">{item.label}</h3>
-                  <p className="talleres-intro-desc">{item.desc}</p>
+                  <div className="talleres-intro-desc">{item.desc}</div>
                 </div>
               ))}
             </div>
