@@ -17,7 +17,11 @@ export default function Footer() {
           <div className="footer-brand">
             <p className="footer-wordmark">Vincula Tu Mente</p>
             <p className="footer-tagline">Psicología y Sexología</p>
-            <p className="subtitle">Psicóloga y sexóloga. Te acompaño en relaciones y vínculos, infancia y adolescencia, trauma y apego, y sexología. Consulta presencial en Alcalá de Henares y terapia online en toda España.</p>
+            <p className="subtitle">Psicóloga y sexóloga. Te acompaño en relaciones y vínculos, infancia y adolescencia, trauma y apego, y sexología.</p>
+            <p className="footer-location">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Consulta presencial en Alcalá de Henares y terapia online en toda España
+            </p>
             <div style={{ display: 'flex', gap: '8px', marginBottom: '20px', flexWrap: 'wrap', marginTop: '5px' }}>
               <span style={{ fontSize: '0.78rem', letterSpacing: '0.5px', fontWeight: 600, padding: '4px 12px', borderRadius: '50px', border: '1px solid rgba(255,255,255,0.3)', color: 'rgba(255,255,255,0.85)' }}>
                 Nº Colegiada M-43581
@@ -95,7 +99,8 @@ export default function Footer() {
         .footer-wordmark { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 2px; letter-spacing: 0.02em; }
         .footer-tagline { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.92rem; color: rgba(255,255,255,0.7); margin: 0 0 14px; }
         .footer-logo { height: 60px; width: auto; margin-bottom: 20px; }
-        .subtitle { color: rgba(255,255,255,0.85); font-size: 0.92rem; margin-top: 5px; margin-bottom: 18px; max-width: 400px; line-height: 1.6; }
+        .subtitle { color: rgba(255,255,255,0.85); font-size: 0.92rem; margin-top: 5px; margin-bottom: 14px; max-width: 400px; line-height: 1.6; }
+        .footer-location { display: flex; align-items: center; gap: 7px; font-size: 0.8rem; font-style: italic; color: rgba(255,255,255,0.6); margin-bottom: 18px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.12); max-width: 340px; line-height: 1.5; }
         .footer-nav-col, .footer-contact-col, .footer-legal-col { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
         .footer-nav-links { display: flex; flex-direction: column; gap: 12px; padding: 0; margin: 0; }
         .footer-nav-links li { list-style: none; }
