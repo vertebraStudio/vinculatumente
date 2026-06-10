@@ -201,21 +201,22 @@ export default async function Home() {
 
             <hr style={{ border:'none', borderTop:'1px solid rgba(0,0,0,0.07)', marginBottom:'60px' }} />
 
-            {/* Tarjetas de áreas temáticas */}
+            {/* Tarjetas de perfiles */}
             <div className="terapia-cards-grid">
               {[
-                { color:'#F4E9F1', accent:'#A87BA0', icon:'♡', label:'Sexualidad, Vínculos y Diversidad', desc:'Talleres sobre relaciones sanas, diversidad sexual y afectiva, consentimiento y bienestar relacional.' },
-                { color:'#EDE3F0', accent:'#8B6088', icon:'◎', label:'Empresas, Igualdad y Cultura', desc:'Programas sobre planes de igualdad, prevención del acoso, liderazgo emocional y bienestar laboral.' },
-                { color:'#F8F0F7', accent:'#9B6E97', icon:'✦', label:'Salud Mental y Diversos Contextos', desc:'Intervenciones sobre regulación emocional, prevención del suicidio, TCA y violencia de género.' },
-              ].map(({ color, accent, icon, label, desc }) => (
-                <Link key={label} href="/talleres" style={{ textDecoration:'none', border:'1px solid #e8dce6', borderRadius:'16px' }} className="therapy-mini-card">
+                { color:'#F4E9F1', accent:'#A87BA0', icon:'◎', label:'Para particulares', desc:'Talleres sobre terapia online, sexología, vínculos, trauma y bienestar emocional.', href:'/talleres/particulares' },
+                { color:'#EDE3F0', accent:'#8B6088', icon:'♡', label:'Para familias', desc:'Formación sobre adolescencia, educación emocional, sexualidad y convivencia familiar.', href:'/talleres/familias' },
+                { color:'#F8F0F7', accent:'#9B6E97', icon:'✦', label:'Para centros educativos', desc:'Programas de educación afectivo-sexual, bullying, ansiedad y salud mental en el aula.', href:'/talleres/centros-educativos' },
+                { color:'#EDE8F2', accent:'#7A5580', icon:'⊙', label:'Para empresas', desc:'Talleres de burnout, acoso laboral, igualdad, liderazgo y bienestar organizacional.', href:'/talleres/empresas' },
+              ].map(({ color, accent, icon, label, desc, href }) => (
+                <Link key={label} href={href} style={{ textDecoration:'none', border:'1px solid #e8dce6', borderRadius:'16px' }} className="therapy-mini-card">
                   <div style={{ aspectRatio:'4/3', overflow:'hidden', borderRadius:'16px 16px 0 0', background: color, display:'flex', alignItems:'center', justifyContent:'center' }}>
                     <span style={{ fontSize:'3rem', color: accent, opacity:0.7 }}>{icon}</span>
                   </div>
                   <div style={{ padding:'20px 20px 22px', backgroundColor:'white', borderRadius:'0 0 16px 16px' }}>
                     <h3 style={{ fontSize:'1.05rem', fontWeight:600, color:'var(--text)', marginBottom:'8px', fontFamily:"'Playfair Display',serif" }}>{label}</h3>
                     <p style={{ fontSize:'0.88rem', color:'var(--text-muted)', lineHeight:'1.6', marginBottom:'16px' }}>{desc}</p>
-                    <span style={{ fontSize:'0.85rem', fontWeight:600, color:'var(--accent)' }}>Ver propuestas →</span>
+                    <span style={{ fontSize:'0.85rem', fontWeight:600, color: accent }}>Ver talleres →</span>
                   </div>
                 </Link>
               ))}

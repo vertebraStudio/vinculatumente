@@ -4,76 +4,50 @@ import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'Talleres y Formación | Vincula Tu Mente | María Villalba',
-  description:
-    'Talleres y formación especializada en sexualidad, vínculos, salud mental y cultura organizacional para empresas, centros educativos y entidades. María Villalba, psicóloga y sexóloga.',
+  description: 'Talleres y programas formativos para particulares, familias, centros educativos y empresas. Sexualidad, vínculos, salud mental, igualdad y bienestar emocional. María Villalba, psicóloga y sexóloga.',
   alternates: { canonical: 'https://vinculatumente.es/talleres' },
 };
 
-const categories = [
+const perfiles = [
   {
-    id: 'sexualidad',
-    eyebrow: 'Bloque 1',
-    title: 'Sexualidad, Vínculos y Diversidad',
-    lead: 'Formación especializada para profesionales, jóvenes, familias y población general sobre relaciones sanas, diversidad sexual y afectiva, y bienestar relacional.',
+    href: '/talleres/particulares',
     color: '#F4E9F1',
     accent: '#A87BA0',
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-      </svg>
-    ),
-    workshops: [
-      { title: 'Vínculos sanos: superando celos e infidelidades', audience: 'Parejas y personas en relaciones vinculares' },
-      { title: 'Sexualidad positiva y bienestar sexual', audience: 'Personas adultas y adolescentes' },
-      { title: 'Consentimiento, límites y deseo', audience: 'Jóvenes y adultos' },
-      { title: 'Psicología afirmativa LGTBI+: diversidad en la consulta', audience: 'Personas adultas y adolescentes' },
-      { title: 'Prevención del abuso sexual infantil (ASI): guía para familias', audience: 'Padres, madres y educadores' },
-      { title: 'Prevención combinada del VIH y sexualidad informada', audience: 'Jóvenes y adultos' },
-    ],
+    icon: '◎',
+    eyebrow: 'Talleres para particulares',
+    label: 'Para particulares',
+    desc: 'Sesiones y talleres sobre terapia online, sexología, vínculos, trauma y bienestar emocional cotidiano.',
+    tags: ['Terapia online', 'Sexología', 'Vínculos', 'Trauma', 'Bienestar emocional'],
   },
   {
-    id: 'empresas',
-    eyebrow: 'Bloque 2',
-    title: 'Empresas, Igualdad y Cultura Organizacional',
-    lead: 'Programas para equipos, directivos y departamentos de RRHH orientados a mejorar el clima laboral, la igualdad y el bienestar psicosocial en el trabajo.',
+    href: '/talleres/familias',
     color: '#EDE3F0',
     accent: '#8B6088',
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="7" width="20" height="14" rx="2" />
-        <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-        <line x1="12" y1="12" x2="12" y2="12.01" />
-      </svg>
-    ),
-    workshops: [
-      { title: 'Implementación práctica de planes de igualdad', audience: 'Directivos, RRHH y mandos intermedios' },
-      { title: 'Prevención del acoso y micromachismos en el trabajo', audience: 'Plantillas completas (B2B)' },
-      { title: 'Comunicación efectiva y negociación en el entorno laboral', audience: 'Equipos profesionales y de gestión' },
-      { title: 'Liderazgo emocionalmente inteligente', audience: 'Mandos intermedios y directivos' },
-      { title: 'Salud mental y bienestar laboral: mindfulness y work-life balance', audience: 'Empleados con alta carga de estrés' },
-      { title: 'Diversidad LGTBI+ en la empresa', audience: 'Empresas y RRHH' },
-    ],
+    icon: '♡',
+    eyebrow: 'Formación para familias',
+    label: 'Para familias',
+    desc: 'Formación sobre adolescencia, educación emocional, sexualidad, redes sociales y convivencia familiar.',
+    tags: ['Adolescencia', 'Educación emocional', 'Sexualidad', 'Redes sociales', 'Convivencia'],
   },
   {
-    id: 'salud-mental',
-    eyebrow: 'Bloque 3',
-    title: 'Salud Mental, Trauma y Diversos Contextos',
-    lead: 'Intervenciones psicoeducativas y de prevención para profesionales sanitarios, docentes, familias y población general en contextos de alta vulnerabilidad.',
+    href: '/talleres/centros-educativos',
     color: '#F8F0F7',
     accent: '#9B6E97',
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
-    workshops: [
-      { title: 'Prevención del suicidio y autolesiones: empoderamiento social', audience: 'Atención primaria, docentes, familias' },
-      { title: 'Salud mental y regulación emocional', audience: 'Población general' },
-      { title: 'Trastornos de la conducta alimentaria: detección temprana', audience: 'Familias y profesionales' },
-      { title: 'Protocolo de detección de violencia de género', audience: 'Profesionales sociosanitarios y de seguridad' },
-      { title: 'Maternidad y salud mental: acompañamiento en riesgo', audience: 'Madres, gestantes y profesionales sanitarios' },
-      { title: 'Psicoeducación en trastornos psicóticos', audience: 'Familias y cuidadores' },
-    ],
+    icon: '✦',
+    eyebrow: 'Programas para centros',
+    label: 'Para centros educativos',
+    desc: 'Programas de educación afectivo-sexual, bullying, ansiedad académica, prevención digital y salud mental.',
+    tags: ['Ed. afectivo-sexual', 'Bullying', 'Ansiedad académica', 'Prevención digital', 'Salud mental'],
+  },
+  {
+    href: '/talleres/empresas',
+    color: '#EDE8F2',
+    accent: '#7A5580',
+    icon: '⊙',
+    eyebrow: 'Formación para organizaciones',
+    label: 'Para empresas',
+    desc: 'Talleres de burnout, prevención del acoso, igualdad, comunicación, liderazgo y bienestar laboral.',
+    tags: ['Burnout', 'Acoso laboral', 'Igualdad', 'Liderazgo', 'Bienestar laboral'],
   },
 ];
 
@@ -158,38 +132,37 @@ export default function TalleresPage() {
           </div>
         </section>
 
-        {/* PROPUESTAS FORMATIVAS */}
+        {/* PROPUESTAS FORMATIVAS — perfiles */}
         <section id="bloques" style={{ backgroundColor: 'var(--off-white)', padding: '80px 5% 100px' }}>
           <div className="container">
             <div className="talleres-section-header">
               <span className="eyebrow eyebrow-center">
-                <span className="eyebrow-line" />Bloques temáticos<span className="eyebrow-line" />
+                <span className="eyebrow-line" />Propuestas formativas<span className="eyebrow-line" />
               </span>
-              <h2 className="talleres-section-title">Propuestas formativas</h2>
-              <p className="talleres-section-sub">Cada intervención se diseña según el grupo, el contexto y los objetivos. Presencial, online o híbrido.</p>
+              <h2 className="talleres-section-title">Elige tu perfil</h2>
+              <p className="talleres-section-sub">Cada propuesta está diseñada para un perfil concreto. Selecciona el tuyo para ver los talleres disponibles.</p>
             </div>
 
-            <div className="talleres-cats-grid">
-              {categories.map((cat) => (
-                <div key={cat.id} id={cat.id} className="talleres-cat-card">
-                  <div className="talleres-cat-header" style={{ backgroundColor: cat.color }}>
-                    <span className="talleres-cat-icon" style={{ color: cat.accent }}>{cat.icon}</span>
-                    <span className="talleres-cat-eyebrow" style={{ color: cat.accent }}>{cat.eyebrow}</span>
-                    <h3 className="talleres-cat-title">{cat.title}</h3>
-                    <p className="talleres-cat-lead">{cat.lead}</p>
+            <div className="talleres-perfiles-grid">
+              {perfiles.map((p) => (
+                <Link key={p.href} href={p.href} className="talleres-perfil-card" style={{ textDecoration: 'none' }}>
+                  <div className="talleres-perfil-top" style={{ backgroundColor: p.color }}>
+                    <span className="talleres-perfil-icon" style={{ color: p.accent }}>{p.icon}</span>
+                    <span className="talleres-perfil-eyebrow" style={{ color: p.accent }}>{p.eyebrow}</span>
+                    <h3 className="talleres-perfil-label">{p.label}</h3>
                   </div>
-                  <div className="talleres-cat-body">
-                    {cat.workshops.map((w) => (
-                      <div key={w.title} className="talleres-workshop-item">
-                        <div className="talleres-workshop-dot" style={{ backgroundColor: cat.accent }} />
-                        <div>
-                          <p className="talleres-workshop-title">{w.title}</p>
-                          <p className="talleres-workshop-audience">{w.audience}</p>
-                        </div>
-                      </div>
-                    ))}
+                  <div className="talleres-perfil-body">
+                    <p className="talleres-perfil-desc">{p.desc}</p>
+                    <div className="talleres-perfil-tags">
+                      {p.tags.map((t) => (
+                        <span key={t} className="talleres-perfil-tag" style={{ color: p.accent, borderColor: `${p.accent}40` }}>{t}</span>
+                      ))}
+                    </div>
+                    <span className="talleres-perfil-cta" style={{ color: p.accent }}>
+                      Ver talleres →
+                    </span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -320,7 +293,7 @@ export default function TalleresPage() {
         .talleres-intro-label { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--text); margin: 0 0 4px; }
         .talleres-intro-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; margin: 0; }
 
-        /* --- Propuestas formativas: grid de tarjetas --- */
+        /* --- Propuestas formativas: perfiles --- */
         .talleres-section-header { text-align: center; margin-bottom: 56px; }
         .talleres-section-title {
           font-family: 'Playfair Display', serif;
@@ -332,64 +305,55 @@ export default function TalleresPage() {
           max-width: 540px; margin: 0 auto;
         }
 
-        .talleres-cats-grid {
-          display: grid; grid-template-columns: repeat(3, 1fr);
-          gap: 24px; align-items: start;
+        .talleres-perfiles-grid {
+          display: grid; grid-template-columns: repeat(2, 1fr);
+          gap: 24px;
         }
-        .talleres-cat-card {
+        .talleres-perfil-card {
           background: #fff; border-radius: 20px;
           border: 1px solid rgba(201,168,197,0.15);
-          overflow: hidden;
+          overflow: hidden; display: flex; flex-direction: column;
           box-shadow: 0 4px 20px rgba(168,123,160,0.07);
           transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
-        .talleres-cat-card:hover {
+        .talleres-perfil-card:hover {
           transform: translateY(-4px);
           box-shadow: 0 14px 38px rgba(168,123,160,0.16);
         }
-        .talleres-cat-header {
-          padding: 30px 26px 24px;
-          display: flex; flex-direction: column; gap: 10px;
+        .talleres-perfil-top {
+          padding: 28px 28px 22px;
+          display: flex; flex-direction: column; gap: 8px;
         }
-        .talleres-cat-icon { display: flex; }
-        .talleres-cat-eyebrow {
+        .talleres-perfil-icon { font-size: 1.6rem; }
+        .talleres-perfil-eyebrow {
           font-size: 0.7rem; font-weight: 700;
           letter-spacing: 0.18em; text-transform: uppercase;
         }
-        .talleres-cat-title {
+        .talleres-perfil-label {
           font-family: 'Playfair Display', serif;
-          font-size: 1.3rem; color: var(--text); margin: 0; line-height: 1.2;
+          font-size: 1.5rem; color: var(--text); margin: 0; line-height: 1.15;
         }
-        .talleres-cat-lead {
-          font-size: 0.86rem; color: var(--text-muted);
-          line-height: 1.6; margin: 0;
+        .talleres-perfil-body {
+          padding: 20px 28px 26px;
+          display: flex; flex-direction: column; gap: 16px; flex: 1;
         }
-        .talleres-cat-body {
-          padding: 8px 26px 22px;
-          display: flex; flex-direction: column;
+        .talleres-perfil-desc {
+          font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; margin: 0;
         }
-        .talleres-workshop-item {
-          display: flex; align-items: flex-start; gap: 12px;
-          padding: 12px 0;
-          border-bottom: 1px solid rgba(201,168,197,0.12);
+        .talleres-perfil-tags {
+          display: flex; flex-wrap: wrap; gap: 6px;
         }
-        .talleres-workshop-item:last-child { border-bottom: none; }
-        .talleres-workshop-dot {
-          width: 7px; height: 7px; border-radius: 50%;
-          flex-shrink: 0; margin-top: 5px;
+        .talleres-perfil-tag {
+          font-size: 0.73rem; font-weight: 600; padding: 3px 10px;
+          border-radius: 50px; border: 1px solid; background: transparent;
         }
-        .talleres-workshop-title {
-          font-size: 0.88rem; font-weight: 600;
-          color: var(--text); margin: 0 0 2px; line-height: 1.4;
-        }
-        .talleres-workshop-audience {
-          font-size: 0.76rem; color: var(--text-muted); margin: 0; line-height: 1.35;
+        .talleres-perfil-cta {
+          font-size: 0.85rem; font-weight: 600; margin-top: auto;
+          display: inline-flex; align-items: center; gap: 4px;
         }
 
-        @media (max-width: 1024px) {
-          .talleres-cats-grid { grid-template-columns: 1fr; gap: 20px; }
-        }
         @media (max-width: 860px) {
+          .talleres-perfiles-grid { grid-template-columns: 1fr; }
           .talleres-formato-card { flex-direction: column; align-items: flex-start; gap: 20px; }
           .talleres-formato-left { border-right: none; padding-right: 0; padding-bottom: 16px; border-bottom: 1px solid rgba(201,168,197,0.25); width: 100%; }
           .talleres-formato-cols { flex-wrap: wrap; width: 100%; }
