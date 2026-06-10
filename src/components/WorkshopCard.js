@@ -7,7 +7,10 @@ export default function WorkshopCard({ workshop: w, accent, color }) {
   const waUrl = `https://wa.me/34604807200?text=${encodeURIComponent(`Hola, me interesa el taller "${w.name}"`)}`;
 
   return (
-    <article className="workshop-card" style={{ borderTop: `3px solid ${accent}` }}>
+    <article
+      className="workshop-card"
+      style={{ borderTop: `3px solid ${accent}`, gridColumn: open ? 'span 2' : 'span 1' }}
+    >
 
       {/* Cabecera siempre visible */}
       <div className="workshop-card-top">
@@ -19,7 +22,7 @@ export default function WorkshopCard({ workshop: w, accent, color }) {
 
       {/* Contenido expandible */}
       <div className={`workshop-expandable ${open ? 'open' : ''}`}>
-        <div className="workshop-expandable-inner">
+        <div className={`workshop-expandable-inner ${open ? 'wide' : ''}`}>
           <div className="workshop-block">
             <p className="workshop-label">Qué problema resuelve</p>
             <p className="workshop-problem">{w.problem}</p>
@@ -104,16 +107,26 @@ export default function WorkshopCard({ workshop: w, accent, color }) {
         .workshop-expandable {
           display: grid;
           grid-template-rows: 0fr;
-          transition: grid-template-rows 0.35s ease;
+          transition: grid-template-rows 0.38s ease;
         }
         .workshop-expandable.open {
           grid-template-rows: 1fr;
         }
-        .workshop-expandable-inner { overflow: hidden; }
+        .workshop-expandable-inner {
+          overflow: hidden;
+        }
+        /* Cuando está expandida y ocupa 2 columnas: bloques en paralelo */
+        .workshop-expandable-inner.wide {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
 
         .workshop-block {
-          padding: 12px 22px;
+          padding: 14px 22px;
           border-top: 1px solid rgba(201,168,197,0.1);
+        }
+        .workshop-expandable-inner.wide .workshop-block:last-child {
+          border-left: 1px solid rgba(201,168,197,0.1);
         }
         .workshop-label {
           font-size: 0.67rem; text-transform: uppercase; letter-spacing: 0.12em;
