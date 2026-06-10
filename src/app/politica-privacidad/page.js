@@ -52,7 +52,7 @@ export default function PrivacidadPage() {
                 <ul>
                   <li><strong>Gestión de consultas y solicitudes de cita</strong> (base legal: consentimiento del interesado al enviar el formulario; artículo 6.1.a del RGPD).</li>
                   <li><strong>Comunicación con el usuario</strong> para responder a sus mensajes y resolver dudas (base legal: aplicación de medidas precontractuales o interés legítimo; artículo 6.1.b / 6.1.f del RGPD).</li>
-                  <li>Prestación de servicios de asistencia sanitaria (terapia psicológica), si se formaliza una relación terapéutica. En este supuesto: Para datos relativos a la salud, la base es la prestación de asistencia o tratamiento sanitario sobre la base del derecho de la Unión o de los Estados miembros, y bajo la responsabilidad de un profesional sujeto a la obligación de secreto profesional (artículo 9.2.h del RGPD, en relación con la Ley 41/2002 de Autonomía del Paciente).</li>
+                  <li><strong>Prestación de servicios de asistencia sanitaria (terapia psicológica)</strong>, si se formaliza una relación terapéutica. En este supuesto: Para datos relativos a la salud, la base es la <strong>prestación de asistencia o tratamiento sanitario</strong> sobre la base del derecho de la Unión o de los Estados miembros, y bajo la responsabilidad de un profesional sujeto a la obligación de secreto profesional (<strong>artículo 9.2.h del RGPD</strong>, en relación con la <strong>Ley 41/2002 de Autonomía del Paciente</strong>).</li>
                 </ul>
               </LegalSection>
 
