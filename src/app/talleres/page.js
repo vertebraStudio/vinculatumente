@@ -305,9 +305,8 @@ export default function TalleresPage() {
           text-align: center; line-height: 1.35;
         }
         .talleres-formato-col-duration {
-          font-size: 0.75rem; font-weight: 600; color: var(--accent);
-          background: rgba(201,168,197,0.15); padding: 3px 11px;
-          border-radius: 50px; white-space: nowrap;
+          font-size: 0.82rem; color: var(--text-muted);
+          white-space: nowrap;
         }
         /* Fila 2: 3 tarjetas en fila */
         .talleres-intro-cards {
