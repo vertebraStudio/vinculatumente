@@ -268,17 +268,22 @@ export default function TalleresPage() {
 
         .talleres-intro-grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 20px;
+          grid-template-columns: 1.5fr 1fr;
+          grid-template-rows: repeat(3, auto);
+          gap: 16px;
         }
         .talleres-intro-item {
-          display: flex; flex-direction: column; align-items: center;
-          text-align: center; gap: 8px; padding: 24px 18px;
+          display: flex; flex-direction: column; gap: 10px; padding: 26px 24px;
           background: var(--off-white); border-radius: 20px;
           border: 1px solid rgba(201,168,197,0.2);
         }
+        .talleres-intro-item:first-child {
+          grid-row: 1 / 4;
+          justify-content: center;
+          padding: 36px 32px;
+        }
         .talleres-intro-icon { font-size: 1.4rem; color: var(--accent); }
-        .talleres-intro-label { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--text); margin: 0; }
+        .talleres-intro-label { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--text); margin: 0; }
         .talleres-intro-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; margin: 0; }
 
         .talleres-block {
@@ -338,7 +343,8 @@ export default function TalleresPage() {
         }
 
         @media (max-width: 860px) {
-          .talleres-intro-grid { grid-template-columns: 1fr 1fr; }
+          .talleres-intro-grid { grid-template-columns: 1fr; }
+          .talleres-intro-item:first-child { grid-row: auto; }
           .talleres-block { grid-template-columns: 1fr; direction: ltr; }
           .talleres-block-header { padding: 32px 24px; }
           .talleres-block-list { padding: 24px 24px; }
