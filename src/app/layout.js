@@ -31,6 +31,20 @@ export const metadata = {
     siteName: "Vincula Tu Mente",
     locale: "es_ES",
     type: "website",
+    images: [
+      {
+        url: "/media/vinculatumenteLogo.jpg",
+        width: 1600,
+        height: 1600,
+        alt: "Vincula Tu Mente — María Villalba, psicóloga y sexóloga",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Vincula Tu Mente | María Villalba · Psicóloga y Sexóloga",
+    description: "Un espacio seguro para comprenderte, aceptarte y vivir relaciones más sanas y conscientes. Alcalá de Henares y online en toda España.",
+    images: ["/media/vinculatumenteLogo.jpg"],
   },
   icons: {
     icon: "/media/FavIcon.png",
