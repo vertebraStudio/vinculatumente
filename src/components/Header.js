@@ -12,6 +12,7 @@ export default function Header({ solid = false }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
+  const [isTalleresDropdownOpen, setIsTalleresDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 40);
@@ -21,19 +22,30 @@ export default function Header({ solid = false }) {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    if (isMenuOpen) setIsMobileDropdownOpen(false);
+    if (isMenuOpen) { setIsMobileDropdownOpen(false); setIsTalleresDropdownOpen(false); }
   };
 
   const handleDropdownClick = (e) => {
     if (window.innerWidth <= 900) {
       e.preventDefault();
       setIsMobileDropdownOpen(!isMobileDropdownOpen);
+      setIsTalleresDropdownOpen(false);
     } else {
       setIsMenuOpen(false);
     }
   };
 
-  const close = () => { setIsMenuOpen(false); setIsMobileDropdownOpen(false); };
+  const handleTalleresDropdownClick = (e) => {
+    if (window.innerWidth <= 900) {
+      e.preventDefault();
+      setIsTalleresDropdownOpen(!isTalleresDropdownOpen);
+      setIsMobileDropdownOpen(false);
+    } else {
+      setIsMenuOpen(false);
+    }
+  };
+
+  const close = () => { setIsMenuOpen(false); setIsMobileDropdownOpen(false); setIsTalleresDropdownOpen(false); };
 
   return (
     <header className={`header ${isScrolled || solid ? 'scrolled' : ''}`}>
@@ -66,7 +78,20 @@ export default function Header({ solid = false }) {
                 </div>
               </div>
             </li>
-            <li><Link href="/talleres" onClick={close}>Talleres</Link></li>
+            <li className={`has-dropdown ${isTalleresDropdownOpen ? 'mobile-dropdown-open' : ''}`}>
+              <Link href="/talleres" className="dropdown-trigger" onClick={handleTalleresDropdownClick}>
+                Talleres <span className={`arrow ${isTalleresDropdownOpen ? 'rotated' : ''}`}>▾</span>
+              </Link>
+              <div className="dropdown-card">
+                <div className="dropdown-inner">
+                  <Link href="/talleres" onClick={close}>Ver todos los talleres</Link>
+                  <Link href="/talleres/particulares" onClick={close}>Para particulares</Link>
+                  <Link href="/talleres/familias" onClick={close}>Para familias</Link>
+                  <Link href="/talleres/centros-educativos" onClick={close}>Para centros educativos</Link>
+                  <Link href="/talleres/empresas" onClick={close}>Para empresas</Link>
+                </div>
+              </div>
+            </li>
             <li><Link href="/blog" onClick={close}>Blog</Link></li>
             <li><Link href="/contacto" onClick={close}>Contacto</Link></li>
             <li className="mobile-cta">
