@@ -166,29 +166,59 @@ export default async function Home() {
 
         </section>
 
-        {/* TALLERES BANNER */}
-        <section style={{ background: 'linear-gradient(135deg, var(--accent) 0%, #8B5E87 100%)', padding: '70px 5%', position: 'relative', overflow: 'hidden' }}>
-          <span aria-hidden="true" style={{ position:'absolute', top:'-60px', right:'-60px', width:'320px', height:'320px', borderRadius:'50%', background:'rgba(255,255,255,0.05)', pointerEvents:'none' }} />
-          <span aria-hidden="true" style={{ position:'absolute', bottom:'-80px', left:'10%', width:'240px', height:'240px', borderRadius:'50%', background:'rgba(255,255,255,0.04)', pointerEvents:'none' }} />
-          <div className="container" style={{ position:'relative', zIndex:2, display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:'32px' }}>
-            <div style={{ flex:'1', minWidth:'280px' }}>
-              <span style={{ display:'inline-flex', alignItems:'center', gap:'8px', fontSize:'0.72rem', fontWeight:600, letterSpacing:'0.18em', textTransform:'uppercase', color:'rgba(255,255,255,0.7)', marginBottom:'14px' }}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                Talleres y Formación
-              </span>
-              <h2 style={{ fontFamily:"'Playfair Display', serif", fontSize:'clamp(1.6rem, 3vw, 2.2rem)', fontWeight:600, color:'#fff', margin:'0 0 12px', lineHeight:1.2 }}>
-                ¿Buscas formación para tu equipo,<br />centro o entidad?
-              </h2>
-              <p style={{ fontSize:'1rem', color:'rgba(255,255,255,0.82)', lineHeight:1.75, margin:0, maxWidth:'520px' }}>
-                Diseño talleres, charlas y programas formativos sobre sexualidad, vínculos, salud mental e igualdad. Presencial, online o híbrido, adaptados a tu grupo y objetivos.
-              </p>
+        {/* TALLERES */}
+        <section id="talleres" className="terapias reveal" style={{ backgroundColor:'var(--off-white)', position:'relative', overflow:'hidden' }}>
+          <div className="container">
+            <div className="terapia-intro-grid">
+              <div className="therapy-text">
+                <span className="eyebrow"><span className="eyebrow-line" /><span className="eyebrow-ic">{lineIcons.cap}</span> Talleres y Formación</span>
+                <h2 className="section-title therapy-title">Formación que transforma</h2>
+                <p>Diseño talleres, charlas y programas formativos sobre <strong>sexualidad, vínculos, salud mental e igualdad</strong> para empresas, centros educativos, entidades sociales y equipos profesionales.</p>
+                <p>Cada intervención se adapta al grupo, el contexto y los objetivos. <strong>Presencial en Alcalá de Henares, online o híbrido</strong>.</p>
+                <Link href="/talleres" style={{ display:'inline-flex', alignItems:'center', gap:'8px', marginTop:'8px', fontSize:'0.88rem', fontWeight:600, color:'var(--accent)', textDecoration:'none' }}>
+                  Ver todas las propuestas
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                </Link>
+              </div>
+              <div className="formation-box glass" style={{ border:'1px solid #e8dce6', padding:'28px 30px', display:'flex', flexDirection:'column', gap:'6px' }}>
+                <h3 style={{ color:'var(--text)', marginBottom:'16px', fontFamily:"'Playfair Display',serif", fontSize:'1.1rem' }}>Formato flexible</h3>
+                {[
+                  ['Píldoras formativas', '1,5 – 2h'],
+                  ['Talleres generales', '3 – 4h'],
+                  ['Formaciones para empresas', '2h'],
+                  ['Programas estructurados', 'paquete cerrado'],
+                ].map(([name, dur]) => (
+                  <div key={name} style={{ display:'flex', justifyContent:'space-between', alignItems:'center', padding:'10px 0', borderBottom:'1px solid rgba(201,168,197,0.15)' }}>
+                    <span style={{ fontSize:'0.88rem', color:'var(--text)', fontWeight:500 }}>{name}</span>
+                    <span style={{ fontSize:'0.8rem', color:'var(--accent)', fontWeight:600 }}>{dur}</span>
+                  </div>
+                ))}
+                <p style={{ fontSize:'0.8rem', color:'var(--text-muted)', marginTop:'14px', lineHeight:1.6 }}>
+                  Contenido a medida · Enfoque riguroso · Presencial u online
+                </p>
+              </div>
             </div>
-            <div style={{ display:'flex', flexDirection:'column', gap:'12px', alignItems:'flex-start' }}>
-              <Link href="/talleres" className="talleres-banner-cta">
-                Ver talleres y formaciones
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-              </Link>
-              <span style={{ fontSize:'0.78rem', color:'rgba(255,255,255,0.6)', paddingLeft:'4px' }}>Presencial · Online · Híbrido</span>
+
+            <hr style={{ border:'none', borderTop:'1px solid rgba(0,0,0,0.07)', marginBottom:'60px' }} />
+
+            {/* Tarjetas de áreas temáticas */}
+            <div className="terapia-cards-grid">
+              {[
+                { color:'#F4E9F1', accent:'#A87BA0', icon:'♡', label:'Sexualidad, Vínculos y Diversidad', desc:'Talleres sobre relaciones sanas, diversidad sexual y afectiva, consentimiento y bienestar relacional.' },
+                { color:'#EDE3F0', accent:'#8B6088', icon:'◎', label:'Empresas, Igualdad y Cultura', desc:'Programas sobre planes de igualdad, prevención del acoso, liderazgo emocional y bienestar laboral.' },
+                { color:'#F8F0F7', accent:'#9B6E97', icon:'✦', label:'Salud Mental y Diversos Contextos', desc:'Intervenciones sobre regulación emocional, prevención del suicidio, TCA y violencia de género.' },
+              ].map(({ color, accent, icon, label, desc }) => (
+                <Link key={label} href="/talleres" style={{ textDecoration:'none', border:'1px solid #e8dce6', borderRadius:'16px' }} className="therapy-mini-card">
+                  <div style={{ aspectRatio:'4/3', overflow:'hidden', borderRadius:'16px 16px 0 0', background: color, display:'flex', alignItems:'center', justifyContent:'center' }}>
+                    <span style={{ fontSize:'3rem', color: accent, opacity:0.7 }}>{icon}</span>
+                  </div>
+                  <div style={{ padding:'20px 20px 22px', backgroundColor:'white', borderRadius:'0 0 16px 16px' }}>
+                    <h3 style={{ fontSize:'1.05rem', fontWeight:600, color:'var(--text)', marginBottom:'8px', fontFamily:"'Playfair Display',serif" }}>{label}</h3>
+                    <p style={{ fontSize:'0.88rem', color:'var(--text-muted)', lineHeight:'1.6', marginBottom:'16px' }}>{desc}</p>
+                    <span style={{ fontSize:'0.85rem', fontWeight:600, color:'var(--accent)' }}>Ver propuestas →</span>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

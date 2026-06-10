@@ -158,34 +158,33 @@ export default function TalleresPage() {
           </div>
         </section>
 
-        {/* BLOQUES TEMÁTICOS */}
+        {/* PROPUESTAS FORMATIVAS */}
         <section id="bloques" style={{ backgroundColor: 'var(--off-white)', padding: '80px 5% 100px' }}>
           <div className="container">
-            <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+            <div className="talleres-section-header">
               <span className="eyebrow eyebrow-center">
                 <span className="eyebrow-line" />Bloques temáticos<span className="eyebrow-line" />
               </span>
-              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2rem, 3vw, 2.8rem)', color: 'var(--text)', margin: '12px 0 0' }}>
-                Propuestas formativas
-              </h2>
+              <h2 className="talleres-section-title">Propuestas formativas</h2>
+              <p className="talleres-section-sub">Cada intervención se diseña según el grupo, el contexto y los objetivos. Presencial, online o híbrido.</p>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '80px' }}>
-              {categories.map((cat, idx) => (
-                <div key={cat.id} id={cat.id} className={`talleres-block ${idx % 2 === 1 ? 'talleres-block--reverse' : ''}`}>
-                  <div className="talleres-block-header" style={{ backgroundColor: cat.color }}>
-                    <span className="talleres-block-icon" style={{ color: cat.accent }}>{cat.icon}</span>
-                    <span className="talleres-block-eyebrow" style={{ color: cat.accent }}>{cat.eyebrow}</span>
-                    <h2 className="talleres-block-title">{cat.title}</h2>
-                    <p className="talleres-block-lead">{cat.lead}</p>
+            <div className="talleres-cats-grid">
+              {categories.map((cat) => (
+                <div key={cat.id} id={cat.id} className="talleres-cat-card">
+                  <div className="talleres-cat-header" style={{ backgroundColor: cat.color }}>
+                    <span className="talleres-cat-icon" style={{ color: cat.accent }}>{cat.icon}</span>
+                    <span className="talleres-cat-eyebrow" style={{ color: cat.accent }}>{cat.eyebrow}</span>
+                    <h3 className="talleres-cat-title">{cat.title}</h3>
+                    <p className="talleres-cat-lead">{cat.lead}</p>
                   </div>
-                  <div className="talleres-block-list">
+                  <div className="talleres-cat-body">
                     {cat.workshops.map((w) => (
-                      <div key={w.title} className="talleres-item">
-                        <div className="talleres-item-dot" style={{ backgroundColor: cat.accent }} />
+                      <div key={w.title} className="talleres-workshop-item">
+                        <div className="talleres-workshop-dot" style={{ backgroundColor: cat.accent }} />
                         <div>
-                          <p className="talleres-item-title">{w.title}</p>
-                          <p className="talleres-item-audience">{w.audience}</p>
+                          <p className="talleres-workshop-title">{w.title}</p>
+                          <p className="talleres-workshop-audience">{w.audience}</p>
                         </div>
                       </div>
                     ))}
@@ -321,62 +320,75 @@ export default function TalleresPage() {
         .talleres-intro-label { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--text); margin: 0 0 4px; }
         .talleres-intro-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; margin: 0; }
 
-        .talleres-block {
-          display: grid;
-          grid-template-columns: 1fr 1.2fr;
-          gap: 0;
-          border-radius: 24px;
-          overflow: hidden;
-          box-shadow: 0 12px 40px rgba(168,123,160,0.1);
+        /* --- Propuestas formativas: grid de tarjetas --- */
+        .talleres-section-header { text-align: center; margin-bottom: 56px; }
+        .talleres-section-title {
+          font-family: 'Playfair Display', serif;
+          font-size: clamp(2rem, 3vw, 2.8rem);
+          color: var(--text); margin: 12px 0 16px;
         }
-        .talleres-block--reverse { direction: rtl; }
-        .talleres-block--reverse > * { direction: ltr; }
+        .talleres-section-sub {
+          color: var(--text-muted); font-size: 1rem; line-height: 1.7;
+          max-width: 540px; margin: 0 auto;
+        }
 
-        .talleres-block-header {
-          padding: 48px 40px;
-          display: flex; flex-direction: column; gap: 12px;
-          justify-content: center;
+        .talleres-cats-grid {
+          display: grid; grid-template-columns: repeat(3, 1fr);
+          gap: 24px; align-items: start;
         }
-        .talleres-block-icon { display: flex; }
-        .talleres-block-eyebrow {
-          font-size: 0.72rem; font-weight: 700;
+        .talleres-cat-card {
+          background: #fff; border-radius: 20px;
+          border: 1px solid rgba(201,168,197,0.15);
+          overflow: hidden;
+          box-shadow: 0 4px 20px rgba(168,123,160,0.07);
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .talleres-cat-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 14px 38px rgba(168,123,160,0.16);
+        }
+        .talleres-cat-header {
+          padding: 30px 26px 24px;
+          display: flex; flex-direction: column; gap: 10px;
+        }
+        .talleres-cat-icon { display: flex; }
+        .talleres-cat-eyebrow {
+          font-size: 0.7rem; font-weight: 700;
           letter-spacing: 0.18em; text-transform: uppercase;
         }
-        .talleres-block-title {
+        .talleres-cat-title {
           font-family: 'Playfair Display', serif;
-          font-size: clamp(1.4rem, 2vw, 1.9rem);
-          color: var(--text); margin: 0; line-height: 1.2;
+          font-size: 1.3rem; color: var(--text); margin: 0; line-height: 1.2;
         }
-        .talleres-block-lead {
-          font-size: 0.95rem; color: var(--text-muted);
-          line-height: 1.65; margin: 0;
+        .talleres-cat-lead {
+          font-size: 0.86rem; color: var(--text-muted);
+          line-height: 1.6; margin: 0;
         }
-
-        .talleres-block-list {
-          background: #fff;
-          padding: 32px 36px;
-          display: flex; flex-direction: column; gap: 0;
+        .talleres-cat-body {
+          padding: 8px 26px 22px;
+          display: flex; flex-direction: column;
         }
-        .talleres-item {
-          display: flex; align-items: flex-start; gap: 14px;
-          padding: 16px 0;
-          border-bottom: 1px solid rgba(201,168,197,0.15);
+        .talleres-workshop-item {
+          display: flex; align-items: flex-start; gap: 12px;
+          padding: 12px 0;
+          border-bottom: 1px solid rgba(201,168,197,0.12);
         }
-        .talleres-item:last-child { border-bottom: none; }
-        .talleres-item-dot {
-          width: 8px; height: 8px; border-radius: 50%;
-          flex-shrink: 0; margin-top: 6px;
+        .talleres-workshop-item:last-child { border-bottom: none; }
+        .talleres-workshop-dot {
+          width: 7px; height: 7px; border-radius: 50%;
+          flex-shrink: 0; margin-top: 5px;
         }
-        .talleres-item-title {
-          font-size: 0.95rem; font-weight: 600;
-          color: var(--text); margin: 0 0 3px;
-          line-height: 1.4;
+        .talleres-workshop-title {
+          font-size: 0.88rem; font-weight: 600;
+          color: var(--text); margin: 0 0 2px; line-height: 1.4;
         }
-        .talleres-item-audience {
-          font-size: 0.8rem; color: var(--text-muted);
-          margin: 0; line-height: 1.4;
+        .talleres-workshop-audience {
+          font-size: 0.76rem; color: var(--text-muted); margin: 0; line-height: 1.35;
         }
 
+        @media (max-width: 1024px) {
+          .talleres-cats-grid { grid-template-columns: 1fr; gap: 20px; }
+        }
         @media (max-width: 860px) {
           .talleres-formato-card { flex-direction: column; align-items: flex-start; gap: 20px; }
           .talleres-formato-left { border-right: none; padding-right: 0; padding-bottom: 16px; border-bottom: 1px solid rgba(201,168,197,0.25); width: 100%; }
@@ -384,9 +396,6 @@ export default function TalleresPage() {
           .talleres-formato-col { flex: 1 1 45%; border-right: none; padding: 10px 8px; border-bottom: 1px solid rgba(201,168,197,0.15); }
           .talleres-formato-col:nth-child(3), .talleres-formato-col:nth-child(4) { border-bottom: none; }
           .talleres-intro-cards { grid-template-columns: 1fr; }
-          .talleres-block { grid-template-columns: 1fr; direction: ltr; }
-          .talleres-block-header { padding: 32px 24px; }
-          .talleres-block-list { padding: 24px 24px; }
         }
       `}</style>
     </>
