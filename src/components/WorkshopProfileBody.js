@@ -54,6 +54,7 @@ export default function WorkshopProfileBody({ profile, workshops }) {
               <h2 className="wkp-section-title">{tagline}</h2>
             </div>
 
+            <div className="wkp-layout">
             <div className="workshop-grid">
               {workshops.map((w, i) => {
                 const waUrl = `https://wa.me/34604807200?text=${encodeURIComponent(`Hola, me interesa el taller "${w.name}"`)}`;
@@ -110,7 +111,48 @@ export default function WorkshopProfileBody({ profile, workshops }) {
                   </article>
                 );
               })}
-            </div>
+            </div>{/* /workshop-grid */}
+
+            {/* TARJETA CONTACTO LATERAL */}
+            <aside className="wkp-sidebar">
+              <div className="wkp-contact-card">
+                <div className="wkp-card-header" style={{ background: `linear-gradient(135deg, ${accent} 0%, ${accent}cc 100%)` }}>
+                  <div className="wkp-card-logo">
+                    <img src="/media/vinculatumenteLogo.jpg" alt="Vincula Tu Mente" />
+                  </div>
+                  <div>
+                    <p className="wkp-card-name">María Villalba</p>
+                    <p className="wkp-card-role">Psicóloga y sexóloga</p>
+                  </div>
+                </div>
+                <div className="wkp-card-body">
+                  <p className="wkp-card-row wkp-card-colegiada">Nº Colegiada M-43581</p>
+                  <p className="wkp-card-row wkp-card-location">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Alcalá de Henares · Online
+                  </p>
+                  <a href="tel:+34604807200" className="wkp-card-contact">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.9 12.59 19.79 19.79 0 0 1 1.83 4a2 2 0 0 1 2-1.92h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    +34 604 80 72 00
+                  </a>
+                  <a href="mailto:vinculatumente@gmail.com" className="wkp-card-contact">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    vinculatumente@gmail.com
+                  </a>
+                  <a href="/contacto" className="wkp-card-cta-btn" style={{ background: accent }}>
+                    Solicitar información →
+                  </a>
+                  <p className="wkp-card-note" style={{ borderLeftColor: `${accent}50` }}>
+                    {profile.note || 'Presencial en Alcalá de Henares y online en toda España.'}
+                  </p>
+                  <a href="https://www.instagram.com/vinculatumente/" target="_blank" rel="noopener noreferrer" className="wkp-card-ig" style={{ color: accent }}>
+                    @vinculatumente
+                  </a>
+                </div>
+              </div>
+            </aside>
+
+            </div>{/* /wkp-layout */}
           </div>
         </section>
 
@@ -195,6 +237,91 @@ export default function WorkshopProfileBody({ profile, workshops }) {
           font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--text); margin: 12px 0 0;
         }
 
+        /* --- Layout con sidebar --- */
+        .wkp-layout {
+          display: grid;
+          grid-template-columns: 1fr 290px;
+          gap: 40px;
+          align-items: start;
+        }
+        .wkp-sidebar {
+          position: sticky;
+          top: 100px;
+        }
+
+        /* --- Tarjeta de contacto --- */
+        .wkp-contact-card {
+          background: #fff;
+          border-radius: 20px;
+          overflow: hidden;
+          border: 1px solid rgba(201,168,197,0.2);
+          box-shadow: 0 8px 32px rgba(168,123,160,0.12);
+        }
+        .wkp-card-header {
+          padding: 24px 22px;
+          display: flex; align-items: center; gap: 16px;
+        }
+        .wkp-card-logo {
+          width: 60px; height: 60px; border-radius: 50%;
+          overflow: hidden; background: #fff; flex-shrink: 0;
+          border: 2.5px solid rgba(255,255,255,0.8);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+          display: flex; align-items: center; justify-content: center;
+        }
+        .wkp-card-logo img { width: 82%; height: 82%; object-fit: contain; }
+        .wkp-card-name {
+          font-family: 'Playfair Display', serif;
+          font-size: 1.2rem; color: #fff; margin: 0 0 2px; font-weight: 600;
+        }
+        .wkp-card-role {
+          font-size: 0.82rem; color: rgba(255,255,255,0.82);
+          margin: 0; font-style: italic;
+        }
+        .wkp-card-body {
+          padding: 20px 22px 22px;
+          display: flex; flex-direction: column; gap: 0;
+        }
+        .wkp-card-row {
+          font-size: 0.82rem; color: var(--text-muted);
+          padding: 12px 0; border-bottom: 1px solid rgba(201,168,197,0.18);
+          margin: 0; display: flex; align-items: center; gap: 8px;
+        }
+        .wkp-card-colegiada { font-size: 0.8rem; }
+        .wkp-card-contact {
+          display: flex; align-items: center; gap: 10px;
+          padding: 12px 0; border-bottom: 1px solid rgba(201,168,197,0.18);
+          font-size: 0.88rem; font-weight: 700; color: var(--text);
+          text-decoration: none; transition: color 0.2s;
+        }
+        .wkp-card-contact:hover { color: var(--accent); }
+        .wkp-card-contact svg { color: var(--accent); flex-shrink: 0; }
+        .wkp-card-cta-btn {
+          display: block; text-align: center;
+          margin: 18px 0 0; padding: 14px;
+          color: #fff; border-radius: 50px;
+          font-size: 0.78rem; font-weight: 700;
+          letter-spacing: 0.1em; text-transform: uppercase;
+          text-decoration: none;
+          box-shadow: 0 6px 18px rgba(168,123,160,0.28);
+          transition: all 0.25s ease;
+        }
+        .wkp-card-cta-btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+        .wkp-card-note {
+          font-size: 0.8rem; color: var(--text-muted); font-style: italic;
+          line-height: 1.55; margin: 14px 0 0;
+          padding: 10px 12px;
+          background: rgba(201,168,197,0.08);
+          border-left: 2px solid;
+          border-radius: 0 8px 8px 0;
+        }
+        .wkp-card-ig {
+          display: block; text-align: center;
+          font-size: 0.82rem; font-weight: 600;
+          margin-top: 16px; text-decoration: none;
+          transition: opacity 0.2s;
+        }
+        .wkp-card-ig:hover { opacity: 0.75; }
+
         /* --- Workshop cards --- */
         .workshop-grid {
           display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
@@ -270,7 +397,12 @@ export default function WorkshopProfileBody({ profile, workshops }) {
           filter: brightness(1.06);
         }
 
+        @media (max-width: 1100px) {
+          .wkp-layout { grid-template-columns: 1fr 260px; gap: 28px; }
+        }
         @media (max-width: 900px) {
+          .wkp-layout { grid-template-columns: 1fr; }
+          .wkp-sidebar { position: static; }
           .workshop-grid { grid-template-columns: 1fr; }
           .wkp-hero { padding: 110px 5% 56px; }
         }

@@ -12,6 +12,7 @@ const profile = {
   description: 'Programas y talleres para alumnado, equipos docentes y orientadores. Intervenciones psicoeducativas diseñadas para el aula, basadas en evidencia y adaptadas a cada etapa educativa.',
   tagline: 'Contenido que transforma el aula',
   color: '#F8F0F7',
+  note: 'Principalmente presencial. Consulta disponibilidad para formato online.',
   accent: '#9B6E97',
 };
 

@@ -12,6 +12,7 @@ const profile = {
   description: 'Programas de formación psicológica para empresas, departamentos de RRHH y equipos directivos. Intervenciones que mejoran el clima laboral, la igualdad y el bienestar de las personas.',
   tagline: 'Formación con impacto real en tu organización',
   color: '#EDE8F2',
+  note: 'Formación presencial en tu sede o en Alcalá de Henares, y online.',
   accent: '#7A5580',
 };
 

@@ -12,6 +12,7 @@ const profile = {
   description: 'Formación práctica para padres, madres y tutores que quieren entender mejor a sus hijos e hijas, mejorar la convivencia y construir vínculos más sanos en casa.',
   tagline: 'Herramientas para acompañar mejor',
   color: '#EDE3F0',
+  note: 'Talleres presenciales y en formato online o híbrido. Consulta disponibilidad.',
   accent: '#8B6088',
 };
 

@@ -12,6 +12,7 @@ const profile = {
   description: 'Espacios formativos para personas adultas que quieren comprender mejor su mundo emocional, su sexualidad y sus relaciones. Talleres divulgativos, prácticos y libres de juicio.',
   tagline: 'Aprende, comprende, avanza',
   color: '#F4E9F1',
+  note: 'Sesiones presenciales en Alcalá de Henares y online en toda España.',
   accent: '#A87BA0',
 };
 
