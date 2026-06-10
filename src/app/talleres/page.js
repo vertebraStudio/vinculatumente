@@ -121,34 +121,41 @@ export default function TalleresPage() {
                 {
                   icon: '✦', label: 'Formato flexible',
                   desc: (
-                    <>
-                      <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '5px', textAlign: 'left' }}>
-                        {[
-                          ['Píldoras formativas', '1,5 – 2h'],
-                          ['Talleres generales', '3 – 4h'],
-                          ['Formaciones para empresas', '2h'],
-                          ['Programas estructurados', 'paquete cerrado'],
-                        ].map(([name, duration]) => (
-                          <li key={name} style={{ display: 'flex', justifyContent: 'space-between', gap: '10px', fontSize: '0.88rem', color: 'var(--text-muted)', borderBottom: '1px solid rgba(201,168,197,0.2)', paddingBottom: '8px', paddingTop: '8px' }}>
-                            <span style={{ fontWeight: 500, color: 'var(--text)' }}>{name}</span>
-                            <span style={{ whiteSpace: 'nowrap', color: 'var(--accent)', fontWeight: 600 }}>{duration}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <p style={{ margin: 0, fontSize: '0.82rem', fontStyle: 'italic', color: 'var(--text-muted)', paddingTop: '4px' }}>
-                        Cada formato se adapta al grupo, al contexto y a los objetivos. Cuéntame qué necesitas y lo diseñamos juntas.
-                      </p>
-                    </>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '12px', width: '100%' }}>
+                      {[
+                        ['Píldoras formativas', '1,5 – 2h'],
+                        ['Talleres generales', '3 – 4h'],
+                        ['Formaciones para empresas', '2h'],
+                        ['Programas estructurados', 'paquete cerrado'],
+                      ].map(([name, duration]) => (
+                        <div key={name} style={{ display: 'flex', flexDirection: 'column', gap: '6px', padding: '16px', background: 'rgba(255,255,255,0.7)', borderRadius: '12px', border: '1px solid rgba(201,168,197,0.25)' }}>
+                          <span style={{ fontSize: '0.92rem', fontWeight: 600, color: 'var(--text)' }}>{name}</span>
+                          <span style={{ fontSize: '0.82rem', color: 'var(--accent)', fontWeight: 600 }}>{duration}</span>
+                        </div>
+                      ))}
+                    </div>
                   )
                 },
                 { icon: '◎', label: 'Contenido a medida', desc: 'Cada intervención se diseña según el perfil del grupo, el contexto y los objetivos.' },
                 { icon: '♡', label: 'Enfoque riguroso', desc: 'Basado en evidencia científica, perspectiva de género y psicología afirmativa.' },
                 { icon: '⊙', label: 'Presencial u online', desc: 'Talleres presenciales en centros educativos, empresas y entidades, con posibilidad de formato online o híbrido.' },
-              ].map((item) => (
+              ].map((item, i) => (
                 <div key={item.label} className="talleres-intro-item">
-                  <span className="talleres-intro-icon">{item.icon}</span>
-                  <h3 className="talleres-intro-label">{item.label}</h3>
-                  <div className="talleres-intro-desc">{item.desc}</div>
+                  {i === 0 ? (
+                    <>
+                      <div className="talleres-intro-header">
+                        <span className="talleres-intro-icon">{item.icon}</span>
+                        <h3 className="talleres-intro-label">{item.label}</h3>
+                      </div>
+                      <div className="talleres-intro-desc">{item.desc}</div>
+                    </>
+                  ) : (
+                    <>
+                      <span className="talleres-intro-icon">{item.icon}</span>
+                      <h3 className="talleres-intro-label">{item.label}</h3>
+                      <div className="talleres-intro-desc">{item.desc}</div>
+                    </>
+                  )}
                 </div>
               ))}
             </div>
@@ -273,19 +280,27 @@ export default function TalleresPage() {
 
         .talleres-intro-grid {
           display: grid;
-          grid-template-columns: 1.4fr 1fr;
-          grid-template-rows: repeat(3, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 16px;
         }
         .talleres-intro-item {
-          display: flex; flex-direction: column; gap: 10px; padding: 26px 24px;
+          display: flex; flex-direction: column; gap: 12px; padding: 26px 24px;
           background: var(--off-white); border-radius: 20px;
           border: 1px solid rgba(201,168,197,0.2);
         }
         .talleres-intro-item:first-child {
-          grid-row: 1 / 4;
-          justify-content: space-between;
-          padding: 32px 32px;
+          grid-column: 1 / -1;
+          flex-direction: row;
+          align-items: center;
+          gap: 40px;
+          padding: 28px 32px;
+        }
+        .talleres-intro-item:first-child .talleres-intro-header {
+          display: flex; flex-direction: column; gap: 6px;
+          flex-shrink: 0; width: 160px;
+        }
+        .talleres-intro-item:first-child .talleres-intro-desc {
+          flex: 1;
         }
         .talleres-intro-icon { font-size: 1.4rem; color: var(--accent); }
         .talleres-intro-label { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--text); margin: 0; }
@@ -349,7 +364,8 @@ export default function TalleresPage() {
 
         @media (max-width: 860px) {
           .talleres-intro-grid { grid-template-columns: 1fr; }
-          .talleres-intro-item:first-child { grid-row: auto; }
+          .talleres-intro-item:first-child { grid-column: auto; flex-direction: column; gap: 12px; }
+          .talleres-intro-item:first-child .talleres-intro-header { width: auto; }
           .talleres-block { grid-template-columns: 1fr; direction: ltr; }
           .talleres-block-header { padding: 32px 24px; }
           .talleres-block-list { padding: 24px 24px; }
