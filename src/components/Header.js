@@ -55,7 +55,7 @@ export default function Header({ solid = false }) {
             <li><Link href="/" onClick={close}>Inicio</Link></li>
             <li className={`has-dropdown ${isMobileDropdownOpen ? 'mobile-dropdown-open' : ''}`}>
               <Link href="/#terapias" className="dropdown-trigger" onClick={handleDropdownClick}>
-                Terapias <span className={`arrow ${isMobileDropdownOpen ? 'rotated' : ''}`}>▾</span>
+                Sesiones <span className={`arrow ${isMobileDropdownOpen ? 'rotated' : ''}`}>▾</span>
               </Link>
               <div className="dropdown-card">
                 <div className="dropdown-inner">

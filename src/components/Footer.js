@@ -34,7 +34,7 @@ export default function Footer() {
             <ul className="footer-nav-links">
               <li><Link href="/">Inicio</Link></li>
               <li><Link href="/#sobre-mi">Sobre mí</Link></li>
-              <li><Link href="/#terapias">Terapias</Link></li>
+              <li><Link href="/#terapias">Sesiones</Link></li>
               <li><Link href="/#compromiso">Cómo trabajo</Link></li>
               <li><Link href="/talleres">Talleres</Link></li>
               <li><Link href="/blog">Blog</Link></li>

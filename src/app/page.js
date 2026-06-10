@@ -123,7 +123,7 @@ export default async function Home() {
           <div className="container">
             <div className="terapia-intro-grid">
               <div className="therapy-text">
-                <span className="eyebrow"><span className="eyebrow-line" /><span className="eyebrow-ic">{lineIcons.heart}</span> Terapias</span>
+                <span className="eyebrow"><span className="eyebrow-line" /><span className="eyebrow-ic">{lineIcons.heart}</span> Sesiones</span>
                 <h2 className="section-title therapy-title">Mi forma de acompañarte</h2>
                 <p>Te acompaño a <strong>comprenderte, aceptarte y vivir relaciones más sanas y conscientes</strong>, integrando lo emocional y lo sexual como parte de un mismo bienestar.</p>
                 <p>Cada proceso es único. Partimos de tu historia y tus objetivos para diseñar un acompañamiento personalizado, con herramientas prácticas que puedas aplicar en tu vida cotidiana.</p>
