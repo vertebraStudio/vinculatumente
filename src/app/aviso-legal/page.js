@@ -28,7 +28,7 @@ export default function AvisoLegalPage() {
                 <p>En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE), se facilitan los siguientes datos:</p>
                 <LegalTable rows={[
                   ["Titular", "María Villalba López"],
-                  ["Actividad", "Psicóloga General Sanitaria y Sexóloga"],
+                  ["Actividad", "Psicóloga y Sexóloga"],
                   ["Nº de Colegiada", "M-43581 (Colegio Oficial de la Psicología de Madrid)"],
                   ["Ámbito de atención", "Alcalá de Henares (Madrid) y terapia online en toda España"],
                   ["Teléfono", "+34 604 80 72 00"],

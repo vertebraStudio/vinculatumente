@@ -28,7 +28,7 @@ export default function PrivacidadPage() {
                 <p>En cumplimiento del Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo (RGPD) y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y Garantía de los Derechos Digitales (LOPDGDD), se informa de los siguientes datos del responsable del tratamiento:</p>
                 <LegalTable rows={[
                   ["Titular / Responsable", "María Villalba López"],
-                  ["Actividad", "Psicóloga General Sanitaria y Sexóloga"],
+                  ["Actividad", "Psicóloga y Sexóloga"],
                   ["Nº de Colegiada", "M-43581 (Colegio Oficial de la Psicología de Madrid)"],
                   ["Ámbito de atención", "Alcalá de Henares (Madrid) y online en toda España"],
                   ["Email de contacto", "vinculatumente@gmail.com"],
