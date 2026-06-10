@@ -53,7 +53,7 @@ export default function WorkshopCard({ workshop: w, accent, color }) {
       </div>
 
       {/* Acciones */}
-      <div className="workshop-cta-wrap">
+      <div className={`workshop-cta-wrap ${open ? 'open' : ''}`}>
         <button
           onClick={() => setOpen(!open)}
           className="btn-toggle"
@@ -69,16 +69,18 @@ export default function WorkshopCard({ workshop: w, accent, color }) {
             <polyline points="6 9 12 15 18 9"/>
           </svg>
         </button>
-        <a
-          href={waUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-workshop"
-          style={{ background: accent }}
-        >
-          Solicitar
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        </a>
+        {open && (
+          <a
+            href={waUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-workshop"
+            style={{ background: accent }}
+          >
+            Solicitar este taller
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
+        )}
       </div>
 
       <style jsx>{`
