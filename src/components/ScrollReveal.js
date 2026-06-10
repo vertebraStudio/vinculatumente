@@ -47,6 +47,10 @@ export default function ScrollReveal() {
             element.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }, 300); // Small timeout to ensure layout is ready
         }
+      } else {
+        // No hash anchor — volvemos al inicio de la página (cubre el caso
+        // "Inicio" desde /#terapias u otro ancla de la misma página)
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     };
 

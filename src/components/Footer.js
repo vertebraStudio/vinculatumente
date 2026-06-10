@@ -62,10 +62,6 @@ export default function Footer() {
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="4" /><line x1="8" y1="11" x2="8" y2="16" /><line x1="8" y1="8" x2="8" y2="8.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 0 0-4 0" /></svg>
                 LinkedIn
               </a>
-              <span style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.82rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
-                Alcalá de Henares, Madrid · Online en toda España
-              </span>
             </div>
           </div>
 
@@ -88,7 +84,7 @@ export default function Footer() {
       </div>
 
       <style jsx>{`
-        .footer-bottom-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; width: 100%; }
+        .footer-bottom-flex { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%; text-align: center; }
         .footer-bottom-flex p { margin: 0; }
         .credit-link { color: rgba(255,255,255,0.8) !important; text-decoration: none !important; font-weight: 500 !important; transition: var(--transition) !important; }
         .credit-link:hover { color: var(--primary) !important; }
@@ -119,7 +115,7 @@ export default function Footer() {
         @media (max-width: 768px) {
           .container { padding: 0 24px; }
           .footer-content { grid-template-columns: 1fr; gap: 40px; }
-          .footer-bottom { text-align: left; }
+          .footer-bottom { text-align: center; }
         }
       `}</style>
     </footer>
