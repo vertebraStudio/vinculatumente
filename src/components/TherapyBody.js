@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 // ============================================================
 // CUERPO DE PÁGINA DE TERAPIA — contenido + sidebar sticky
@@ -56,7 +57,7 @@ export default function TherapyBody({ introTitle, introParas = [], senales = [],
         <aside className="ty-aside">
           <div className="ty-card">
             <div className="ty-card-head">
-              <img src="/media/vinculatumenteLogo.jpg" alt="Vincula Tu Mente" className="ty-avatar" />
+              <Image src="/media/vinculatumenteLogo.jpg" alt="Vincula Tu Mente" width={54} height={54} className="ty-avatar" />
               <div>
                 <p className="ty-name">María Villalba</p>
                 <p className="ty-role">Psicóloga y sexóloga</p>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -127,7 +128,7 @@ export default async function PostPage({ params }) {
                 </div>
                 {post.heroImage && (
                   <div className="post-hero-image">
-                    <img src={post.heroImage} alt={post.heroImageAlt || post.title} />
+                    <Image src={post.heroImage} alt={post.heroImageAlt || post.title} fill style={{ objectFit: 'cover' }} sizes="(max-width: 720px) 100vw, 380px" priority />
                   </div>
                 )}
               </div>
@@ -148,7 +149,7 @@ export default async function PostPage({ params }) {
                 )}
 
                 <div className="post-author-card">
-                  <img src="/media/vinculatumenteLogo.jpg" alt="Vincula Tu Mente" className="pac-avatar" />
+                  <Image src="/media/vinculatumenteLogo.jpg" alt="Vincula Tu Mente" width={72} height={72} className="pac-avatar" />
                   <div>
                     <p className="pac-name">María Villalba</p>
                     <p className="pac-role">Psicóloga y Sexóloga · Nº Col. M-43581</p>
@@ -183,7 +184,7 @@ export default async function PostPage({ params }) {
                   {related.map((p) => (
                     <Link key={p.slug} href={`/blog/${p.slug}/`} className="post-related-card">
                       <div className="prc-image">
-                        {p.heroImage ? <img src={p.heroImage} alt={p.heroImageAlt || ''} /> : <div className="prc-ph"><span>{p.title?.[0] || '♡'}</span></div>}
+                        {p.heroImage ? <Image src={p.heroImage} alt={p.heroImageAlt || ''} fill style={{ objectFit: 'cover' }} sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" /> : <div className="prc-ph"><span>{p.title?.[0] || '♡'}</span></div>}
                       </div>
                       <div className="prc-body">
                         <span className="prc-date">{formatDate(p.publishedAt)}</span>

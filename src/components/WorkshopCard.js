@@ -15,9 +15,9 @@ export default function WorkshopCard({ workshop: w, accent, color }) {
       {/* Cabecera siempre visible */}
       <div className="workshop-card-top">
         <h3 className="workshop-name">{w.name}</h3>
-        <span className="workshop-chip" style={{ color: accent, background: color }}>
+        <p className="workshop-audience" style={{ borderLeftColor: accent }}>
           {w.audience}
-        </span>
+        </p>
       </div>
 
       {/* Contenido expandible */}
@@ -45,10 +45,6 @@ export default function WorkshopCard({ workshop: w, accent, color }) {
         <span className="workshop-meta-chip">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           {w.modality}
-        </span>
-        <span className="workshop-meta-chip" style={{ color: accent, borderColor: `${accent}40`, background: color }}>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          {w.price}
         </span>
       </div>
 
@@ -100,9 +96,11 @@ export default function WorkshopCard({ workshop: w, accent, color }) {
           font-family: 'Playfair Display', serif; font-size: 1.1rem;
           color: var(--text); margin: 0 0 10px; line-height: 1.25;
         }
-        .workshop-chip {
-          font-size: 0.74rem; font-weight: 600; padding: 3px 11px;
-          border-radius: 50px; display: inline-block;
+        .workshop-audience {
+          font-size: 0.82rem; color: var(--text-muted); font-style: italic;
+          line-height: 1.5; margin: 6px 0 0; padding: 7px 12px 7px 13px;
+          background: rgba(201,168,197,0.07); border-left: 2px solid;
+          border-radius: 0 6px 6px 0;
         }
 
         /* Contenido expandible con grid trick */

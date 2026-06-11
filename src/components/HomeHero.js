@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 // ============================================================
 // HERO — Vincula Tu Mente
@@ -51,7 +52,7 @@ export default function HomeHero() {
         <div className="hero-visual">
           <span className="visual-ring" aria-hidden="true" />
           <div className="hero-photo">
-            <img src="/media/maria-profile-2.png" alt="María Villalba, psicóloga y sexóloga" className="hero-photo-img" />
+            <Image src="/media/maria-profile-2.png" alt="María Villalba, psicóloga y sexóloga" fill className="hero-photo-img" priority sizes="(max-width: 900px) 70vw, 40vw" />
           </div>
           <div className="hero-floating-card">
             <span className="fc-heart">♡</span>

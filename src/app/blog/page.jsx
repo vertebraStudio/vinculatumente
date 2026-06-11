@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Suspense } from 'react';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BlogSearch from '@/components/BlogSearch';
@@ -85,7 +86,7 @@ export default async function BlogIndexPage({ searchParams }) {
                   <Link href={`/blog/${featured.slug}/`} className="blog-featured">
                     <div className="bf-image">
                       {featured.heroImage ? (
-                        <img src={featured.heroImage} alt={featured.heroImageAlt || ''} />
+                        <Image src={featured.heroImage} alt={featured.heroImageAlt || ''} fill style={{ objectFit: 'cover' }} sizes="(max-width: 900px) 100vw, 55vw" />
                       ) : (
                         <div className="bf-image-ph">
                           <span>{featured.title?.[0] || '♡'}</span>
@@ -110,7 +111,7 @@ export default async function BlogIndexPage({ searchParams }) {
                       <Link key={p.slug} href={`/blog/${p.slug}/`} className="blog-card">
                         <div className="bc-image">
                           {p.heroImage ? (
-                            <img src={p.heroImage} alt={p.heroImageAlt || ''} />
+                            <Image src={p.heroImage} alt={p.heroImageAlt || ''} fill style={{ objectFit: 'cover' }} sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw" />
                           ) : (
                             <div className="bc-image-ph">
                               <span>{p.title?.[0] || '♡'}</span>
@@ -149,7 +150,7 @@ export default async function BlogIndexPage({ searchParams }) {
 
         .blog-featured { display: grid; grid-template-columns: 1.1fr 1fr; gap: 36px; align-items: stretch; padding: 22px; background: #fff; border: 1px solid rgba(201,168,197,0.25); border-radius: 24px; box-shadow: 0 16px 38px rgba(168,123,160,0.12); text-decoration: none; color: inherit; transition: transform 0.35s ease, box-shadow 0.35s ease; margin-bottom: 60px; }
         .blog-featured:hover { transform: translateY(-4px); box-shadow: 0 22px 50px rgba(168,123,160,0.2); }
-        .bf-image { border-radius: 18px; overflow: hidden; aspect-ratio: 4/3; background: linear-gradient(140deg, #EAD9E8, #C9A8C5); }
+        .bf-image { border-radius: 18px; overflow: hidden; aspect-ratio: 4/3; position: relative; background: linear-gradient(140deg, #EAD9E8, #C9A8C5); }
         .bf-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .bf-image-ph { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 5rem; color: rgba(255,255,255,0.6); }
         .bf-content { display: flex; flex-direction: column; justify-content: center; padding: 8px 4px 8px 0; }
@@ -163,7 +164,7 @@ export default async function BlogIndexPage({ searchParams }) {
         .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
         .blog-card { display: flex; flex-direction: column; background: #fff; border: 1px solid rgba(201,168,197,0.25); border-radius: 20px; overflow: hidden; text-decoration: none; color: inherit; transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .blog-card:hover { transform: translateY(-5px); box-shadow: 0 18px 38px rgba(168,123,160,0.16); }
-        .bc-image { aspect-ratio: 16/10; overflow: hidden; background: linear-gradient(140deg, #EAD9E8, #C9A8C5); }
+        .bc-image { aspect-ratio: 16/10; overflow: hidden; position: relative; background: linear-gradient(140deg, #EAD9E8, #C9A8C5); }
         .bc-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .bc-image-ph { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 3rem; color: rgba(255,255,255,0.6); }
         .bc-content { padding: 22px 22px 26px; display: flex; flex-direction: column; gap: 10px; flex: 1; }

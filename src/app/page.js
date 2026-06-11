@@ -5,6 +5,7 @@ import HomeHero from "@/components/HomeHero";
 import FormationAccordion from "@/components/FormationAccordion";
 import HomeBlogSection from "@/components/HomeBlogSection";
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Iconos de línea finos (estilo coherente con la marca)
 const svg = (paths) => (
@@ -49,7 +50,7 @@ export default async function Home() {
             <div className="about-grid">
               <div className="about-image-wrapper reveal" style={{ position: 'relative' }}>
                 <div className="about-image" style={{ overflow:'hidden', display:'flex', alignItems:'center', justifyContent:'center', borderRadius:'52% 48% 46% 54% / 48% 52% 48% 52%', position:'relative', zIndex:2, boxShadow:'0 24px 50px rgba(168,123,160,0.22)' }}>
-                  <img src="/media/maria-profile-3.png" alt="María Villalba, psicóloga y sexóloga" style={{ width:'100%', height:'100%', objectFit:'cover', display:'block' }} />
+                  <Image src="/media/maria-profile-3.png" alt="María Villalba, psicóloga y sexóloga" width={600} height={750} style={{ width:'100%', height:'100%', objectFit:'cover', display:'block' }} sizes="(max-width: 900px) 80vw, 35vw" />
                 </div>
               </div>
 
@@ -146,8 +147,8 @@ export default async function Home() {
                 { href:'/terapias/sexologia', label:'Sexología', desc:'Exploras tu sexualidad desde el respeto, el placer y la información, sin juicios y con rigor.', photo:'/media/sexologiaHeader.jpg' },
               ].map(({ href, label, desc, photo }) => (
                 <Link key={href} href={href} style={{ textDecoration:'none', border:'1px solid #e8dce6', borderRadius:'16px' }} className="therapy-mini-card">
-                  <div style={{ aspectRatio:'4/3', overflow:'hidden', borderRadius:'16px 16px 0 0' }}>
-                    <img src={photo} alt={label} style={{ width:'100%', height:'100%', objectFit:'cover', display:'block' }} />
+                  <div style={{ aspectRatio:'4/3', overflow:'hidden', borderRadius:'16px 16px 0 0', position:'relative' }}>
+                    <Image src={photo} alt={label} fill style={{ objectFit:'cover' }} sizes="(max-width: 900px) 100vw, 25vw" />
                   </div>
                   <div style={{ padding:'20px 20px 22px', backgroundColor:'white', borderRadius:'0 0 16px 16px', flex:1, display:'flex', flexDirection:'column' }}>
                     <h3 style={{ fontSize:'1.05rem', fontWeight:600, color:'var(--text)', marginBottom:'8px', fontFamily:"'Playfair Display',serif" }}>{label}</h3>
@@ -206,8 +207,8 @@ export default async function Home() {
                 { color:'#EDE8F2', accent:'#7A5580', photo:'/media/tallerEmpresas.jpg', label:'Para empresas', desc:'Talleres de burnout, acoso laboral, igualdad, liderazgo y bienestar organizacional.', href:'/talleres/empresas' },
               ].map(({ color, accent, photo, label, desc, href }) => (
                 <Link key={label} href={href} style={{ textDecoration:'none', border:'1px solid #e8dce6', borderRadius:'16px' }} className="therapy-mini-card">
-                  <div style={{ aspectRatio:'4/3', overflow:'hidden', borderRadius:'16px 16px 0 0', background: color }}>
-                    <img src={photo} alt={label} style={{ width:'100%', height:'100%', objectFit:'cover', display:'block' }} />
+                  <div style={{ aspectRatio:'4/3', overflow:'hidden', borderRadius:'16px 16px 0 0', background: color, position:'relative' }}>
+                    <Image src={photo} alt={label} fill style={{ objectFit:'cover' }} sizes="(max-width: 900px) 100vw, 25vw" />
                   </div>
                   <div style={{ padding:'20px 20px 22px', backgroundColor:'white', borderRadius:'0 0 16px 16px', flex:1, display:'flex', flexDirection:'column' }}>
                     <h3 style={{ fontSize:'1.05rem', fontWeight:600, color:'var(--text)', marginBottom:'8px', fontFamily:"'Playfair Display',serif" }}>{label}</h3>

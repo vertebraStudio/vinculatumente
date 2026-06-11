@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import WorkshopSection from '@/components/WorkshopSection';
 
 // ============================================================
@@ -37,14 +38,19 @@ export default function WorkshopProfileBody({ profile, workshops, workshopGroups
           {/* Foto / placeholder derecho */}
           <div
             className="wkp-hero-photo"
-            role="img"
-            aria-label={eyebrow}
-            style={
-              photo
-                ? { backgroundImage: `url('${photo}')`, backgroundSize: 'cover', backgroundPosition: photoPosition }
-                : { background: `linear-gradient(140deg, ${color} 0%, ${accent}cc 55%, ${accent} 100%)` }
-            }
-          />
+            style={!photo ? { background: `linear-gradient(140deg, ${color} 0%, ${accent}cc 55%, ${accent} 100%)` } : undefined}
+          >
+            {photo && (
+              <Image
+                src={photo}
+                alt={eyebrow}
+                fill
+                style={{ objectFit: 'cover', objectPosition: photoPosition }}
+                sizes="(max-width: 900px) 90vw, 54vw"
+                priority
+              />
+            )}
+          </div>
 
           {/* Contenido izquierdo */}
           <div className="wkp-hero-inner">
@@ -149,7 +155,7 @@ export default function WorkshopProfileBody({ profile, workshops, workshopGroups
               <aside className="wkp-sidebar">
                 <div className="wkp-contact-card">
                   <div className="wkp-card-header">
-                    <img src="/media/vinculatumenteLogo.jpg" alt="Vincula Tu Mente" className="wkp-avatar" />
+                    <Image src="/media/vinculatumenteLogo.jpg" alt="Vincula Tu Mente" width={54} height={54} className="wkp-avatar" />
                     <div>
                       <p className="wkp-card-name">María Villalba</p>
                       <p className="wkp-card-role">Psicóloga y sexóloga</p>

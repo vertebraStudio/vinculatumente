@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { getAllPosts, categoryLabel, formatDate } from '@/lib/posts';
 
 export default async function HomeBlogSection() {
@@ -33,7 +34,7 @@ export default async function HomeBlogSection() {
         <Link href={`/blog/${featured.slug}/`} className="hb-featured">
           <div className="hb-featured-image">
             {featured.heroImage
-              ? <img src={featured.heroImage} alt={featured.heroImageAlt || featured.title} />
+              ? <Image src={featured.heroImage} alt={featured.heroImageAlt || featured.title} fill style={{ objectFit: 'cover' }} sizes="(max-width: 900px) 100vw, 55vw" />
               : <div className="hb-image-ph"><span>{featured.title?.[0] || '♡'}</span></div>
             }
           </div>
@@ -55,7 +56,7 @@ export default async function HomeBlogSection() {
               <Link key={p.slug} href={`/blog/${p.slug}/`} className="hb-card">
                 <div className="hb-card-image">
                   {p.heroImage
-                    ? <img src={p.heroImage} alt={p.heroImageAlt || ''} />
+                    ? <Image src={p.heroImage} alt={p.heroImageAlt || ''} fill style={{ objectFit: 'cover' }} sizes="(max-width: 600px) 100vw, 50vw" />
                     : <div className="hb-image-ph"><span>{p.title?.[0] || '♡'}</span></div>
                   }
                 </div>
