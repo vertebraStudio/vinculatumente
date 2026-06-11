@@ -97,10 +97,10 @@ export default function HomeHero() {
 
         /* ---- Contenido ---- */
         .hero-content { display: flex; flex-direction: column; gap: 22px; }
-        .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: 'Poppins', sans-serif; font-size: 0.76rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
+        .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-poppins), sans-serif; font-size: 0.76rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
         .eb-line { width: 40px; height: 1px; background: var(--accent); opacity: 0.5; display: inline-block; }
         .eb-heart { font-size: 0.95rem; }
-        .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 5.2vw, 4.8rem); font-weight: 500; line-height: 1.06; color: var(--text); margin: 0; letter-spacing: -0.01em; }
+        .hero-title { font-family: var(--font-playfair), serif; font-size: clamp(2.8rem, 5.2vw, 4.8rem); font-weight: 500; line-height: 1.06; color: var(--text); margin: 0; letter-spacing: -0.01em; }
         .hero-title em { font-style: italic; color: var(--accent); position: relative; }
         .hero-lead { font-size: 1.08rem; line-height: 1.8; color: var(--text-muted); max-width: 480px; margin: 0; }
         .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 6px; }
@@ -140,8 +140,8 @@ export default function HomeHero() {
         }
         :global(.hero-photo-img) { width: 100%; height: 100%; object-fit: cover; display: block; }
         .hero-photo-ph { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(160deg, #f3eaf1, #e7d6e5); color: var(--accent); text-align: center; }
-        .ph-mark { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1; opacity: 0.55; }
-        .ph-text { font-family: 'Poppins', sans-serif; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; }
+        .ph-mark { font-family: var(--font-playfair), serif; font-size: 4rem; line-height: 1; opacity: 0.55; }
+        .ph-text { font-family: var(--font-poppins), sans-serif; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; }
         .ph-text small { font-size: 0.7rem; text-transform: none; letter-spacing: 0; }
 
         .hero-floating-card {
@@ -152,9 +152,9 @@ export default function HomeHero() {
           padding: 14px 18px; box-shadow: 0 12px 30px rgba(26,20,22,0.1); max-width: 230px;
         }
         .fc-heart { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: var(--primary-light); color: var(--accent); font-size: 1rem; flex-shrink: 0; }
-        .fc-text { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.92rem; line-height: 1.35; color: var(--text); }
+        .fc-text { font-family: var(--font-playfair), serif; font-style: italic; font-size: 0.92rem; line-height: 1.35; color: var(--text); }
 
-        .scroll-cue { position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; font-family: 'Poppins', sans-serif; font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); z-index: 2; }
+        .scroll-cue { position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; font-family: var(--font-poppins), sans-serif; font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); z-index: 2; }
         .scroll-cue-line { width: 1px; height: 38px; background: linear-gradient(var(--accent), transparent); }
 
         @media (max-width: 900px) {

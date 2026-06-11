@@ -141,7 +141,7 @@ export default async function BlogIndexPage({ searchParams }) {
       <style>{`
         .blog-hero { position: relative; padding: 130px 5% 40px; overflow: hidden; background: linear-gradient(160deg, #F4E9F1 0%, #FBF7FB 70%); }
         .blog-blob { position: absolute; width: 460px; height: 460px; top: -160px; right: -120px; border-radius: 50%; filter: blur(80px); background: radial-gradient(circle, rgba(201,168,197,0.4), rgba(201,168,197,0) 70%); }
-        .blog-hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.3rem, 3.4vw, 3.1rem); text-align: center; color: var(--text); margin: 14px 0 12px; line-height: 1.12; }
+        .blog-hero-title { font-family: var(--font-playfair), serif; font-size: clamp(2.3rem, 3.4vw, 3.1rem); text-align: center; color: var(--text); margin: 14px 0 12px; line-height: 1.12; }
         .blog-hero-lead { text-align: center; max-width: 620px; margin: 0 auto; color: var(--text-muted); font-size: 1.05rem; line-height: 1.6; }
 
         .blog-grid-section { padding: 60px 5% 100px; }
@@ -152,12 +152,12 @@ export default async function BlogIndexPage({ searchParams }) {
         .blog-featured:hover { transform: translateY(-4px); box-shadow: 0 22px 50px rgba(168,123,160,0.2); }
         .bf-image { border-radius: 18px; overflow: hidden; aspect-ratio: 4/3; position: relative; background: linear-gradient(140deg, #EAD9E8, #C9A8C5); }
         .bf-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .bf-image-ph { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 5rem; color: rgba(255,255,255,0.6); }
+        .bf-image-ph { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: var(--font-playfair), serif; font-size: 5rem; color: rgba(255,255,255,0.6); }
         .bf-content { display: flex; flex-direction: column; justify-content: center; padding: 8px 4px 8px 0; }
         .bf-meta, .bc-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; flex-wrap: wrap; }
         .bf-chip, .bc-chip { display: inline-block; padding: 4px 12px; border-radius: 50px; background: var(--primary-light); color: var(--accent); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
         .bf-date, .bc-date { font-size: 0.78rem; color: var(--text-muted); }
-        .bf-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 2.4vw, 2.2rem); line-height: 1.18; margin: 0 0 14px; color: var(--text); }
+        .bf-title { font-family: var(--font-playfair), serif; font-size: clamp(1.6rem, 2.4vw, 2.2rem); line-height: 1.18; margin: 0 0 14px; color: var(--text); }
         .bf-excerpt { color: var(--text-muted); margin: 0 0 16px; line-height: 1.65; }
         .bf-link, .bc-link { color: var(--accent); font-weight: 600; font-size: 0.86rem; letter-spacing: 0.04em; }
 
@@ -166,9 +166,9 @@ export default async function BlogIndexPage({ searchParams }) {
         .blog-card:hover { transform: translateY(-5px); box-shadow: 0 18px 38px rgba(168,123,160,0.16); }
         .bc-image { aspect-ratio: 16/10; overflow: hidden; position: relative; background: linear-gradient(140deg, #EAD9E8, #C9A8C5); }
         .bc-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .bc-image-ph { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 3rem; color: rgba(255,255,255,0.6); }
+        .bc-image-ph { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: var(--font-playfair), serif; font-size: 3rem; color: rgba(255,255,255,0.6); }
         .bc-content { padding: 22px 22px 26px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
-        .bc-title { font-family: 'Playfair Display', serif; font-size: 1.18rem; line-height: 1.3; color: var(--text); margin: 0; }
+        .bc-title { font-family: var(--font-playfair), serif; font-size: 1.18rem; line-height: 1.3; color: var(--text); margin: 0; }
         .bc-excerpt { color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin: 0; flex: 1; }
         .bc-link { margin-top: 6px; }
 

@@ -105,7 +105,7 @@ export default function ContactHero() {
         }
 
         .hero-split-title {
-          font-family: 'Sabon', 'Playfair Display', serif;
+          font-family: 'Sabon', var(--font-playfair), serif;
           font-size: clamp(2.4rem, 4vw, 3.6rem);
           font-weight: 600;
           line-height: 1.15;

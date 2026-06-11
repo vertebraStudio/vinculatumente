@@ -98,7 +98,7 @@ export default function CookieBanner() {
         }
 
         .cookie-banner-title {
-          font-family: 'Sabon', 'Playfair Display', serif;
+          font-family: 'Sabon', var(--font-playfair), serif;
           font-size: 1.2rem;
           color: var(--text);
           margin: 0 0 8px 0;

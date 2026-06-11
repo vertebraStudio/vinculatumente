@@ -65,7 +65,7 @@ export default function WorkshopGroup({ group, accent, color, forceOpen = false 
         .wg-header:hover { background: rgba(201, 168, 197, 0.13); }
 
         .wg-title {
-          font-family: 'Playfair Display', serif;
+          font-family: var(--font-playfair), serif;
           font-size: 1.1rem; font-weight: 600;
           color: var(--text); font-style: italic;
           display: inline-flex; align-items: center; gap: 10px;

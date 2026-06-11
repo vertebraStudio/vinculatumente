@@ -93,7 +93,7 @@ export default function WorkshopCard({ workshop: w, accent, color }) {
         }
         .workshop-card-top { padding: 20px 22px 14px; }
         .workshop-name {
-          font-family: 'Playfair Display', serif; font-size: 1.1rem;
+          font-family: var(--font-playfair), serif; font-size: 1.1rem;
           color: var(--text); margin: 0 0 10px; line-height: 1.25;
         }
         .workshop-audience {
@@ -170,7 +170,7 @@ export default function WorkshopCard({ workshop: w, accent, color }) {
           display: inline-flex; align-items: center; gap: 5px;
           background: none; border: none; cursor: pointer; padding: 0;
           font-size: 0.8rem; font-weight: 600;
-          font-family: 'Poppins', sans-serif;
+          font-family: var(--font-poppins), sans-serif;
           letter-spacing: 0.04em; transition: opacity 0.2s;
         }
         .btn-toggle:hover { opacity: 0.7; }

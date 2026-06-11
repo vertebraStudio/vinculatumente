@@ -171,7 +171,7 @@ export default function TalleresPage() {
         {/* CTA FINAL */}
         <section style={{ background: 'linear-gradient(135deg, var(--accent) 0%, #8B5E86 100%)', padding: '80px 5%', textAlign: 'center' }}>
           <div className="container" style={{ maxWidth: '680px' }}>
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', color: '#fff', marginBottom: '16px' }}>
+            <h2 style={{ fontFamily: "var(--font-playfair), serif", fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', color: '#fff', marginBottom: '16px' }}>
               ¿Quieres que diseñe un taller para tu organización?
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.88)', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '36px' }}>
@@ -215,7 +215,7 @@ export default function TalleresPage() {
           background: radial-gradient(circle, rgba(201,168,197,0.4), rgba(201,168,197,0) 70%);
         }
         .talleres-hero-title {
-          font-family: 'Playfair Display', serif;
+          font-family: var(--font-playfair), serif;
           font-size: clamp(2.4rem, 4vw, 3.4rem);
           color: var(--text);
           margin: 14px 0 16px;
@@ -290,13 +290,13 @@ export default function TalleresPage() {
           border: 1px solid rgba(201,168,197,0.2);
         }
         .talleres-intro-icon { font-size: 1.4rem; color: var(--accent); }
-        .talleres-intro-label { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--text); margin: 0 0 4px; }
+        .talleres-intro-label { font-family: var(--font-playfair), serif; font-size: 1.05rem; color: var(--text); margin: 0 0 4px; }
         .talleres-intro-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; margin: 0; }
 
         /* --- Propuestas formativas: perfiles --- */
         .talleres-section-header { text-align: center; margin-bottom: 56px; }
         .talleres-section-title {
-          font-family: 'Playfair Display', serif;
+          font-family: var(--font-playfair), serif;
           font-size: clamp(2rem, 3vw, 2.8rem);
           color: var(--text); margin: 12px 0 16px;
         }
@@ -330,7 +330,7 @@ export default function TalleresPage() {
           letter-spacing: 0.18em; text-transform: uppercase;
         }
         .talleres-perfil-label {
-          font-family: 'Playfair Display', serif;
+          font-family: var(--font-playfair), serif;
           font-size: 1.5rem; color: var(--text); margin: 0; line-height: 1.15;
         }
         .talleres-perfil-body {

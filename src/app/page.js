@@ -151,7 +151,7 @@ export default async function Home() {
                     <Image src={photo} alt={label} fill style={{ objectFit:'cover' }} sizes="(max-width: 900px) 100vw, 25vw" />
                   </div>
                   <div style={{ padding:'20px 20px 22px', backgroundColor:'white', borderRadius:'0 0 16px 16px', flex:1, display:'flex', flexDirection:'column' }}>
-                    <h3 style={{ fontSize:'1.05rem', fontWeight:600, color:'var(--text)', marginBottom:'8px', fontFamily:"'Playfair Display',serif" }}>{label}</h3>
+                    <h3 style={{ fontSize:'1.05rem', fontWeight:600, color:'var(--text)', marginBottom:'8px', fontFamily:"var(--font-playfair),serif" }}>{label}</h3>
                     <p style={{ fontSize:'0.88rem', color:'var(--text-muted)', lineHeight:'1.6', marginBottom:'16px', flex:1 }}>{desc}</p>
                     <span style={{ fontSize:'0.85rem', fontWeight:600, color:'var(--accent)' }}>Leer más →</span>
                   </div>
@@ -178,7 +178,7 @@ export default async function Home() {
                 </Link>
               </div>
               <div className="formation-box glass" style={{ border:'1px solid #e8dce6', padding:'28px 30px', display:'flex', flexDirection:'column', gap:'6px' }}>
-                <h3 style={{ color:'var(--text)', marginBottom:'16px', fontFamily:"'Playfair Display',serif", fontSize:'1.1rem' }}>Formato flexible</h3>
+                <h3 style={{ color:'var(--text)', marginBottom:'16px', fontFamily:"var(--font-playfair),serif", fontSize:'1.1rem' }}>Formato flexible</h3>
                 {[
                   ['Píldoras formativas', '1,5 – 2h'],
                   ['Talleres generales', '3 – 4h'],
@@ -211,7 +211,7 @@ export default async function Home() {
                     <Image src={photo} alt={label} fill style={{ objectFit:'cover' }} sizes="(max-width: 900px) 100vw, 25vw" />
                   </div>
                   <div style={{ padding:'20px 20px 22px', backgroundColor:'white', borderRadius:'0 0 16px 16px', flex:1, display:'flex', flexDirection:'column' }}>
-                    <h3 style={{ fontSize:'1.05rem', fontWeight:600, color:'var(--text)', marginBottom:'8px', fontFamily:"'Playfair Display',serif" }}>{label}</h3>
+                    <h3 style={{ fontSize:'1.05rem', fontWeight:600, color:'var(--text)', marginBottom:'8px', fontFamily:"var(--font-playfair),serif" }}>{label}</h3>
                     <p style={{ fontSize:'0.88rem', color:'var(--text-muted)', lineHeight:'1.6', marginBottom:'16px', flex:1 }}>{desc}</p>
                     <span style={{ fontSize:'0.85rem', fontWeight:600, color: accent }}>Ver talleres →</span>
                   </div>

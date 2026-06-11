@@ -219,7 +219,7 @@ export default function WorkshopProfileBody({ profile, workshops, workshopGroups
         {/* CTA FINAL */}
         <section style={{ background: 'linear-gradient(135deg, var(--accent) 0%, #8B5E86 100%)', padding: '80px 5%', textAlign: 'center' }}>
           <div className="container" style={{ maxWidth: '640px' }}>
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', color: '#fff', marginBottom: '16px' }}>
+            <h2 style={{ fontFamily: "var(--font-playfair), serif", fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', color: '#fff', marginBottom: '16px' }}>
               ¿Quieres un formato a medida?
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.88)', fontSize: '1rem', lineHeight: 1.75, marginBottom: '32px' }}>
@@ -275,7 +275,7 @@ export default function WorkshopProfileBody({ profile, workshops, workshopGroups
         }
         .wkp-back:hover { color: var(--text); }
         .wkp-hero-title {
-          font-family: 'Playfair Display', serif;
+          font-family: var(--font-playfair), serif;
           font-size: clamp(1.6rem, 2.2vw, 2.1rem);
           color: var(--text); margin: 0; line-height: 1.15;
         }
@@ -303,7 +303,7 @@ export default function WorkshopProfileBody({ profile, workshops, workshopGroups
 
         /* --- Section heading --- */
         .wkp-section-title {
-          font-family: 'Playfair Display', serif;
+          font-family: var(--font-playfair), serif;
           font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--text); margin: 12px 0 0;
         }
 
@@ -334,7 +334,7 @@ export default function WorkshopProfileBody({ profile, workshops, workshopGroups
           background: #fff; border: 2px solid rgba(255,255,255,0.7); flex-shrink: 0;
         }
         .wkp-card-name {
-          font-family: 'Playfair Display', serif;
+          font-family: var(--font-playfair), serif;
           font-size: 1.2rem; color: #fff; margin: 0; font-weight: 600;
         }
         .wkp-card-role {
@@ -429,7 +429,7 @@ export default function WorkshopProfileBody({ profile, workshops, workshopGroups
           margin-bottom: 14px;
         }
         .wkp-method-title {
-          font-family: 'Playfair Display', serif; font-size: 1rem;
+          font-family: var(--font-playfair), serif; font-size: 1rem;
           color: var(--text); margin: 0 0 8px; font-weight: 600; font-style: italic;
         }
         .wkp-method-desc {
@@ -446,7 +446,7 @@ export default function WorkshopProfileBody({ profile, workshops, workshopGroups
           max-width: 820px; margin: 0 auto; text-align: center;
         }
         .wkp-benefits-title {
-          font-family: 'Playfair Display', serif;
+          font-family: var(--font-playfair), serif;
           font-size: clamp(1.5rem, 2.5vw, 2rem);
           color: var(--text); margin: 12px 0 40px;
         }

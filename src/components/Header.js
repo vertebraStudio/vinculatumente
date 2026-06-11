@@ -144,8 +144,8 @@ export default function Header({ solid = false }) {
         .logo-mark img { width: 84%; height: 84%; object-fit: contain; display: block; }
         .header.scrolled .logo-mark { width: 44px; height: 44px; }
         .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
-        .logo-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 600; color: var(--text); letter-spacing: 0.01em; }
-        .logo-sub { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.72rem; color: var(--accent); letter-spacing: 0.02em; }
+        .logo-name { font-family: var(--font-playfair), serif; font-size: 1.15rem; font-weight: 600; color: var(--text); letter-spacing: 0.01em; }
+        .logo-sub { font-family: var(--font-playfair), serif; font-style: italic; font-size: 0.72rem; color: var(--accent); letter-spacing: 0.02em; }
 
         .nav ul {
           display: flex;
@@ -156,7 +156,7 @@ export default function Header({ solid = false }) {
           padding: 0;
         }
         .nav a {
-          font-family: 'Poppins', sans-serif;
+          font-family: var(--font-poppins), sans-serif;
           font-weight: 500;
           color: var(--text);
           font-size: 0.74rem;

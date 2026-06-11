@@ -92,8 +92,8 @@ export default function Footer() {
         .container { padding: 0 80px; }
         .footer-content { display: grid; grid-template-columns: 1.3fr 0.8fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
         .footer-brand { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
-        .footer-wordmark { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 2px; letter-spacing: 0.02em; }
-        .footer-tagline { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.92rem; color: rgba(255,255,255,0.7); margin: 0 0 14px; }
+        .footer-wordmark { font-family: var(--font-playfair), serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin: 0 0 2px; letter-spacing: 0.02em; }
+        .footer-tagline { font-family: var(--font-playfair), serif; font-style: italic; font-size: 0.92rem; color: rgba(255,255,255,0.7); margin: 0 0 14px; }
         .footer-logo { height: 60px; width: auto; margin-bottom: 20px; }
         .subtitle { color: rgba(255,255,255,0.85); font-size: 0.92rem; margin-top: 5px; margin-bottom: 14px; max-width: 400px; line-height: 1.6; }
         .footer-location { display: flex; align-items: center; gap: 7px; font-size: 0.8rem; font-style: italic; color: rgba(255,255,255,0.6); margin-bottom: 18px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.12); max-width: 340px; line-height: 1.5; }
@@ -102,7 +102,7 @@ export default function Footer() {
         .footer-nav-links li { list-style: none; }
         .footer-nav-links :global(a) { color: rgba(255,255,255,0.65) !important; font-size: 0.82rem !important; text-decoration: none !important; transition: var(--transition) !important; }
         .footer-nav-links :global(a:hover) { color: var(--primary-light) !important; }
-        .footer-title-styled { font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,0.92); margin-bottom: 20px; font-family: 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: 1.2px; }
+        .footer-title-styled { font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,0.92); margin-bottom: 20px; font-family: var(--font-poppins), sans-serif; text-transform: uppercase; letter-spacing: 1.2px; }
         .brand-contact { display: flex; flex-direction: column; gap: 12px; }
         .brand-contact :global(a) { display: flex !important; align-items: center !important; gap: 10px !important; color: rgba(255,255,255,0.78) !important; text-decoration: none !important; font-size: 0.82rem !important; transition: var(--transition) !important; }
         .brand-contact :global(a:hover) { color: #fff !important; }

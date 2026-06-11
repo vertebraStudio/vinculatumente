@@ -76,7 +76,7 @@ export default function TherapyHero({ category, title, titleEm, desc, photo, phI
         }
         .hero-bg-ph { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; color: rgba(255,255,255,0.85); padding: 0 30px 0 100px; }
         .hero-bg-icon { font-size: 2rem; opacity: 0.7; }
-        .hero-bg-label { font-family: 'Poppins', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+        .hero-bg-label { font-family: var(--font-poppins), sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
         .hero-bg-desc { font-size: 0.72rem; opacity: 0.8; max-width: 200px; line-height: 1.5; }
 
         .hero-split-inner {
@@ -91,7 +91,7 @@ export default function TherapyHero({ category, title, titleEm, desc, photo, phI
         .hero-back-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.04em; color: var(--accent); text-decoration: none; width: fit-content; transition: color 0.2s ease; margin-bottom: 0; }
         .hero-back-btn:hover { color: var(--text); }
         .hero-category { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; color: var(--accent); text-transform: uppercase; }
-        .hero-split-title { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 3.4vw, 3.2rem); font-weight: 600; line-height: 1.1; color: var(--text); margin: 0; }
+        .hero-split-title { font-family: var(--font-playfair), serif; font-size: clamp(2.4rem, 3.4vw, 3.2rem); font-weight: 600; line-height: 1.1; color: var(--text); margin: 0; }
         .hero-split-title em { font-style: italic; color: var(--accent); }
         .hero-split-desc { font-size: 1.08rem; line-height: 1.65; color: var(--text-muted); max-width: 520px; margin: 2px 0 0; }
         .hero-split-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 16px; }

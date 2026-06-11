@@ -22,7 +22,7 @@ export default function ContactoPage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '60px' }}>
 
               <div className="reveal">
-                <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.8rem', fontWeight: 600, marginBottom: '20px', color: 'var(--text)' }}>
+                <h2 style={{ fontFamily: "var(--font-playfair), serif", fontSize: '1.8rem', fontWeight: 600, marginBottom: '20px', color: 'var(--text)' }}>
                   ¿Cómo puedo ayudarte?
                 </h2>
                 <p style={{ lineHeight: '1.9', fontSize: '1.05rem', marginBottom: '16px' }}>
@@ -36,7 +36,7 @@ export default function ContactoPage() {
               <hr style={{ border: 'none', borderTop: '1px solid #eadce6' }} />
 
               <div className="reveal">
-                <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.8rem', fontWeight: 600, marginBottom: '30px', color: 'var(--text)' }}>
+                <h2 style={{ fontFamily: "var(--font-playfair), serif", fontSize: '1.8rem', fontWeight: 600, marginBottom: '30px', color: 'var(--text)' }}>
                   Vías de contacto
                 </h2>
 
@@ -133,7 +133,7 @@ export default function ContactoPage() {
 
               {/* Modalidades */}
               <div className="reveal">
-                <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.8rem', fontWeight: 600, marginBottom: '20px', color: 'var(--text)' }}>
+                <h2 style={{ fontFamily: "var(--font-playfair), serif", fontSize: '1.8rem', fontWeight: 600, marginBottom: '20px', color: 'var(--text)' }}>
                   Modalidad de atención
                 </h2>
                 <p style={{ lineHeight: '1.9', fontSize: '1rem', marginBottom: '24px', color: 'var(--text-muted)' }}>
@@ -145,7 +145,7 @@ export default function ContactoPage() {
                       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
                     </span>
                     <div>
-                      <p style={{ fontWeight: 600, color: 'var(--text)', margin: '0 0 6px', fontFamily: "'Playfair Display', serif", fontSize: '1.1rem' }}>Sesiones presenciales</p>
+                      <p style={{ fontWeight: 600, color: 'var(--text)', margin: '0 0 6px', fontFamily: "var(--font-playfair), serif", fontSize: '1.1rem' }}>Sesiones presenciales</p>
                       <p style={{ fontSize: '0.92rem', color: 'var(--text-muted)', margin: 0, lineHeight: 1.6 }}>En consulta en Alcalá de Henares (Madrid). Un espacio cálido y confidencial para que te sientas cómodx desde el primer momento.</p>
                     </div>
                   </div>
@@ -154,7 +154,7 @@ export default function ContactoPage() {
                       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
                     </span>
                     <div>
-                      <p style={{ fontWeight: 600, color: 'var(--text)', margin: '0 0 6px', fontFamily: "'Playfair Display', serif", fontSize: '1.1rem' }}>Sesiones online</p>
+                      <p style={{ fontWeight: 600, color: 'var(--text)', margin: '0 0 6px', fontFamily: "var(--font-playfair), serif", fontSize: '1.1rem' }}>Sesiones online</p>
                       <p style={{ fontSize: '0.92rem', color: 'var(--text-muted)', margin: 0, lineHeight: 1.6 }}>Por videollamada, desde cualquier lugar de España. Sin desplazamientos, con toda la comodidad y privacidad de tu espacio.</p>
                     </div>
                   </div>
@@ -209,7 +209,7 @@ export default function ContactoPage() {
 
               {/* CTA */}
               <div style={{ backgroundColor: 'var(--accent)', borderRadius: '16px', padding: '28px 24px', color: 'white' }}>
-                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.4rem', fontWeight: 600, marginBottom: '12px', color: 'white', lineHeight: '1.3' }}>
+                <h3 style={{ fontFamily: "var(--font-playfair), serif", fontSize: '1.4rem', fontWeight: 600, marginBottom: '12px', color: 'white', lineHeight: '1.3' }}>
                   ¿Empezamos?
                 </h3>
                 <p style={{ fontSize: '0.9rem', lineHeight: '1.7', color: 'rgba(255,255,255,0.85)', marginBottom: '20px' }}>

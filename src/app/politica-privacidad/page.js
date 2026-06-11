@@ -15,7 +15,7 @@ export default function PrivacidadPage() {
         <section className="legal-section-header">
           <div className="container">
             <span style={{ fontSize: '0.85rem', color: 'var(--accent)', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase' }}>Legal</span>
-            <h1 style={{ fontSize: '2.5rem', fontFamily: "'Playfair Display', serif", color: 'var(--text)', marginTop: '10px', marginBottom: '10px' }}>Política de Privacidad</h1>
+            <h1 style={{ fontSize: '2.5rem', fontFamily: "var(--font-playfair), serif", color: 'var(--text)', marginTop: '10px', marginBottom: '10px' }}>Política de Privacidad</h1>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: 0 }}>Última actualización: mayo de 2026</p>
           </div>
         </section>

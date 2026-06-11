@@ -97,11 +97,11 @@ export default function TherapyBody({ introTitle, introParas = [], senales = [],
         .ty-layout { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 350px; gap: 64px; align-items: start; }
 
         .ty-main { display: flex; flex-direction: column; gap: 50px; }
-        .ty-h2 { font-family: 'Playfair Display', serif; font-size: 2.1rem; font-weight: 600; color: var(--text); margin: 6px 0 18px; line-height: 1.2; }
+        .ty-h2 { font-family: var(--font-playfair), serif; font-size: 2.1rem; font-weight: 600; color: var(--text); margin: 6px 0 18px; line-height: 1.2; }
         .ty-para { line-height: 1.9; font-size: 1.05rem; color: var(--text); margin: 0 0 14px; }
         .ty-para:last-child { margin-bottom: 0; }
 
-        .ty-block-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 600; color: var(--text); margin: 0 0 24px; }
+        .ty-block-title { font-family: var(--font-playfair), serif; font-size: 1.5rem; font-weight: 600; color: var(--text); margin: 0 0 24px; }
 
         /* Señales como chips */
         .ty-chips { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
@@ -124,7 +124,7 @@ export default function TherapyBody({ introTitle, introParas = [], senales = [],
         .ty-card { border-radius: 22px; overflow: hidden; box-shadow: 0 20px 50px rgba(168,123,160,0.18); border: 1px solid rgba(201,168,197,0.22); }
         .ty-card-head { background: linear-gradient(150deg, #C9A8C5 0%, #A87BA0 100%); padding: 26px 24px; display: flex; align-items: center; gap: 14px; }
         .ty-avatar { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; background: #fff; border: 2px solid rgba(255,255,255,0.7); }
-        .ty-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #fff; margin: 0; }
+        .ty-name { font-family: var(--font-playfair), serif; font-size: 1.2rem; color: #fff; margin: 0; }
         .ty-role { font-size: 0.82rem; color: rgba(255,255,255,0.85); margin: 2px 0 0; }
         .ty-card-body { background: #fff; padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 14px; }
         .ty-col { font-size: 0.78rem; letter-spacing: 0.04em; color: var(--text-muted); padding-bottom: 6px; border-bottom: 1px solid rgba(201,168,197,0.2); }
