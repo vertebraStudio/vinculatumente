@@ -467,17 +467,41 @@ export default function WorkshopProfileBody({ profile, workshops, workshopGroups
             border-radius: 12px;
           }
           .wkp-hero-inner { order: 2; padding: 20px 24px 36px; }
-          .wkp-hero-left { max-width: 100%; }
+          .wkp-hero-left { max-width: 100%; gap: 0; }
+
+          /* Back link como barra de navegación separada visualmente del eyebrow */
+          .wkp-back {
+            display: flex;
+            padding-bottom: 16px;
+            margin-bottom: 18px;
+            border-bottom: 1px solid rgba(201,168,197,0.2);
+            width: 100%;
+          }
+
           /* Layout talleres */
           .wkp-layout { grid-template-columns: 1fr; }
           .wkp-sidebar { position: static; }
           .workshop-grid { grid-template-columns: 1fr; }
-          /* Formatos y metodología */
-          .wkp-formats-bar { grid-template-columns: 1fr 1fr; }
-          .wkp-format-item { padding: 14px 16px; border-right: none; border-bottom: 1px solid rgba(201,168,197,0.18); }
-          .wkp-format-item:nth-child(odd)  { border-right: 1px solid rgba(201,168,197,0.18); }
+
+          /* Formatos: columna única para que todos los iconos queden alineados */
+          .wkp-formats-bar { grid-template-columns: 1fr; padding-bottom: 20px; margin-bottom: 32px; }
+          .wkp-format-item {
+            padding: 11px 12px;
+            border-right: none;
+            border-bottom: 1px solid rgba(201,168,197,0.15);
+            align-items: center;
+          }
+          .wkp-format-item:last-child { border-bottom: none; }
+          /* en 1 col, todos los nth-child rules del desktop no aplican */
+          .wkp-format-item:nth-child(odd)  { border-right: none; }
           .wkp-format-item:nth-child(3),
+          .wkp-format-item:nth-child(4)    { border-bottom: 1px solid rgba(201,168,197,0.15); }
           .wkp-format-item:nth-child(4)    { border-bottom: none; }
+          /* label y tiempo en la misma línea para que la lista sea compacta */
+          .wkp-format-item strong { display: inline; }
+          .wkp-format-item em     { display: inline; margin-left: 5px; color: var(--text-muted); }
+          .wkp-format-item em::before { content: '·'; margin-right: 5px; opacity: 0.5; }
+
           .wkp-method-grid { grid-template-columns: 1fr; }
           /* Beneficios */
           .wkp-benefits-grid { grid-template-columns: 1fr; }
