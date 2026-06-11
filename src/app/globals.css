@@ -124,6 +124,16 @@ section {
 .eyebrow-ic { display: inline-flex; align-items: center; }
 .eyebrow svg { width: 15px; height: 15px; }
 
+/* Variante para secciones principales de la home donde el eyebrow
+   necesita más peso visual para orientar al usuario mientras scrollea */
+.eyebrow-section {
+  font-size: 0.84rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 14px;
+}
+.eyebrow-section .eyebrow-line { width: 28px; opacity: 0.6; }
+.eyebrow-section svg { width: 17px; height: 17px; }
+
 /* ============================================================
    Cuerpo del post del blog (renderer Keystatic)
    ============================================================ */
@@ -1014,7 +1024,7 @@ footer {
    ============================================================ */
 .terapia-intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; margin-bottom:70px; }
 .terapia-cards-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
-.therapy-mini-card { border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.06); transition:transform 0.3s ease,box-shadow 0.3s ease; display:block; overflow:hidden; }
+.therapy-mini-card { border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.06); transition:transform 0.3s ease,box-shadow 0.3s ease; display:flex; flex-direction:column; overflow:hidden; }
 .therapy-mini-card:hover { transform:translateY(-6px); box-shadow:0 12px 30px rgba(168,123,160,0.18); }
 @media (max-width:992px) { .terapia-cards-grid { grid-template-columns:repeat(2,1fr); } }
 @media (max-width:768px) { .terapia-intro-grid { grid-template-columns:1fr; gap:32px; margin-bottom:40px; } .therapy-title { text-align:left; } }

@@ -390,13 +390,14 @@ export default function WorkshopProfileBody({ profile, workshops, workshopGroups
           border-bottom: 1px solid rgba(201,168,197,0.12);
         }
         .wkp-formats-bar {
-          display: flex; justify-content: center; flex-wrap: wrap;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
           margin-bottom: 44px; padding-bottom: 28px;
           border-bottom: 1px solid rgba(201,168,197,0.15);
         }
         .wkp-format-item {
           display: flex; align-items: center; gap: 9px;
-          padding: 8px 28px;
+          padding: 12px 20px;
           border-right: 1px solid rgba(201,168,197,0.22);
         }
         .wkp-format-item:last-child { border-right: none; }
@@ -472,8 +473,11 @@ export default function WorkshopProfileBody({ profile, workshops, workshopGroups
           .wkp-sidebar { position: static; }
           .workshop-grid { grid-template-columns: 1fr; }
           /* Formatos y metodología */
-          .wkp-format-item { padding: 8px 14px; border-right: none; }
-          .wkp-formats-bar { gap: 0; justify-content: center; }
+          .wkp-formats-bar { grid-template-columns: 1fr 1fr; }
+          .wkp-format-item { padding: 14px 16px; border-right: none; border-bottom: 1px solid rgba(201,168,197,0.18); }
+          .wkp-format-item:nth-child(odd)  { border-right: 1px solid rgba(201,168,197,0.18); }
+          .wkp-format-item:nth-child(3),
+          .wkp-format-item:nth-child(4)    { border-bottom: none; }
           .wkp-method-grid { grid-template-columns: 1fr; }
           /* Beneficios */
           .wkp-benefits-grid { grid-template-columns: 1fr; }

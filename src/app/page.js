@@ -70,7 +70,7 @@ export default async function Home() {
           <div className="container">
             <div className="trayectoria-grid">
               <div className="trayectoria-content">
-                <span className="eyebrow"><span className="eyebrow-line" /><span className="eyebrow-ic">{lineIcons.cap}</span> Formación</span>
+                <span className="eyebrow eyebrow-section"><span className="eyebrow-line" /><span className="eyebrow-ic">{lineIcons.cap}</span> Formación</span>
                 <h2 className="trayectoria-title">Una base académica sólida al servicio de tu bienestar</h2>
                 <p className="trayectoria-text">
                   Me gradué en Psicología por la <strong>Universidad Europea Miguel de Cervantes</strong> y me especialicé con el <strong>Máster en Sexología: Educación, Terapia Sexual y de Pareja</strong> (Universidad de Extremadura).
@@ -123,7 +123,7 @@ export default async function Home() {
           <div className="container">
             <div className="terapia-intro-grid">
               <div className="therapy-text">
-                <span className="eyebrow"><span className="eyebrow-line" /><span className="eyebrow-ic">{lineIcons.heart}</span> Sesiones</span>
+                <span className="eyebrow eyebrow-section"><span className="eyebrow-line" /><span className="eyebrow-ic">{lineIcons.heart}</span> Sesiones</span>
                 <h2 className="section-title therapy-title">Mi forma de acompañarte</h2>
                 <p>Te acompaño a <strong>comprenderte, aceptarte y vivir relaciones más sanas y conscientes</strong>, integrando lo emocional y lo sexual como parte de un mismo bienestar.</p>
                 <p>Cada proceso es único. Partimos de tu historia y tus objetivos para diseñar un acompañamiento personalizado, con herramientas prácticas que puedas aplicar en tu vida cotidiana.</p>
@@ -140,22 +140,18 @@ export default async function Home() {
             {/* Tarjetas de especialidades */}
             <div className="terapia-cards-grid">
               {[
-                { href:'/terapias/relaciones-y-vinculos', label:'Relaciones y vínculos', desc:'Te acompaño a construir relaciones más sanas, conscientes y auténticas contigo y con los demás.', phIcon:'♡', phDesc:'Foto cálida sobre vínculos y relaciones. Formato 4:3.' },
-                { href:'/terapias/infanto-juvenil', label:'Infanto-juvenil', desc:'Apoyo emocional y terapéutico para niñas, niños y adolescentes en su desarrollo y bienestar.', phIcon:'✦', phDesc:'Foto de infancia/adolescencia (sin rostro identificable). Formato 4:3.' },
-                { href:'/terapias/trauma-y-apego', label:'Trauma y apego', desc:'Trabajo especializado para sanar heridas, regular emociones y construir apegos seguros (EMDR).', phIcon:'◎', phDesc:'Foto serena y simbólica sobre calma y sanación. Formato 4:3.' },
-                { href:'/terapias/sexologia', label:'Sexología', desc:'Exploras tu sexualidad desde el respeto, el placer y la información, sin juicios y con rigor.', phIcon:'❀', phDesc:'Foto delicada y respetuosa sobre bienestar sexual. Formato 4:3.' },
-              ].map(({ href, label, desc, phIcon, phDesc }) => (
+                { href:'/terapias/relaciones-y-vinculos', label:'Relaciones y vínculos', desc:'Te acompaño a construir relaciones más sanas, conscientes y auténticas contigo y con los demás.', photo:'/media/relacionesHeader.jpg' },
+                { href:'/terapias/infanto-juvenil', label:'Infanto-juvenil', desc:'Apoyo emocional y terapéutico para niñas, niños y adolescentes en su desarrollo y bienestar.', photo:'/media/infantoHeader.jpg' },
+                { href:'/terapias/trauma-y-apego', label:'Trauma y apego', desc:'Trabajo especializado para sanar heridas, regular emociones y construir apegos seguros (EMDR).', photo:'/media/imagenDeprueba3.jpg' },
+                { href:'/terapias/sexologia', label:'Sexología', desc:'Exploras tu sexualidad desde el respeto, el placer y la información, sin juicios y con rigor.', photo:'/media/sexologiaHeader.jpg' },
+              ].map(({ href, label, desc, photo }) => (
                 <Link key={href} href={href} style={{ textDecoration:'none', border:'1px solid #e8dce6', borderRadius:'16px' }} className="therapy-mini-card">
                   <div style={{ aspectRatio:'4/3', overflow:'hidden', borderRadius:'16px 16px 0 0' }}>
-                    <div className="img-placeholder therapy-mini-img" style={{ height:'100%' }}>
-                      <span className="ph-icon">{phIcon}</span>
-                      <span className="ph-label">{label}</span>
-                      <span className="ph-desc">{phDesc}</span>
-                    </div>
+                    <img src={photo} alt={label} style={{ width:'100%', height:'100%', objectFit:'cover', display:'block' }} />
                   </div>
-                  <div style={{ padding:'20px 20px 22px', backgroundColor:'white', borderRadius:'0 0 16px 16px' }}>
+                  <div style={{ padding:'20px 20px 22px', backgroundColor:'white', borderRadius:'0 0 16px 16px', flex:1, display:'flex', flexDirection:'column' }}>
                     <h3 style={{ fontSize:'1.05rem', fontWeight:600, color:'var(--text)', marginBottom:'8px', fontFamily:"'Playfair Display',serif" }}>{label}</h3>
-                    <p style={{ fontSize:'0.88rem', color:'var(--text-muted)', lineHeight:'1.6', marginBottom:'16px' }}>{desc}</p>
+                    <p style={{ fontSize:'0.88rem', color:'var(--text-muted)', lineHeight:'1.6', marginBottom:'16px', flex:1 }}>{desc}</p>
                     <span style={{ fontSize:'0.85rem', fontWeight:600, color:'var(--accent)' }}>Leer más →</span>
                   </div>
                 </Link>
@@ -171,7 +167,7 @@ export default async function Home() {
           <div className="container">
             <div className="terapia-intro-grid">
               <div className="therapy-text">
-                <span className="eyebrow"><span className="eyebrow-line" /><span className="eyebrow-ic">{lineIcons.cap}</span> Talleres y Formación</span>
+                <span className="eyebrow eyebrow-section"><span className="eyebrow-line" /><span className="eyebrow-ic">{lineIcons.cap}</span> Talleres y Formación</span>
                 <h2 className="section-title therapy-title">Formación que transforma</h2>
                 <p>Diseño talleres, charlas y programas formativos sobre <strong>sexualidad, vínculos, salud mental e igualdad</strong> para empresas, centros educativos, entidades sociales y equipos profesionales.</p>
                 <p>Cada intervención se adapta al grupo, el contexto y los objetivos. <strong>Presencial en Alcalá de Henares, online o híbrido</strong>.</p>
@@ -204,18 +200,18 @@ export default async function Home() {
             {/* Tarjetas de perfiles */}
             <div className="terapia-cards-grid">
               {[
-                { color:'#F4E9F1', accent:'#A87BA0', icon:'◎', label:'Para particulares', desc:'Talleres sobre terapia online, sexología, vínculos, trauma y bienestar emocional.', href:'/talleres/particulares' },
-                { color:'#EDE3F0', accent:'#8B6088', icon:'♡', label:'Para familias', desc:'Formación sobre adolescencia, educación emocional, sexualidad y convivencia familiar.', href:'/talleres/familias' },
-                { color:'#F8F0F7', accent:'#9B6E97', icon:'✦', label:'Para centros educativos', desc:'Programas de educación afectivo-sexual, bullying, ansiedad y salud mental en el aula.', href:'/talleres/centros-educativos' },
-                { color:'#EDE8F2', accent:'#7A5580', icon:'⊙', label:'Para empresas', desc:'Talleres de burnout, acoso laboral, igualdad, liderazgo y bienestar organizacional.', href:'/talleres/empresas' },
-              ].map(({ color, accent, icon, label, desc, href }) => (
+                { color:'#F4E9F1', accent:'#A87BA0', photo:'/media/tallerParticulares.jpg', label:'Para particulares', desc:'Talleres sobre terapia online, sexología, vínculos, trauma y bienestar emocional.', href:'/talleres/particulares' },
+                { color:'#EDE3F0', accent:'#8B6088', photo:'/media/tallerFamilias.jpg', label:'Para familias', desc:'Formación sobre adolescencia, educación emocional, sexualidad y convivencia familiar.', href:'/talleres/familias' },
+                { color:'#F8F0F7', accent:'#9B6E97', photo:'/media/tallerCentrosEducativos.jpg', label:'Para centros educativos', desc:'Programas de educación afectivo-sexual, bullying, ansiedad y salud mental en el aula.', href:'/talleres/centros-educativos' },
+                { color:'#EDE8F2', accent:'#7A5580', photo:'/media/tallerEmpresas.jpg', label:'Para empresas', desc:'Talleres de burnout, acoso laboral, igualdad, liderazgo y bienestar organizacional.', href:'/talleres/empresas' },
+              ].map(({ color, accent, photo, label, desc, href }) => (
                 <Link key={label} href={href} style={{ textDecoration:'none', border:'1px solid #e8dce6', borderRadius:'16px' }} className="therapy-mini-card">
-                  <div style={{ aspectRatio:'4/3', overflow:'hidden', borderRadius:'16px 16px 0 0', background: color, display:'flex', alignItems:'center', justifyContent:'center' }}>
-                    <span style={{ fontSize:'3rem', color: accent, opacity:0.7 }}>{icon}</span>
+                  <div style={{ aspectRatio:'4/3', overflow:'hidden', borderRadius:'16px 16px 0 0', background: color }}>
+                    <img src={photo} alt={label} style={{ width:'100%', height:'100%', objectFit:'cover', display:'block' }} />
                   </div>
-                  <div style={{ padding:'20px 20px 22px', backgroundColor:'white', borderRadius:'0 0 16px 16px' }}>
+                  <div style={{ padding:'20px 20px 22px', backgroundColor:'white', borderRadius:'0 0 16px 16px', flex:1, display:'flex', flexDirection:'column' }}>
                     <h3 style={{ fontSize:'1.05rem', fontWeight:600, color:'var(--text)', marginBottom:'8px', fontFamily:"'Playfair Display',serif" }}>{label}</h3>
-                    <p style={{ fontSize:'0.88rem', color:'var(--text-muted)', lineHeight:'1.6', marginBottom:'16px' }}>{desc}</p>
+                    <p style={{ fontSize:'0.88rem', color:'var(--text-muted)', lineHeight:'1.6', marginBottom:'16px', flex:1 }}>{desc}</p>
                     <span style={{ fontSize:'0.85rem', fontWeight:600, color: accent }}>Ver talleres →</span>
                   </div>
                 </Link>
