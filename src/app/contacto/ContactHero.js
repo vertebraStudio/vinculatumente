@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ContactHero() {
   return (
@@ -25,17 +26,16 @@ export default function ContactHero() {
 
         {/* Columna derecha: imagen compacta */}
         <div className="hero-split-right">
-          <div className="hero-img-wrapper" style={{ minHeight: '280px', display: 'flex', flexDirection: 'column', width: '100%' }}>
-            {/*
-              HERO — FOTO CONTACTO:
-              Una foto de la consulta o una imagen cálida de bienvenida.
-              Sustituye por: <img src="/media/ContactoHero.jpg" className="hero-split-img" alt="Consulta de psicología" />
-            */}
-            <div className="img-placeholder" style={{ width: '100%', height: '280px', borderRadius: '20px', fontSize: '0.8rem' }}>
-              <span className="ph-icon" style={{ fontSize: '2rem' }}>📞</span>
-              <span className="ph-label">Foto de Contacto / Consulta</span>
-              <span className="ph-desc" style={{ fontSize: '0.7rem' }}>Cálida e invitadora. Formato horizontal.</span>
-            </div>
+          <div className="hero-img-wrapper" style={{ width: '100%' }}>
+            <Image
+              src="/media/contacto.jpg"
+              alt="Consulta de psicología Vincula Tu Mente"
+              className="hero-split-img"
+              width={440}
+              height={280}
+              style={{ objectFit: 'cover' }}
+              priority
+            />
           </div>
         </div>
       </div>
