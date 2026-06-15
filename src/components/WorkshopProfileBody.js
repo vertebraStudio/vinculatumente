@@ -171,9 +171,9 @@ export default function WorkshopProfileBody({ profile, workshops, workshopGroups
                       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.9 12.59 19.79 19.79 0 0 1 1.83 4a2 2 0 0 1 2-1.92h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                       +34 604 80 72 00
                     </a>
-                    <a href="mailto:vinculatumente@gmail.com" className="wkp-card-contact">
+                    <a href="mailto:info@vinculatumente.com" className="wkp-card-contact">
                       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                      <span className="wkp-card-mail">vinculatumente@gmail.com</span>
+                      <span className="wkp-card-mail">info@vinculatumente.com</span>
                     </a>
                     <Link href="/contacto" className="wkp-card-cta-btn">
                       Solicitar información →
@@ -198,7 +198,7 @@ export default function WorkshopProfileBody({ profile, workshops, workshopGroups
             <div className="container">
               <div className="wkp-benefits-inner">
                 <span className="eyebrow eyebrow-center">
-                  <span className="eyebrow-line" />Resultados<span className="eyebrow-line" />
+                  <span className="eyebrow-line" />Objetivos<span className="eyebrow-line" />
                 </span>
                 <h2 className="wkp-benefits-title">Lo que cambia desde las primeras sesiones</h2>
                 <div className="wkp-benefits-grid">
@@ -223,7 +223,7 @@ export default function WorkshopProfileBody({ profile, workshops, workshopGroups
               ¿Quieres un formato a medida?
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.88)', fontSize: '1rem', lineHeight: 1.75, marginBottom: '32px' }}>
-              Cuéntame el contexto, el grupo y los objetivos. Te propongo un taller adaptado.
+              Comparte el contexto, el perfil del colectivo y los objetivos formativos. Vincula Tu Mente elabora una propuesta a medida para cada grupo.
             </p>
             <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a

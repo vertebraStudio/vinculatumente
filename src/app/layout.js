@@ -80,7 +80,7 @@ export default function RootLayout({ children }) {
     "@id": "https://vinculatumente.es",
     "url": "https://vinculatumente.es",
     "telephone": "+34 604 80 72 00",
-    "email": "vinculatumente@gmail.com",
+    "email": "info@vinculatumente.com",
     "priceRange": "€€",
     "areaServed": "ES",
     "address": {

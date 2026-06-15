@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     question: "¿Cómo puedo pedir mi primera cita?",
-    answer: "Puedes escribirme por WhatsApp, llamarme o enviarme un email a vinculatumente@gmail.com. Te responderé lo antes posible y resolveremos juntxs cualquier duda antes de empezar, sin compromiso."
+    answer: "Puedes escribirme por WhatsApp, llamarme o enviarme un email a info@vinculatumente.com. Te responderé lo antes posible y resolveremos juntxs cualquier duda antes de empezar, sin compromiso."
   },
   {
     question: "¿Qué duración tienen las sesiones?",

@@ -64,7 +64,7 @@ export default function CookiesPage() {
               </LegalSection>
 
               <LegalSection title="5. Actualización de la Política">
-                <p>El titular puede modificar esta Política de Cookies en función de exigencias legislativas o para adaptarla a las instrucciones dictadas por la Agencia Española de Protección de Datos (AEPD). Para cualquier duda, puedes contactar en <a href="mailto:vinculatumente@gmail.com">vinculatumente@gmail.com</a>.</p>
+                <p>El titular puede modificar esta Política de Cookies en función de exigencias legislativas o para adaptarla a las instrucciones dictadas por la Agencia Española de Protección de Datos (AEPD). Para cualquier duda, puedes contactar en <a href="mailto:info@vinculatumente.com">info@vinculatumente.com</a>.</p>
               </LegalSection>
 
             </div>

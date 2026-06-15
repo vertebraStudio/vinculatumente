@@ -65,6 +65,7 @@ export default function Header({ solid = false }) {
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <ul>
             <li><Link href="/" onClick={close}>Inicio</Link></li>
+            <li><Link href="/equipo" onClick={close}>Equipo</Link></li>
             <li className={`has-dropdown ${isMobileDropdownOpen ? 'mobile-dropdown-open' : ''}`}>
               <Link href="/#terapias" className="dropdown-trigger" onClick={handleDropdownClick}>
                 Sesiones <span className={`arrow ${isMobileDropdownOpen ? 'rotated' : ''}`}>▾</span>

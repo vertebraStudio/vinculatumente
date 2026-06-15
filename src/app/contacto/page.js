@@ -84,7 +84,7 @@ export default function ContactoPage() {
                   </a>
 
                   {/* Email */}
-                  <a href="mailto:vinculatumente@gmail.com" style={{ display: 'flex', flexDirection: 'column', gap: '20px', padding: '28px 24px', borderRadius: '16px', backgroundColor: 'var(--white)', border: '1px solid #eadce6', textDecoration: 'none', transition: 'all 0.2s ease' }} className="contact-card-link">
+                  <a href="mailto:info@vinculatumente.com" style={{ display: 'flex', flexDirection: 'column', gap: '20px', padding: '28px 24px', borderRadius: '16px', backgroundColor: 'var(--white)', border: '1px solid #eadce6', textDecoration: 'none', transition: 'all 0.2s ease' }} className="contact-card-link">
                     <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
                       <div style={{ width: '46px', height: '46px', borderRadius: '50%', backgroundColor: 'var(--primary-light)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent)' }}>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
@@ -100,7 +100,7 @@ export default function ContactoPage() {
                       </p>
                     </div>
                     <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--accent)', marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '4px', wordBreak: 'break-all' }}>
-                      vinculatumente@gmail.com →
+                      info@vinculatumente.com →
                     </span>
                   </a>
 

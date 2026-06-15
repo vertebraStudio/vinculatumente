@@ -21,7 +21,7 @@ export default function HomeHero() {
         {/* Contenido */}
         <div className="hero-content">
           <span className="hero-eyebrow">
-            <span className="eb-line" /> <span className="eb-heart">♡</span> Psicóloga y Sexóloga
+            <span className="eb-line" /> <span className="eb-heart">♡</span> Psicología · Sexología · Bienestar Emocional
           </span>
 
           <h1 className="hero-title">
@@ -31,14 +31,14 @@ export default function HomeHero() {
           </h1>
 
           <p className="hero-lead">
-            Soy María Villalba. Te acompaño a comprenderte, aceptarte y vivir
-            relaciones más sanas y conscientes, desde un espacio seguro, cercano
+            En Vincula Tu Mente acompañamos a comprenderte, aceptarte y vivir
+            relaciones más sanas y conscientes. Desde un espacio seguro, cercano
             y libre de juicios.
           </p>
 
           <div className="hero-ctas">
             <Link href="/contacto" className="hero-btn-primary">Reservar mi cita</Link>
-            <Link href="/#sobre-mi" className="hero-btn-ghost">Conóceme</Link>
+            <Link href="/equipo" className="hero-btn-ghost">Conoce el equipo</Link>
           </div>
 
           <div className="hero-meta">

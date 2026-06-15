@@ -31,7 +31,7 @@ export default function PrivacidadPage() {
                   ["Actividad", "Psicóloga y Sexóloga"],
                   ["Nº de Colegiada", "M-43581 (Colegio Oficial de la Psicología de Madrid)"],
                   ["Ámbito de atención", "Alcalá de Henares (Madrid) y online en toda España"],
-                  ["Email de contacto", "vinculatumente@gmail.com"],
+                  ["Email de contacto", "info@vinculatumente.com"],
                   ["Teléfono", "+34 604 80 72 00"],
                 ]} />
               </LegalSection>
@@ -81,7 +81,7 @@ export default function PrivacidadPage() {
                   <li><strong>Portabilidad</strong>: recibir tus datos en un formato estructurado y de uso común.</li>
                   <li><strong>Retirar el consentimiento</strong>: en cualquier momento, sin que ello afecte a la licitud del tratamiento previo.</li>
                 </ul>
-                <p>Para ejercer cualquiera de estos derechos, puedes dirigirte por escrito al correo electrónico <a href="mailto:vinculatumente@gmail.com">vinculatumente@gmail.com</a>. En cumplimiento de las directrices actuales de la Agencia Española de Protección de Datos (AEPD), no es obligatorio adjuntar sistemáticamente una copia de tu DNI; únicamente te solicitaremos aportar una prueba de identidad (como una copia de tu DNI o equivalente) si existieran dudas razonables sobre tu identidad para poder verificarla de forma segura.</p>
+                <p>Para ejercer cualquiera de estos derechos, puedes dirigirte por escrito al correo electrónico <a href="mailto:info@vinculatumente.com">info@vinculatumente.com</a>. En cumplimiento de las directrices actuales de la Agencia Española de Protección de Datos (AEPD), no es obligatorio adjuntar sistemáticamente una copia de tu DNI; únicamente te solicitaremos aportar una prueba de identidad (como una copia de tu DNI o equivalente) si existieran dudas razonables sobre tu identidad para poder verificarla de forma segura.</p>
                 <p>Asimismo, tienes derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong> en <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a> si consideras que el tratamiento de tus datos infringe la normativa vigente.</p>
               </LegalSection>
 

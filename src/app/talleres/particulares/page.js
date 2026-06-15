@@ -2,14 +2,14 @@ import WorkshopProfileBody from '@/components/WorkshopProfileBody';
 
 export const metadata = {
   title: 'Talleres para Particulares | Vincula Tu Mente | María Villalba',
-  description: 'Talleres sobre sexualidad, vínculos, relaciones y bienestar emocional para personas adultas. María Villalba, psicóloga y sexóloga en Alcalá de Henares y online.',
+  description: 'Talleres sobre sexualidad, vínculos, relaciones y bienestar emocional para personas adultas. Enfoque inclusivo: todas las orientaciones, identidades y modelos de relación. María Villalba, psicóloga y sexóloga en Alcalá de Henares y online.',
   alternates: { canonical: 'https://vinculatumente.es/talleres/particulares' },
 };
 
 const profile = {
   eyebrow: 'Talleres para particulares',
   title: 'Formación para tu bienestar personal',
-  description: 'Espacios formativos para personas adultas que quieren comprender mejor su mundo emocional, su sexualidad y sus relaciones. Talleres divulgativos, prácticos y libres de juicio.',
+  description: 'Espacios formativos para personas adultas que quieren comprender mejor su mundo emocional, su sexualidad y sus relaciones. Talleres divulgativos, prácticos y libres de juicio, abiertos a todas las identidades, orientaciones y modelos de relación.',
   tagline: 'Aprende, comprende, avanza',
   color: '#F4E9F1',
   note: 'Sesiones presenciales en Alcalá de Henares y online en toda España.',
