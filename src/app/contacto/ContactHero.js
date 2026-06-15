@@ -26,14 +26,13 @@ export default function ContactHero() {
 
         {/* Columna derecha: imagen compacta */}
         <div className="hero-split-right">
-          <div className="hero-img-wrapper" style={{ width: '100%' }}>
+          <div className="hero-img-wrapper" style={{ width: '100%', position: 'relative', height: '280px' }}>
             <Image
               src="/media/contacto.jpg"
               alt="Consulta de psicología Vincula Tu Mente"
-              className="hero-split-img"
-              width={440}
-              height={280}
+              fill
               style={{ objectFit: 'cover' }}
+              sizes="(max-width: 768px) 100vw, 440px"
               priority
             />
           </div>
