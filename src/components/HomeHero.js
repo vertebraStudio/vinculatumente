@@ -48,24 +48,22 @@ export default function HomeHero() {
           </div>
         </div>
 
-        {/* Panel visual — composición de tres imágenes */}
+        {/* Panel visual — composición ilustraciones flotantes */}
         <div className="hero-visual">
+          <span className="hc-bg-blob" aria-hidden="true" />
           <div className="hero-composition">
-            <div className="hc-main">
-              <Image src="/media/selfcare-draw 1.png" alt="Bienestar emocional" fill style={{ objectFit: 'cover' }} sizes="(max-width: 900px) 60vw, 30vw" priority />
+            {/* Selfcare — tarjeta central grande */}
+            <div className="hc-card hc-selfcare">
+              <Image src="/media/selfcare-draw 1.png" alt="Autocuidado y bienestar emocional" fill style={{ objectFit: 'contain', padding: '16px', mixBlendMode: 'multiply' }} sizes="(max-width: 900px) 55vw, 26vw" priority />
             </div>
-            <div className="hc-col">
-              <div className="hc-card">
-                <Image src="/media/plant-draw 1.png" alt="Crecimiento personal" fill style={{ objectFit: 'cover' }} sizes="(max-width: 900px) 35vw, 16vw" priority />
-              </div>
-              <div className="hc-card">
-                <Image src="/media/bird-draw 1.png" alt="Libertad y bienestar" fill style={{ objectFit: 'cover' }} sizes="(max-width: 900px) 35vw, 16vw" priority />
-              </div>
+            {/* Plant — tarjeta superior derecha */}
+            <div className="hc-card hc-plant">
+              <Image src="/media/plant-draw 1.png" alt="Crecimiento personal" fill style={{ objectFit: 'contain', padding: '12px' }} sizes="(max-width: 900px) 32vw, 16vw" priority />
             </div>
-          </div>
-          <div className="hero-floating-card">
-            <span className="fc-heart">♡</span>
-            <span className="fc-text">Un espacio seguro,<br />cercano y sin juicios</span>
+            {/* Bird — tarjeta inferior izquierda */}
+            <div className="hc-card hc-bird">
+              <Image src="/media/bird-draw 1.png" alt="Libertad emocional" fill style={{ objectFit: 'contain', padding: '14px', mixBlendMode: 'multiply' }} sizes="(max-width: 900px) 34vw, 16vw" priority />
+            </div>
           </div>
         </div>
       </div>
@@ -135,35 +133,52 @@ export default function HomeHero() {
         :global(.hero-btn-ghost:hover) { color: var(--accent) !important; }
 
         /* ---- Panel visual ---- */
-        .hero-visual { position: relative; display: flex; align-items: center; justify-content: center; min-height: 540px; }
+        .hero-visual { position: relative; display: flex; align-items: center; justify-content: center; min-height: 560px; }
+
+        .hc-bg-blob {
+          position: absolute; inset: 0; pointer-events: none; z-index: 0;
+          background: radial-gradient(ellipse 80% 80% at 55% 48%, rgba(201,168,197,0.38) 0%, transparent 68%);
+        }
 
         .hero-composition {
           position: relative; z-index: 2;
-          display: grid;
-          grid-template-columns: 1.35fr 1fr;
-          gap: 12px;
-          width: 92%;
+          width: 100%; height: 500px;
         }
-        .hc-main {
-          position: relative;
-          border-radius: 24px;
-          overflow: hidden;
-          aspect-ratio: 3/4;
-          box-shadow: 0 20px 50px rgba(168,123,160,0.22);
-          background: #f0e6ee;
-        }
-        .hc-col {
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-        }
+
         .hc-card {
-          position: relative;
-          border-radius: 20px;
+          position: absolute;
+          border-radius: 22px;
           overflow: hidden;
-          flex: 1;
-          box-shadow: 0 10px 28px rgba(168,123,160,0.16);
-          background: #f0e6ee;
+        }
+
+        /* Selfcare — central, grande, ligera inclinación izquierda */
+        .hc-selfcare {
+          width: 54%; aspect-ratio: 3/4;
+          background: #F7ECF4;
+          top: 50%; left: 50%;
+          transform: translate(-54%, -50%) rotate(-3deg);
+          z-index: 2;
+          box-shadow: 0 22px 56px rgba(26,20,22,0.15), 0 0 0 1px rgba(201,168,197,0.2);
+        }
+
+        /* Plant — esquina superior derecha, inclinación derecha */
+        .hc-plant {
+          width: 33%; aspect-ratio: 1/1.55;
+          background: #EEF5E6;
+          top: 2%; right: 3%;
+          transform: rotate(7deg);
+          z-index: 3;
+          box-shadow: 0 14px 38px rgba(168,123,160,0.22), 0 0 0 1px rgba(201,168,197,0.15);
+        }
+
+        /* Bird — esquina inferior izquierda, inclinación contraria */
+        .hc-bird {
+          width: 36%; aspect-ratio: 1;
+          background: #EBF0F8;
+          bottom: 3%; left: 2%;
+          transform: rotate(-6deg);
+          z-index: 1;
+          box-shadow: 0 14px 38px rgba(168,123,160,0.18), 0 0 0 1px rgba(201,168,197,0.15);
         }
 
         .hero-floating-card {
@@ -181,12 +196,13 @@ export default function HomeHero() {
 
         @media (max-width: 900px) {
           .hero-grid { grid-template-columns: 1fr; padding: 120px 26px 70px; gap: 44px; }
-          .hero-visual { order: -1; min-height: 0; }
-          .hero-composition { width: 100%; }
-          .hc-main { aspect-ratio: 4/3; }
+          .hero-visual { order: -1; min-height: 360px; }
+          .hero-composition { height: 340px; }
+          .hc-selfcare { width: 56%; }
+          .hc-plant { width: 30%; }
+          .hc-bird { width: 32%; }
           .hero-title { font-size: clamp(2.6rem, 11vw, 3.6rem); }
           .scroll-cue { display: none; }
-          .hero-floating-card { left: 0; bottom: 0; }
         }
       `}</style>
     </section>
