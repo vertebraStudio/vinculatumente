@@ -17,10 +17,10 @@ export default function Footer() {
           <div className="footer-brand">
             <p className="footer-wordmark">Vincula Tu Mente</p>
             <p className="footer-tagline">Psicología y Sexología</p>
-            <p className="subtitle">Psicóloga y sexóloga. Te acompaño en relaciones y vínculos, infancia y adolescencia, trauma y apego, y sexología.</p>
+            <p className="subtitle">Acompañamiento psicológico y sexológico especializado en relaciones y vínculos, infancia y adolescencia, trauma y apego. Rigor, cercanía y confidencialidad en cada proceso.</p>
             <p className="footer-location">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Consulta presencial en Alcalá de Henares y terapia online en toda España
+              Consulta presencial en Alcalá de Henares y sesiones online en toda España
             </p>
             <div style={{ display: 'flex', gap: '8px', marginBottom: '20px', flexWrap: 'wrap', marginTop: '5px' }}>
               <span style={{ fontSize: '0.78rem', letterSpacing: '0.5px', fontWeight: 600, padding: '4px 12px', borderRadius: '50px', border: '1px solid rgba(255,255,255,0.3)', color: 'rgba(255,255,255,0.85)' }}>
