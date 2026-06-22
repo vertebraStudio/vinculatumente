@@ -8,7 +8,7 @@ import { useState } from 'react';
 const faqs = [
   {
     question: "¿Atiendes online o de forma presencial?",
-    answer: "Ambas. Tengo consulta presencial en Alcalá de Henares y también realizo terapia online por videollamada para que puedas conectarte desde cualquier punto de España, con la misma cercanía y confidencialidad."
+    answer: "Ambas. Tengo consulta presencial en Alcalá de Henares y también ofrezco sesiones online por videollamada para que puedas conectarte desde cualquier punto de España, con la misma cercanía y confidencialidad."
   },
   {
     question: "¿Cómo puedo pedir mi primera cita?",
@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     question: "¿En qué puedes ayudarme?",
-    answer: "Con personas adultas trabajo ansiedad, autoestima, duelo y gestión emocional; relaciones, vínculos y sexualidad; trauma y apego con terapia EMDR; y perspectiva de género y diversidad. Con niñas, niños y adolescentes ofrezco acompañamiento emocional adaptado a cada etapa del desarrollo, integrando a la familia en el proceso."
+    answer: "Con personas adultas trabajo ansiedad, autoestima, duelo y gestión emocional; relaciones, vínculos y sexualidad; trauma y apego mediante EMDR; y perspectiva de género y diversidad. Con niñas, niños y adolescentes ofrezco acompañamiento emocional adaptado a cada etapa del desarrollo, integrando a la familia en el proceso."
   },
   {
     question: "¿Atiendes sesiones de pareja y relaciones afectivas?",
@@ -51,7 +51,7 @@ export default function FAQ() {
           <span className="eyebrow eyebrow-center"><span className="eyebrow-line" /><span className="eyebrow-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg></span> Dudas frecuentes <span className="eyebrow-line" /></span>
         </div>
         <h2 className="section-title">Preguntas Frecuentes</h2>
-        <p className="section-subtitle">Resuelvo tus dudas principales antes de comenzar el proceso terapéutico.</p>
+        <p className="section-subtitle">Resuelvo tus dudas principales antes de que empecemos.</p>
         <div className="faq-list">
           {faqs.map((faq, index) => (
             <div key={index} className={`faq-item glass ${openIndex === index ? 'open' : ''}`} onClick={() => toggleFAQ(index)}>
