@@ -51,6 +51,29 @@ export default function TherapyBody({ introTitle, introParas = [], senales = [],
               ))}
             </div>
           </div>
+
+          <div className="reveal ty-block">
+            <h3 className="ty-block-title">Tarifas</h3>
+            <div className="ty-pricing">
+              <div className="ty-pricing-header">
+                <span>Tipo de sesión</span>
+                <span>Duración</span>
+                <span>Precio</span>
+              </div>
+              {[
+                ['Sesión individual',  '1h',  '50 €'],
+                ['Sesión de pareja',   '1h',  '65 €'],
+                ['Sesiones grupales',  '2h',  '35 € / persona'],
+              ].map(([tipo, dur, precio]) => (
+                <div key={tipo} className="ty-pricing-row">
+                  <span className="ty-pricing-name">{tipo}</span>
+                  <span>{dur}</span>
+                  <span className="ty-pricing-price">{precio}</span>
+                </div>
+              ))}
+              <p className="ty-pricing-note">Los precios indicados son orientativos. Escríbenos para confirmar disponibilidad y tarifas actualizadas.</p>
+            </div>
+          </div>
         </div>
 
         {/* ---- Sidebar sticky ---- */}
@@ -138,6 +161,15 @@ export default function TherapyBody({ introTitle, introParas = [], senales = [],
         .ty-modalidad-custom { text-align: left; font-size: 0.8rem; line-height: 1.55; padding: 10px 14px; background: rgba(201,168,197,0.1); border-left: 2px solid rgba(168,123,160,0.35); border-radius: 0 8px 8px 0; font-style: italic; }
         .ty-ig { text-align: center; font-size: 0.85rem; color: var(--accent); text-decoration: none; font-weight: 500; }
         .ty-ig:hover { text-decoration: underline; }
+
+        /* Tabla de precios */
+        .ty-pricing { border: 1px solid rgba(201,168,197,0.3); border-radius: 16px; overflow: hidden; }
+        .ty-pricing-header { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 12px 20px; background: rgba(201,168,197,0.12); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+        .ty-pricing-row { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 16px 20px; border-top: 1px solid rgba(201,168,197,0.2); font-size: 0.95rem; color: var(--text); align-items: center; }
+        .ty-pricing-row:hover { background: rgba(201,168,197,0.06); }
+        .ty-pricing-name { font-weight: 600; }
+        .ty-pricing-price { color: var(--accent); font-weight: 600; }
+        .ty-pricing-note { font-size: 0.78rem; color: var(--text-muted); font-style: italic; margin: 14px 20px 16px; line-height: 1.55; }
 
         @media (max-width: 900px) {
           .ty-layout { grid-template-columns: 1fr; gap: 40px; }
