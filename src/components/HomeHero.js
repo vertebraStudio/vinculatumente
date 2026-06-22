@@ -67,7 +67,7 @@ export default function HomeHero() {
         .home-hero {
           position: relative;
           width: 100%;
-          min-height: auto;
+          min-height: 100svh;
           overflow: hidden;
           background:
             radial-gradient(120% 90% at 100% 0%, #F2E3EF 0%, rgba(242,227,239,0) 55%),
@@ -85,8 +85,8 @@ export default function HomeHero() {
           display: flex; flex-direction: column; align-items: center; text-align: center;
           gap: 22px;
           max-width: 680px;
-          margin: 110px auto 60px;
-          padding: 0 40px;
+          margin: 0 auto;
+          padding: 120px 40px 80px;
         }
 
         .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-poppins), sans-serif; font-size: 0.76rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
@@ -154,9 +154,9 @@ export default function HomeHero() {
         .scroll-cue-line { width: 1px; height: 38px; background: linear-gradient(var(--accent), transparent); }
 
         @media (max-width: 900px) {
-          .hero-center { margin: 120px auto 70px; padding: 0 26px; }
+          .hero-center { padding: 110px 26px 70px; }
           .hero-title { font-size: clamp(2.6rem, 11vw, 3.6rem); }
-          .deco-plant { width: 160px; height: 240px; right: -10px; top: 40px; }
+          .deco-plant { width: 140px; height: 190px; right: -5px; top: 10px; }
           .deco-selfcare { width: 160px; height: 200px; left: -10px; bottom: 20px; }
           .deco-bird { display: none; }
           .scroll-cue { display: none; }
