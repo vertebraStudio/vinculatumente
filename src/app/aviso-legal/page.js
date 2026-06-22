@@ -33,7 +33,7 @@ export default function AvisoLegalPage() {
                   ["Ámbito de atención", "Alcalá de Henares (Madrid) y terapia online en toda España"],
                   ["Teléfono", "+34 604 80 72 00"],
                   ["Email", "info@vinculatumente.com"],
-                  ["Sitio web", "https://vinculatumente.es"],
+                  ["Sitio web", "https://vinculatumente.com"],
                 ]} />
                 <p style={{ marginTop: '16px', fontSize: '0.92rem', fontStyle: 'italic' }}>
                   Como profesional que ejerce una actividad regulada y colegiada en España, el/la titular se rige por las normas profesionales vigentes en el <strong>Código Deontológico del Psicólogo</strong>, emitido por el Consejo General de la Psicología de España, accesible de manera pública y gratuita a través de la web institucional del colegio oficial correspondiente.
