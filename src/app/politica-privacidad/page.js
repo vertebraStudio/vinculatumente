@@ -52,12 +52,12 @@ export default function PrivacidadPage() {
                 <ul>
                   <li><strong>Gestión de consultas y solicitudes de cita</strong> (base legal: consentimiento del interesado al enviar el formulario; artículo 6.1.a del RGPD).</li>
                   <li><strong>Comunicación con el usuario</strong> para responder a sus mensajes y resolver dudas (base legal: aplicación de medidas precontractuales o interés legítimo; artículo 6.1.b / 6.1.f del RGPD).</li>
-                  <li><strong>Prestación de servicios de asistencia sanitaria (terapia psicológica)</strong>, si se formaliza una relación terapéutica. En este supuesto: Para datos relativos a la salud, la base es la <strong>prestación de asistencia o tratamiento sanitario</strong> sobre la base del derecho de la Unión o de los Estados miembros, y bajo la responsabilidad de un profesional sujeto a la obligación de secreto profesional (<strong>artículo 9.2.h del RGPD</strong>, en relación con la <strong>Ley 41/2002 de Autonomía del Paciente</strong>).</li>
+                  <li><strong>Prestación de servicios de asistencia sanitaria (psicología y sexología)</strong>, si se formaliza un proceso de acompañamiento profesional. En este supuesto: Para datos relativos a la salud, la base es la <strong>prestación de asistencia o tratamiento sanitario</strong> sobre la base del derecho de la Unión o de los Estados miembros, y bajo la responsabilidad de un profesional sujeto a la obligación de secreto profesional (<strong>artículo 9.2.h del RGPD</strong>, en relación con la <strong>Ley 41/2002 de Autonomía del Paciente</strong>).</li>
                 </ul>
               </LegalSection>
 
               <LegalSection title="4. Conservación de los Datos">
-                <p>Los datos personales se conservarán durante el tiempo necesario para atender tu consulta y, en caso de relación terapéutica, durante el tiempo que establezca la normativa aplicable en materia de documentación clínica (Ley 41/2002, de Autonomía del Paciente), con un mínimo de 5 años desde la última intervención.</p>
+                <p>Los datos personales se conservarán durante el tiempo necesario para atender tu consulta y, en caso de proceso de acompañamiento profesional, durante el tiempo que establezca la normativa aplicable en materia de documentación clínica (Ley 41/2002, de Autonomía del Paciente), con un mínimo de 5 años desde la última intervención.</p>
                 <p>Una vez finalizada la relación y vencidos los plazos legales de conservación, los datos serán suprimidos de forma segura.</p>
               </LegalSection>
 
@@ -86,7 +86,7 @@ export default function PrivacidadPage() {
               </LegalSection>
 
               <LegalSection title="7. Confidencialidad y Secreto Profesional">
-                <p>Como profesional sanitario/a colegiado/a, el/la titular está sujeto al secreto profesional establecido en el Código Deontológico del Psicólogo y en la Ley de Autonomía del Paciente. Toda la información compartida en el contexto de la relación terapéutica es estrictamente confidencial y no podrá ser divulgada sin el consentimiento expreso del paciente, salvo en los supuestos legalmente establecidos.</p>
+                <p>Como profesional sanitario/a colegiado/a, el/la titular está sujeto al secreto profesional establecido en el Código Deontológico del Psicólogo y en la Ley de Autonomía del Paciente. Toda la información compartida en el contexto del proceso de acompañamiento profesional es estrictamente confidencial y no podrá ser divulgada sin el consentimiento expreso del paciente, salvo en los supuestos legalmente establecidos.</p>
               </LegalSection>
 
               <LegalSection title="8. Seguridad de los Datos">
