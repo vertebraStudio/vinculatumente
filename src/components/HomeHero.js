@@ -17,54 +17,44 @@ export default function HomeHero() {
       <span className="bg-blob bg-blob-a" aria-hidden="true" />
       <span className="bg-blob bg-blob-b" aria-hidden="true" />
 
-      <div className="hero-grid">
-        {/* Contenido */}
-        <div className="hero-content">
-          <span className="hero-eyebrow">
-            <span className="eb-line" /> <span className="eb-heart">♡</span> Psicología · Sexología · Bienestar Emocional
-          </span>
+      {/* Ilustraciones decorativas flotantes */}
+      <div className="deco deco-plant" aria-hidden="true">
+        <Image src="/media/plant-draw 1.png" alt="" fill style={{ objectFit: 'contain' }} sizes="260px" priority />
+      </div>
+      <div className="deco deco-selfcare" aria-hidden="true">
+        <Image src="/media/selfcare-draw 1.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="280px" priority />
+      </div>
+      <div className="deco deco-bird" aria-hidden="true">
+        <Image src="/media/bird-draw 1.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="220px" priority />
+      </div>
 
-          <h1 className="hero-title">
-            Tu bienestar<br />
-            emocional y<br />
-            sexual <em>importa</em>
-          </h1>
+      {/* Contenido centrado */}
+      <div className="hero-center">
+        <span className="hero-eyebrow">
+          <span className="eb-line" /> <span className="eb-heart">♡</span> Psicología · Sexología · Bienestar Emocional
+        </span>
 
-          <p className="hero-lead">
-            En Vincula Tu Mente acompañamos a comprenderte, aceptarte y vivir
-            relaciones más sanas y conscientes. Desde un espacio seguro, cercano
-            y libre de juicios.
-          </p>
+        <h1 className="hero-title">
+          Tu bienestar<br />
+          emocional y<br />
+          sexual <em>importa</em>
+        </h1>
 
-          <div className="hero-ctas">
-            <Link href="/contacto" className="hero-btn-primary">Reservar mi cita</Link>
-            <Link href="/equipo" className="hero-btn-ghost">Conoce el equipo</Link>
-          </div>
+        <p className="hero-lead">
+          En Vincula Tu Mente acompañamos a comprenderte, aceptarte y vivir
+          relaciones más sanas y conscientes. Desde un espacio seguro, cercano
+          y libre de juicios.
+        </p>
 
-          <div className="hero-meta">
-            <span>Consulta presencial en <strong>Alcalá de Henares</strong> y sesiones <strong>online</strong> en toda España</span>
-            <span className="meta-dot">·</span>
-            <span>Col. <strong>M-43581</strong></span>
-          </div>
+        <div className="hero-ctas">
+          <Link href="/contacto" className="hero-btn-primary">Reservar mi cita</Link>
+          <Link href="/equipo" className="hero-btn-ghost">Conoce el equipo</Link>
         </div>
 
-        {/* Panel visual — composición ilustraciones flotantes */}
-        <div className="hero-visual">
-          <span className="hc-bg-blob" aria-hidden="true" />
-          <div className="hero-composition">
-            {/* Selfcare — tarjeta central grande */}
-            <div className="hc-card hc-selfcare">
-              <Image src="/media/selfcare-draw 1.png" alt="Autocuidado y bienestar emocional" fill style={{ objectFit: 'contain', padding: '16px', mixBlendMode: 'multiply' }} sizes="(max-width: 900px) 55vw, 26vw" priority />
-            </div>
-            {/* Plant — tarjeta superior derecha */}
-            <div className="hc-card hc-plant">
-              <Image src="/media/plant-draw 1.png" alt="Crecimiento personal" fill style={{ objectFit: 'contain', padding: '12px' }} sizes="(max-width: 900px) 32vw, 16vw" priority />
-            </div>
-            {/* Bird — tarjeta inferior izquierda */}
-            <div className="hc-card hc-bird">
-              <Image src="/media/bird-draw 1.png" alt="Libertad emocional" fill style={{ objectFit: 'contain', padding: '14px', mixBlendMode: 'multiply' }} sizes="(max-width: 900px) 34vw, 16vw" priority />
-            </div>
-          </div>
+        <div className="hero-meta">
+          <span>Consulta presencial en <strong>Alcalá de Henares</strong> y sesiones <strong>online</strong> en toda España</span>
+          <span className="meta-dot">·</span>
+          <span>Col. <strong>M-43581</strong></span>
         </div>
       </div>
 
@@ -89,31 +79,48 @@ export default function HomeHero() {
         .bg-blob-a { width: 480px; height: 480px; top: -140px; left: -120px; background: radial-gradient(circle, rgba(201,168,197,0.35), rgba(201,168,197,0) 70%); }
         .bg-blob-b { width: 380px; height: 380px; bottom: -120px; left: 38%; background: radial-gradient(circle, rgba(234,217,232,0.6), rgba(234,217,232,0) 70%); }
 
-        .hero-grid {
-          position: relative;
-          z-index: 2;
-          width: 100%;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 140px 40px 90px;
-          display: grid;
-          grid-template-columns: 1.05fr 0.95fr;
-          gap: 50px;
-          align-items: center;
+        /* ---- Layout centrado ---- */
+        .hero-center {
+          position: relative; z-index: 2;
+          display: flex; flex-direction: column; align-items: center; text-align: center;
+          gap: 22px;
+          max-width: 680px;
+          margin: 140px auto 90px;
+          padding: 0 40px;
         }
 
-        /* ---- Contenido ---- */
-        .hero-content { display: flex; flex-direction: column; gap: 22px; }
         .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-poppins), sans-serif; font-size: 0.76rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
         .eb-line { width: 40px; height: 1px; background: var(--accent); opacity: 0.5; display: inline-block; }
         .eb-heart { font-size: 0.95rem; }
         .hero-title { font-family: var(--font-playfair), serif; font-size: clamp(2.8rem, 5.2vw, 4.8rem); font-weight: 500; line-height: 1.06; color: var(--text); margin: 0; letter-spacing: -0.01em; }
-        .hero-title em { font-style: italic; color: var(--accent); position: relative; }
-        .hero-lead { font-size: 1.08rem; line-height: 1.8; color: var(--text-muted); max-width: 480px; margin: 0; }
-        .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 6px; }
-        .hero-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 14px; font-size: 0.82rem; color: var(--text-muted); }
+        .hero-title em { font-style: italic; color: var(--accent); }
+        .hero-lead { font-size: 1.08rem; line-height: 1.8; color: var(--text-muted); max-width: 520px; margin: 0; }
+        .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 6px; }
+        .hero-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; margin-top: 14px; font-size: 0.82rem; color: var(--text-muted); }
         .hero-meta strong { color: var(--text); font-weight: 600; }
         .meta-dot { color: var(--primary); }
+
+        /* ---- Ilustraciones decorativas ---- */
+        .deco { position: absolute; z-index: 1; pointer-events: none; }
+
+        .deco-plant {
+          width: 240px; height: 360px;
+          top: 60px; right: 4%;
+          transform: rotate(6deg);
+          opacity: 0.82;
+        }
+        .deco-selfcare {
+          width: 260px; height: 320px;
+          bottom: 40px; left: 3%;
+          transform: rotate(-4deg);
+          opacity: 0.75;
+        }
+        .deco-bird {
+          width: 200px; height: 200px;
+          top: 80px; left: 8%;
+          transform: rotate(3deg);
+          opacity: 0.65;
+        }
 
         :global(.hero-btn-primary) {
           display: inline-flex !important; align-items: center !important; justify-content: center !important;
@@ -132,54 +139,6 @@ export default function HomeHero() {
         }
         :global(.hero-btn-ghost:hover) { color: var(--accent) !important; }
 
-        /* ---- Panel visual ---- */
-        .hero-visual { position: relative; display: flex; align-items: center; justify-content: center; min-height: 560px; }
-
-        .hc-bg-blob {
-          position: absolute; inset: 0; pointer-events: none; z-index: 0;
-          background: radial-gradient(ellipse 80% 80% at 55% 48%, rgba(201,168,197,0.38) 0%, transparent 68%);
-        }
-
-        .hero-composition {
-          position: relative; z-index: 2;
-          width: 100%; height: 500px;
-        }
-
-        .hc-card {
-          position: absolute;
-          border-radius: 22px;
-          overflow: hidden;
-        }
-
-        /* Selfcare — central, grande, ligera inclinación izquierda */
-        .hc-selfcare {
-          width: 54%; aspect-ratio: 3/4;
-          background: #F7ECF4;
-          top: 50%; left: 50%;
-          transform: translate(-54%, -50%) rotate(-3deg);
-          z-index: 2;
-          box-shadow: 0 22px 56px rgba(26,20,22,0.15), 0 0 0 1px rgba(201,168,197,0.2);
-        }
-
-        /* Plant — esquina superior derecha, inclinación derecha */
-        .hc-plant {
-          width: 33%; aspect-ratio: 1/1.55;
-          background: #EEF5E6;
-          top: 2%; right: 3%;
-          transform: rotate(7deg);
-          z-index: 3;
-          box-shadow: 0 14px 38px rgba(168,123,160,0.22), 0 0 0 1px rgba(201,168,197,0.15);
-        }
-
-        /* Bird — esquina inferior izquierda, inclinación contraria */
-        .hc-bird {
-          width: 36%; aspect-ratio: 1;
-          background: #EBF0F8;
-          bottom: 3%; left: 2%;
-          transform: rotate(-6deg);
-          z-index: 1;
-          box-shadow: 0 14px 38px rgba(168,123,160,0.18), 0 0 0 1px rgba(201,168,197,0.15);
-        }
 
         .hero-floating-card {
           position: absolute; z-index: 3; left: -6%; bottom: 8%;
@@ -195,13 +154,11 @@ export default function HomeHero() {
         .scroll-cue-line { width: 1px; height: 38px; background: linear-gradient(var(--accent), transparent); }
 
         @media (max-width: 900px) {
-          .hero-grid { grid-template-columns: 1fr; padding: 120px 26px 70px; gap: 44px; }
-          .hero-visual { order: -1; min-height: 360px; }
-          .hero-composition { height: 340px; }
-          .hc-selfcare { width: 56%; }
-          .hc-plant { width: 30%; }
-          .hc-bird { width: 32%; }
+          .hero-center { margin: 120px auto 70px; padding: 0 26px; }
           .hero-title { font-size: clamp(2.6rem, 11vw, 3.6rem); }
+          .deco-plant { width: 160px; height: 240px; right: -10px; top: 40px; }
+          .deco-selfcare { width: 160px; height: 200px; left: -10px; bottom: 20px; }
+          .deco-bird { display: none; }
           .scroll-cue { display: none; }
         }
       `}</style>
