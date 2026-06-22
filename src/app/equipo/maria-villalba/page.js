@@ -45,7 +45,7 @@ export default function MariaVillalbaPage() {
               <div className="mv-photo-col">
                 <div className="mv-photo-blob">
                   <Image
-                    src="/media/maria-profile-3.png"
+                    src="/media/maria-profile-2.png"
                     alt="María Villalba, psicóloga y sexóloga"
                     fill
                     style={{ objectFit: 'cover', objectPosition: 'center 20%' }}
