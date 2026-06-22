@@ -67,7 +67,7 @@ export default function HomeHero() {
         .home-hero {
           position: relative;
           width: 100%;
-          min-height: 70vh;
+          min-height: auto;
           overflow: hidden;
           background:
             radial-gradient(120% 90% at 100% 0%, #F2E3EF 0%, rgba(242,227,239,0) 55%),
@@ -85,7 +85,7 @@ export default function HomeHero() {
           display: flex; flex-direction: column; align-items: center; text-align: center;
           gap: 22px;
           max-width: 680px;
-          margin: 120px auto 70px;
+          margin: 110px auto 60px;
           padding: 0 40px;
         }
 
