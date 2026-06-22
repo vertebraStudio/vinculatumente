@@ -72,6 +72,7 @@ export default function Header({ solid = false }) {
               </Link>
               <div className="dropdown-card">
                 <div className="dropdown-inner">
+                  <Link href="/terapias/adultos" onClick={close}>Adolescentes y adultos</Link>
                   <Link href="/terapias/relaciones-y-vinculos" onClick={close}>Relaciones y vínculos</Link>
                   <Link href="/terapias/infanto-juvenil" onClick={close}>Infanto-juvenil</Link>
                   <Link href="/terapias/trauma-y-apego" onClick={close}>Trauma y apego</Link>
