@@ -49,6 +49,9 @@ export default function TraumaApegoPage() {
           senales={senales}
           herramientas={herramientas}
           ctaNote="Trabajo presencial en Alcalá de Henares y online en toda España, valorando la modalidad más adecuada según el proceso terapéutico."
+          precios={[
+            ["Sesión individual", "1h", "50 €"],
+          ]}
         />
       </main>
       <Footer />

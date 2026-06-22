@@ -49,6 +49,9 @@ export default function InfantoJuvenilPage() {
           senales={senales}
           herramientas={herramientas}
           ctaNote="Sesiones presenciales en Alcalá de Henares y acompañamiento online cuando sea adecuado para la edad y el caso."
+          precios={[
+            ["Sesión individual", "1h", "50 €"],
+          ]}
         />
       </main>
       <Footer />

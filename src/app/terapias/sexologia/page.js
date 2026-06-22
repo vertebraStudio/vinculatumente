@@ -49,6 +49,10 @@ export default function SexologiaPage() {
           senales={senales}
           herramientas={herramientas}
           ctaNote="Consulta sexológica presencial en Alcalá de Henares y online en toda España."
+          precios={[
+            ["Sesión individual", "1h", "50 €"],
+            ["Sesión de pareja", "1h", "65 €"],
+          ]}
         />
       </main>
       <Footer />

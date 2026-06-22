@@ -12,7 +12,7 @@ import Image from 'next/image';
 //   herramientas— array de "¿qué trabajamos?"
 // ============================================================
 
-export default function TherapyBody({ introTitle, introParas = [], senales = [], herramientas = [], ctaNote }) {
+export default function TherapyBody({ introTitle, introParas = [], senales = [], herramientas = [], ctaNote, precios = [] }) {
   return (
     <section className="ty-section">
       <div className="ty-layout">
@@ -52,28 +52,26 @@ export default function TherapyBody({ introTitle, introParas = [], senales = [],
             </div>
           </div>
 
-          <div className="reveal ty-block">
-            <h3 className="ty-block-title">Tarifas</h3>
-            <div className="ty-pricing">
-              <div className="ty-pricing-header">
-                <span>Tipo de sesión</span>
-                <span>Duración</span>
-                <span>Precio</span>
-              </div>
-              {[
-                ['Sesión individual',  '1h',  '50 €'],
-                ['Sesión de pareja',   '1h',  '65 €'],
-                ['Sesiones grupales',  '2h',  '35 € / persona'],
-              ].map(([tipo, dur, precio]) => (
-                <div key={tipo} className="ty-pricing-row">
-                  <span className="ty-pricing-name">{tipo}</span>
-                  <span>{dur}</span>
-                  <span className="ty-pricing-price">{precio}</span>
+          {precios.length > 0 && (
+            <div className="reveal ty-block">
+              <h3 className="ty-block-title">Tarifas</h3>
+              <div className="ty-pricing">
+                <div className="ty-pricing-header">
+                  <span>Tipo de sesión</span>
+                  <span>Duración</span>
+                  <span>Precio</span>
                 </div>
-              ))}
-              <p className="ty-pricing-note">Los precios indicados son orientativos. Escríbenos para confirmar disponibilidad y tarifas actualizadas.</p>
+                {precios.map(([tipo, dur, precio]) => (
+                  <div key={tipo} className="ty-pricing-row">
+                    <span className="ty-pricing-name">{tipo}</span>
+                    <span>{dur}</span>
+                    <span className="ty-pricing-price">{precio}</span>
+                  </div>
+                ))}
+                <p className="ty-pricing-note">Los precios indicados son orientativos. Escríbenos para confirmar disponibilidad y tarifas actualizadas.</p>
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         {/* ---- Sidebar sticky ---- */}

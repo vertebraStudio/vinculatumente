@@ -49,6 +49,10 @@ export default function RelacionesVinculosPage() {
           senales={senales}
           herramientas={herramientas}
           ctaNote="Disponible en modalidad presencial y online."
+          precios={[
+            ["Sesión individual", "1h", "50 €"],
+            ["Sesión de pareja", "1h", "65 €"],
+          ]}
         />
       </main>
       <Footer />
