@@ -30,7 +30,7 @@ export default function AvisoLegalPage() {
                   ["Titular", "María Villalba López"],
                   ["Actividad", "Psicóloga y Sexóloga"],
                   ["Nº de Colegiada", "M-43581 (Colegio Oficial de la Psicología de Madrid)"],
-                  ["Ámbito de atención", "Alcalá de Henares (Madrid) y terapia online en toda España"],
+                  ["Ámbito de atención", "Alcalá de Henares (Madrid) y sesiones online en toda España"],
                   ["Teléfono", "+34 604 80 72 00"],
                   ["Email", "info@vinculatumente.com"],
                   ["Sitio web", "https://vinculatumente.com"],
