@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="footer-brand">
             <p className="footer-wordmark">Vincula Tu Mente</p>
             <p className="footer-tagline">Psicología y Sexología</p>
-            <p className="subtitle">Acompañamiento psicológico y sexológico especializado en relaciones y vínculos, infancia y adolescencia, trauma y apego. Rigor, cercanía y confidencialidad en cada proceso.</p>
+            <p className="subtitle">Especialistas en psicología y sexología. Acompañamiento riguroso, cercano y confidencial.</p>
             <p className="footer-location">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               Consulta presencial en Alcalá de Henares y sesiones online en toda España
