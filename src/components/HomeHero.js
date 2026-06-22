@@ -42,17 +42,26 @@ export default function HomeHero() {
           </div>
 
           <div className="hero-meta">
-            <span>Consulta presencial en <strong>Alcalá de Henares</strong> y terapia <strong>online</strong> en toda España</span>
+            <span>Consulta presencial en <strong>Alcalá de Henares</strong> y sesiones <strong>online</strong> en toda España</span>
             <span className="meta-dot">·</span>
             <span>Col. <strong>M-43581</strong></span>
           </div>
         </div>
 
-        {/* Panel visual con foto en blob */}
+        {/* Panel visual — composición de tres imágenes */}
         <div className="hero-visual">
-          <span className="visual-ring" aria-hidden="true" />
-          <div className="hero-photo">
-            <Image src="/media/maria-profile-2.png" alt="María Villalba, psicóloga y sexóloga" fill className="hero-photo-img" priority sizes="(max-width: 900px) 70vw, 40vw" />
+          <div className="hero-composition">
+            <div className="hc-main">
+              <Image src="/media/selfcare-draw 1.png" alt="Bienestar emocional" fill style={{ objectFit: 'cover' }} sizes="(max-width: 900px) 60vw, 30vw" priority />
+            </div>
+            <div className="hc-col">
+              <div className="hc-card">
+                <Image src="/media/plant-draw 1.png" alt="Crecimiento personal" fill style={{ objectFit: 'cover' }} sizes="(max-width: 900px) 35vw, 16vw" priority />
+              </div>
+              <div className="hc-card">
+                <Image src="/media/bird-draw 1.png" alt="Libertad y bienestar" fill style={{ objectFit: 'cover' }} sizes="(max-width: 900px) 35vw, 16vw" priority />
+              </div>
+            </div>
           </div>
           <div className="hero-floating-card">
             <span className="fc-heart">♡</span>
@@ -127,22 +136,35 @@ export default function HomeHero() {
 
         /* ---- Panel visual ---- */
         .hero-visual { position: relative; display: flex; align-items: center; justify-content: center; min-height: 540px; }
-        .visual-ring {
-          position: absolute; width: 86%; aspect-ratio: 1; border-radius: 46% 54% 50% 50% / 52% 48% 52% 48%;
-          background: linear-gradient(150deg, #E4CFE1 0%, #C9A8C5 55%, #B58FAE 100%);
-          transform: rotate(-6deg); box-shadow: 0 30px 70px rgba(168,123,160,0.28);
+
+        .hero-composition {
+          position: relative; z-index: 2;
+          display: grid;
+          grid-template-columns: 1.35fr 1fr;
+          gap: 12px;
+          width: 92%;
         }
-        .hero-photo {
-          position: relative; z-index: 2; width: 78%; aspect-ratio: 4/5;
-          border-radius: 52% 48% 46% 54% / 48% 52% 48% 52%;
-          overflow: hidden; box-shadow: 0 24px 60px rgba(26,20,22,0.18);
-          background: #efe6ee;
+        .hc-main {
+          position: relative;
+          border-radius: 24px;
+          overflow: hidden;
+          aspect-ratio: 3/4;
+          box-shadow: 0 20px 50px rgba(168,123,160,0.22);
+          background: #f0e6ee;
         }
-        :global(.hero-photo-img) { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .hero-photo-ph { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(160deg, #f3eaf1, #e7d6e5); color: var(--accent); text-align: center; }
-        .ph-mark { font-family: var(--font-playfair), serif; font-size: 4rem; line-height: 1; opacity: 0.55; }
-        .ph-text { font-family: var(--font-poppins), sans-serif; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; }
-        .ph-text small { font-size: 0.7rem; text-transform: none; letter-spacing: 0; }
+        .hc-col {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+        .hc-card {
+          position: relative;
+          border-radius: 20px;
+          overflow: hidden;
+          flex: 1;
+          box-shadow: 0 10px 28px rgba(168,123,160,0.16);
+          background: #f0e6ee;
+        }
 
         .hero-floating-card {
           position: absolute; z-index: 3; left: -6%; bottom: 8%;
@@ -160,8 +182,8 @@ export default function HomeHero() {
         @media (max-width: 900px) {
           .hero-grid { grid-template-columns: 1fr; padding: 120px 26px 70px; gap: 44px; }
           .hero-visual { order: -1; min-height: 0; }
-          .hero-photo { width: 70%; max-width: 320px; }
-          .visual-ring { width: 78%; max-width: 360px; }
+          .hero-composition { width: 100%; }
+          .hc-main { aspect-ratio: 4/3; }
           .hero-title { font-size: clamp(2.6rem, 11vw, 3.6rem); }
           .scroll-cue { display: none; }
           .hero-floating-card { left: 0; bottom: 0; }
