@@ -13,19 +13,28 @@ import Image from 'next/image';
 export default function HomeHero() {
   return (
     <section className="home-hero">
-      {/* Capas de fondo */}
-      <span className="bg-blob bg-blob-a" aria-hidden="true" />
-      <span className="bg-blob bg-blob-b" aria-hidden="true" />
+      {/* Trazos de acuarela — fondo de cada polo */}
+      <div className="stroke stroke-1" aria-hidden="true">
+        <Image src="/media/brushStroke1.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="540px" priority />
+      </div>
+      <div className="stroke stroke-2" aria-hidden="true">
+        <Image src="/media/brushStroke2.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="500px" priority />
+      </div>
+      <div className="stroke stroke-5" aria-hidden="true">
+        <Image src="/media/brushStroke5.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="300px" priority />
+      </div>
 
-      {/* Ilustraciones decorativas flotantes */}
-      <div className="deco deco-plant" aria-hidden="true">
-        <Image src="/media/plant-draw 1.png" alt="" fill style={{ objectFit: 'contain' }} sizes="260px" priority />
+      {/* Cerebro — esquina superior izquierda */}
+      <div className="hero-deco hero-brain" aria-hidden="true">
+        <Image src="/media/brainHero.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="180px" priority />
       </div>
-      <div className="deco deco-selfcare" aria-hidden="true">
-        <Image src="/media/selfcare-draw 1.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="280px" priority />
+
+      {/* Flores — protagonistas de cada polo */}
+      <div className="hero-deco hero-flower-r" aria-hidden="true">
+        <Image src="/media/flowerHeroRight.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="340px" priority />
       </div>
-      <div className="deco deco-bird" aria-hidden="true">
-        <Image src="/media/bird-draw 1.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="220px" priority />
+      <div className="hero-deco hero-flower-l" aria-hidden="true">
+        <Image src="/media/flowerHeroLeft.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="340px" priority />
       </div>
 
       {/* Contenido centrado */}
@@ -69,15 +78,21 @@ export default function HomeHero() {
           width: 100%;
           min-height: 100svh;
           overflow: hidden;
-          background:
-            radial-gradient(120% 90% at 100% 0%, #F2E3EF 0%, rgba(242,227,239,0) 55%),
-            linear-gradient(165deg, #FBF9FB 0%, #FAF6F9 55%, #F4E9F2 100%);
+          background: #FAF7FB;
           display: flex;
           align-items: center;
         }
-        .bg-blob { position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none; z-index: 0; }
-        .bg-blob-a { width: 480px; height: 480px; top: -140px; left: -120px; background: radial-gradient(circle, rgba(201,168,197,0.35), rgba(201,168,197,0) 70%); }
-        .bg-blob-b { width: 380px; height: 380px; bottom: -120px; left: 38%; background: radial-gradient(circle, rgba(234,217,232,0.6), rgba(234,217,232,0) 70%); }
+        /* ---- Trazos acuarela (fondo, z-index 1) ---- */
+        .stroke { position: absolute; z-index: 1; pointer-events: none; }
+        .stroke-1 { width: 520px; height: 300px; top: -50px;   right: -70px;  transform: rotate(-10deg); opacity: 0.48; }
+        .stroke-2 { width: 480px; height: 280px; bottom: -30px; left: -70px;  transform: rotate(7deg);   opacity: 0.42; }
+        .stroke-5 { width: 240px; height: 150px; top: 20px; left: 10px; transform: rotate(-6deg); opacity: 0.38; }
+
+        /* ---- Ilustraciones (z-index 2) ---- */
+        .hero-deco { position: absolute; z-index: 2; pointer-events: none; }
+        .hero-brain    { width: 155px; height: 155px; top: 30px; left: 30px; transform: rotate(-10deg); opacity: 0.62; }
+        .hero-flower-r { width: 300px; height: 370px; left: -10px;  bottom: -10px; transform: rotate(4deg);  opacity: 0.88; }
+        .hero-flower-l { width: 310px; height: 380px; right: -10px; bottom: -10px; transform: rotate(4deg);  opacity: 0.85; }
 
         /* ---- Layout centrado ---- */
         .hero-center {
@@ -100,27 +115,6 @@ export default function HomeHero() {
         .hero-meta strong { color: var(--text); font-weight: 600; }
         .meta-dot { color: var(--primary); }
 
-        /* ---- Ilustraciones decorativas ---- */
-        .deco { position: absolute; z-index: 1; pointer-events: none; }
-
-        .deco-plant {
-          width: 240px; height: 360px;
-          top: 60px; right: 4%;
-          transform: rotate(6deg);
-          opacity: 0.82;
-        }
-        .deco-selfcare {
-          width: 260px; height: 320px;
-          bottom: 40px; left: 3%;
-          transform: rotate(-4deg);
-          opacity: 0.75;
-        }
-        .deco-bird {
-          width: 200px; height: 200px;
-          top: 80px; left: 8%;
-          transform: rotate(3deg);
-          opacity: 0.65;
-        }
 
         :global(.hero-btn-primary) {
           display: inline-flex !important; align-items: center !important; justify-content: center !important;
@@ -153,12 +147,23 @@ export default function HomeHero() {
         .scroll-cue { position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; font-family: var(--font-poppins), sans-serif; font-size: 0.66rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); z-index: 2; }
         .scroll-cue-line { width: 1px; height: 38px; background: linear-gradient(var(--accent), transparent); }
 
+        @media (max-height: 920px) and (min-width: 901px) {
+          .hero-center {
+            padding: clamp(70px, 10vh, 110px) 40px clamp(40px, 6vh, 70px);
+            gap: clamp(12px, 1.8vh, 20px);
+          }
+          .hero-title { font-size: clamp(2.2rem, 3.8vw, 3.6rem); }
+          .hero-lead { font-size: clamp(0.92rem, 1.1vw, 1.05rem); }
+        }
+
         @media (max-width: 900px) {
           .hero-center { padding: 110px 26px 70px; }
           .hero-title { font-size: clamp(2.6rem, 11vw, 3.6rem); }
-          .deco-plant { width: 140px; height: 190px; right: -5px; top: 10px; }
-          .deco-selfcare { width: 160px; height: 200px; left: -10px; bottom: 20px; }
-          .deco-bird { display: none; }
+          .stroke-1 { width: 220px; height: 130px; top: -15px; right: -20px; opacity: 0.38; }
+          .stroke-2 { width: 200px; height: 120px; bottom: -10px; left: -25px; opacity: 0.32; }
+          .stroke-5 { display: none; }
+          .hero-brain, .hero-flower-r { display: none; }
+          .hero-flower-l { width: 150px; height: 180px; right: -10px; bottom: -10px; left: auto; top: auto; transform: rotate(4deg); opacity: 0.72; }
           .scroll-cue { display: none; }
         }
       `}</style>

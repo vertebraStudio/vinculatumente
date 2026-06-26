@@ -12,7 +12,7 @@ const senales = [
   "Arrastras experiencias dolorosas del pasado que siguen afectando a tu presente.",
   "Sientes emociones intensas que te cuesta regular o entender.",
   "Tienes recuerdos, pensamientos o sensaciones que vuelven una y otra vez.",
-  "Te cuesta confiar, sentirte seguro o seguir en tus vínculos.",
+  "Te cuesta confiar, sentirte segurx o seguir en tus vínculos.",
   "Has vivido situaciones de pérdida, violencia o ruptura difíciles de elaborar.",
   "Quieres sanar de raíz, no solo gestionar los síntomas.",
 ];

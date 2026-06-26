@@ -36,11 +36,11 @@ export default function AdultosPage() {
       <Header solid={true} />
       <main className="therapy-page fade-in">
         <TherapyHero
-          category="ADOLESCENTES Y ADULTOS"
+          category="ADULTOS"
           title="Un espacio para ti,"
           titleEm="a tu ritmo"
           desc="En Vincula Tu Mente el trabajo con adolescentes y adultos se adapta a las necesidades emocionales, relacionales y personales de cada persona, desde un espacio seguro, cercano y basado en la evidencia."
-          photo="/media/imagenDePrueba1.jpg"
+          photo="/media/adultosHeader.jpg"
           phIcon="✦"
           phLabel="Foto · Adolescentes y adultos"
           phDesc="Imagen cálida y cercana. Formato horizontal."

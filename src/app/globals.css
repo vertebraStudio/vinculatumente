@@ -889,6 +889,13 @@ footer {
 }
 
 /* Legal Pages Styles */
+.legal-section-header {
+  padding: 40px 5% 24px;
+}
+.legal-section-body {
+  padding: 0 5% 80px;
+}
+
 .legal-content p {
   color: var(--text-muted);
   line-height: 1.8;
@@ -1024,11 +1031,15 @@ footer {
    ============================================================ */
 .terapia-intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; margin-bottom:70px; }
 .terapia-cards-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+.areas-cards-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:24px; }
+.areas-cards-grid > * { grid-column: span 2; }
+.areas-cards-grid > *:nth-child(4) { grid-column: 2 / 4; }
+.areas-cards-grid > *:nth-child(5) { grid-column: 4 / 6; }
 .therapy-mini-card { border-radius:16px; box-shadow:0 2px 12px rgba(0,0,0,0.06); transition:transform 0.3s ease,box-shadow 0.3s ease; display:flex; flex-direction:column; overflow:hidden; }
 .therapy-mini-card:hover { transform:translateY(-6px); box-shadow:0 12px 30px rgba(168,123,160,0.18); }
-@media (max-width:992px) { .terapia-cards-grid { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:992px) { .terapia-cards-grid { grid-template-columns:repeat(2,1fr); } .areas-cards-grid { grid-template-columns:repeat(2,1fr); } .areas-cards-grid > * { grid-column: span 1; } .areas-cards-grid > *:nth-child(4), .areas-cards-grid > *:nth-child(5) { grid-column: span 1; } }
 @media (max-width:768px) { .terapia-intro-grid { grid-template-columns:1fr; gap:32px; margin-bottom:40px; } .therapy-title { text-align:left; } }
-@media (max-width:560px) { .terapia-cards-grid { grid-template-columns:1fr; gap:16px; } }
+@media (max-width:560px) { .terapia-cards-grid { grid-template-columns:1fr; gap:16px; } .areas-cards-grid { grid-template-columns:1fr; gap:16px; } .areas-cards-grid > * { grid-column: span 1; } }
 
 /* ============================================================
    HOME — COMPROMISO

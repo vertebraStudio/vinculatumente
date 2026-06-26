@@ -34,7 +34,7 @@ export default function EquipoPage() {
               Nuestro equipo
             </h1>
             <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: 1.7, maxWidth: '640px', marginBottom: 0 }}>
-              Profesionales especializados en psicología y sexología. Aunque el proyecto nace de la mano de una sola persona, la estructura de Vincula Tu Mente está pensada para crecer y dar cabida a más profesionales comprometidos con el bienestar emocional y sexual.
+              Profesionales con formación especializada y un enfoque común: acompañar con rigor, cercanía y respeto. Quienes formamos Vincula Tu Mente compartimos el compromiso con tu bienestar emocional.
             </p>
           </div>
         </section>

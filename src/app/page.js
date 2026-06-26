@@ -75,8 +75,9 @@ export default async function Home() {
             <hr style={{ border:'none', borderTop:'1px solid rgba(0,0,0,0.07)', marginBottom:'60px' }} />
 
             {/* Tarjetas de especialidades */}
-            <div className="terapia-cards-grid">
+            <div className="areas-cards-grid">
               {[
+                { href:'/terapias/adultos', label:'Adultos', desc:'Acompañamiento psicológico adaptado a tus necesidades emocionales, relacionales y personales.', photo:'/media/adultosHeader.jpg' },
                 { href:'/terapias/relaciones-y-vinculos', label:'Relaciones y vínculos', desc:'Te acompaño a construir relaciones más sanas, conscientes y auténticas contigo y con los demás.', photo:'/media/relacionesHeader.jpg' },
                 { href:'/terapias/infanto-juvenil', label:'Infanto-juvenil', desc:'Apoyo emocional y terapéutico para niñas, niños y adolescentes en su desarrollo y bienestar.', photo:'/media/infantoHeader.jpg' },
                 { href:'/terapias/trauma-y-apego', label:'Trauma y apego', desc:'Trabajo especializado para sanar heridas, regular emociones y construir apegos seguros (EMDR).', photo:'/media/imagenDeprueba3.jpg' },

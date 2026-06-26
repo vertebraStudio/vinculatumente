@@ -14,7 +14,7 @@ const senales = [
   "Está atravesando un cambio importante: separación, duelo, mudanza o nueva etapa escolar.",
   "Notas problemas de autoestima, relaciones o adaptación en el colegio o instituto.",
   "Como familia, buscáis orientación y herramientas para acompañarle mejor.",
-  "Quieres un espacio seguro donde tu adolescente pueda expresarse sin sentirse juzgado.",
+  "Quieres un espacio seguro donde tu adolescente pueda expresarse sin sentirse juzgadx.",
 ];
 
 const herramientas = [

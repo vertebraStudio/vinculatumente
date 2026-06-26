@@ -20,7 +20,7 @@ export default function ContactHero() {
           </h1>
 
           <p className="hero-split-desc">
-            Dar el primer paso puede generar dudas. Estoy aquí para acompañarte desde el primer momento; elige la vía que te resulte más cómoda para escribirme o resolver tus inquietudes.
+            Dar el primer paso puede generar dudas. Estoy aquí para acompañarte desde el primer momento; elige la vía que te resulte más cómoda para contactarme o resolver tus inquietudes.
           </p>
         </div>
 
