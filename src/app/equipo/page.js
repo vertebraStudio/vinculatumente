@@ -17,7 +17,7 @@ const equipo = [
     colegiada: 'N.º Colegiada M-43581',
     photo: '/media/maria-profile-2.png',
     bio: 'Especializada en relaciones humanas, desarrollo infanto-juvenil, trauma y apego. Trabaja desde una perspectiva integradora, cercana y rigurosa, integrando la salud emocional y sexual como parte de un mismo bienestar.',
-    especialidades: ['Trauma y apego (EMDR)', 'Sexología y pareja', 'Psicología infanto-juvenil', 'Perspectiva de género', 'Psicología afirmativa LGTBI+'],
+    especialidades: ['Sexología y Terapia de Pareja', 'Trauma y EMDR', 'Salud Mental Clínica', 'Diversidad LGTBI+', 'Psicología Laboral'],
   },
 ];
 
