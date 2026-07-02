@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  trailingSlash: true,
-  // Evita que Next fuerce el redirect a barra final en las rutas de Keystatic
-  // (el callback de OAuth de Keystatic Cloud falla con la barra → "Not found").
-  skipTrailingSlashRedirect: true,
+  // NOTA: no usar trailingSlash:true. Las rutas de API de Keystatic
+  // (/api/keystatic/tree, /blob, etc.) se piden SIN barra final y con
+  // trailingSlash devolvían 404. Además los canonicals del sitio ya van
+  // sin barra, así que esto deja las URLs públicas coherentes.
   // Incluye los .mdoc de Keystatic en el bundle serverless de Vercel.
   // Sin esto el reader no encuentra los posts en producción.
   outputFileTracingIncludes: {
