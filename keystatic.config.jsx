@@ -12,13 +12,18 @@ const CATEGORIES = [
 ];
 
 // Storage:
-// - En desarrollo (local): escribe directamente en src/content/posts/
-// - En producción: KEYSTATIC_STORAGE_KIND=cloud  →  Keystatic Cloud
-//   (vertebra-studio/vinculatumente en https://keystatic.cloud)
+// - En desarrollo (next dev): escribe directamente en src/content/posts/
+// - En producción: Keystatic Cloud (vertebra-studio/vinculatumente)
+//
+// Se decide con NODE_ENV (no con una env var propia): process.env.NODE_ENV
+// SÍ se incrusta en el bundle del navegador, así que cliente y servidor
+// resuelven el MISMO modo. Con KEYSTATIC_STORAGE_KIND el cliente quedaba en
+// 'local' (var no expuesta al navegador) y pedía /api/keystatic/tree mientras
+// el servidor estaba en 'cloud' y devolvía 404 → "Unable to load collection".
 const storage =
-  process.env.KEYSTATIC_STORAGE_KIND === 'cloud'
-    ? { kind: 'cloud' }
-    : { kind: 'local' };
+  process.env.NODE_ENV === 'development'
+    ? { kind: 'local' }
+    : { kind: 'cloud' };
 
 export default config({
   storage,
