@@ -27,7 +27,7 @@ const storage =
 
 export default config({
   storage,
-  cloud: { project: 'vertebra-studio/vinculatumente' },
+  cloud: { project: 'vincula-tu-mente/vinculatumente' },
   ui: {
     brand: { name: 'Vincula Tu Mente · CMS' },
     navigation: {

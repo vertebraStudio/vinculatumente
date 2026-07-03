@@ -88,8 +88,11 @@ const storage =
 
 ### Keystatic Cloud
 
-- Proyecto: **`vertebra-studio/vinculatumente`** en https://keystatic.cloud
-- Equipo: **Vertebra Studio** (plan Free: hasta 3 usuarios, proyectos ilimitados)
+- Proyecto: **`vincula-tu-mente/vinculatumente`** en https://keystatic.cloud
+- Equipo: **Vincula tu mente** (plan Free: hasta 3 usuarios, proyectos ilimitados)
+  - Se usa un equipo propio por clienta para aislar accesos: el acceso en
+    Keystatic Cloud es a nivel de equipo, no de proyecto. Cada clienta se invita
+    solo a su equipo. El equipo interno `Vertebra Studio` queda para gestión.
 - GitHub App "Keystatic Cloud" instalada sobre el repo con permiso de
   lectura/escritura de código. Es la que hace los commits cuando alguien edita
   desde el CMS (los editores **no** necesitan cuenta de GitHub).
@@ -97,7 +100,7 @@ const storage =
 
 ### Dar acceso a un editor (p. ej. la clienta)
 
-1. keystatic.cloud → equipo **Vertebra Studio** → pestaña **Users** → invitar por email.
+1. keystatic.cloud → equipo **Vincula tu mente** → pestaña **Users** → invitar por email.
 2. La persona acepta la invitación y crea su cuenta (email o GitHub).
 3. Entra en `vinculatumente.es/keystatic` → **Sign into Cloud** → a editar.
 
@@ -171,7 +174,8 @@ del proyecto es el **punto 2**, no mover el hosting a IONOS.
 
 - **GitHub:** `vertebraStudio/vinculatumente` (privado).
 - **Vercel:** equipo `vertebraStudio`, proyecto `vinculatumente`.
-- **Keystatic Cloud:** equipo `Vertebra Studio`, proyecto `vertebra-studio/vinculatumente`.
+- **Keystatic Cloud:** equipo `Vincula tu mente`, proyecto `vincula-tu-mente/vinculatumente`
+  (equipo propio de la clienta). El equipo `Vertebra Studio` queda para gestión interna.
 - **IONOS:** cuenta de la clienta (dominios + correo).
 - **Secretos:** el `KEYSTATIC_SECRET` generado se guardó en el gestor de
   contraseñas (referencia interna de Vertebra Studio).
