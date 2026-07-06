@@ -44,6 +44,9 @@ export const metadata = {
   alternates: {
     canonical: "https://vinculatumente.es",
   },
+  verification: {
+    google: "tpG98MWpesP4v0TGkkXTfcNaBV2aXsC5KVbjCV8ZRDA",
+  },
   openGraph: {
     title: "Vincula Tu Mente | María Villalba · Psicóloga y Sexóloga en Alcalá de Henares",
     description: "Un espacio seguro para comprenderte, aceptarte y vivir relaciones más sanas y conscientes. Consulta presencial en Alcalá de Henares y online en toda España.",
