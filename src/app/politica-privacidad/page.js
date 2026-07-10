@@ -16,7 +16,7 @@ export default function PrivacidadPage() {
           <div className="container">
             <span style={{ fontSize: '0.85rem', color: 'var(--accent)', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase' }}>Legal</span>
             <h1 style={{ fontSize: '2.5rem', fontFamily: "var(--font-playfair), serif", color: 'var(--text)', marginTop: '10px', marginBottom: '10px' }}>Política de Privacidad</h1>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: 0 }}>Última actualización: mayo de 2026</p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: 0 }}>Última actualización: julio de 2026</p>
           </div>
         </section>
 
@@ -25,72 +25,90 @@ export default function PrivacidadPage() {
             <div className="legal-content" style={{ maxWidth: '780px' }}>
 
               <LegalSection title="1. Responsable del Tratamiento">
-                <p>En cumplimiento del Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo (RGPD) y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y Garantía de los Derechos Digitales (LOPDGDD), se informa de los siguientes datos del responsable del tratamiento:</p>
+                <p>De conformidad con el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales (RGPD), y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), le informamos de que el responsable del tratamiento de los datos personales recabados a través de este sitio web es:</p>
                 <LegalTable rows={[
-                  ["Titular / Responsable", "María Villalba López"],
-                  ["Actividad", "Psicóloga y Sexóloga"],
-                  ["Nº de Colegiada", "M-43581 (Colegio Oficial de la Psicología de Madrid)"],
-                  ["Ámbito de atención", "Alcalá de Henares (Madrid) y online en toda España"],
-                  ["Email de contacto", "info@vinculatumente.com"],
-                  ["Teléfono", "+34 604 80 72 00"],
+                  ["Responsable", "María Villalba López"],
+                  ["N.I.F.", "41618060C"],
+                  ["Nº Colegiada", "M-43581 — Colegio Oficial de Psicólogos de Madrid"],
+                  ["Domicilio profesional", "Calle Senda de la Cultura, 7 – 1B, 28806, Alcalá de Henares (Madrid)"],
+                  ["Correo electrónico", "info@vinculatumente.com"],
+                  ["Teléfono", "+34 667 236 523"],
+                  ["DPD (Delegado de Protección de Datos)", "Dataibéricalex S.L. — Avenida Primero de Mayo 38, 9, 46017, Valencia — dpo@dataiberica.com"],
                 ]} />
+                <p>MARÍA VILLALBA LÓPEZ ha designado voluntariamente como Delegado de Protección de Datos (DPD) a DATAIBÉRICALEX S.L., en atención a que su actividad implica el tratamiento de datos de salud de categoría especial (Art. 9 RGPD), con el fin de reforzar las garantías de protección de datos de sus pacientes.</p>
               </LegalSection>
 
-              <LegalSection title="2. Datos que Recopilamos">
-                <p>A través del formulario de contacto del sitio web, podemos recopilar los siguientes datos personales:</p>
-                <ul>
-                  <li><strong>Nombre y apellidos</strong>: para identificarte y dirigirnos a ti de forma personalizada.</li>
-                  <li><strong>Dirección de correo electrónico</strong>: para poder responderte y gestionar la comunicación contigo.</li>
-                  <li><strong>Número de teléfono</strong> (opcional): para facilitarte el contacto por vía telefónica si así lo prefieres.</li>
-                  <li><strong>Mensaje libre</strong>: el contenido de tu consulta o solicitud de cita.</li>
-                </ul>
-                <p>No recopilamos datos sensibles de categoría especial (como datos de salud) a través del formulario web. Si en el mensaje incluyes información relativa a tu salud, esta se tratará con la máxima confidencialidad, bajo el secreto profesional propio de la práctica psicológica, tal y como establece el Código Deontológico del Psicólogo.</p>
+              <LegalSection title="2. Finalidades del Tratamiento, Base Jurídica y Plazos de Conservación">
+                <p>A través del Sitio Web www.vinculatumente.es no se recaban datos personales mediante formularios propios. El contacto con la psicóloga se produce exclusivamente por las siguientes vías, que implican el tratamiento de los datos facilitados voluntariamente por el usuario:</p>
+                <DataTable
+                  headers={["Finalidad", "Base jurídica", "Plazo de conservación"]}
+                  rows={[
+                    [
+                      "Atención de consultas y solicitudes de información enviadas por correo electrónico (info@vinculatumente.com) o mediante el enlace de WhatsApp del Sitio Web",
+                      "Art. 6.1.f) RGPD: interés legítimo del responsable en dar respuesta a las comunicaciones recibidas. Art. 6.1.a) RGPD: consentimiento del interesado al iniciar el contacto.",
+                      "Hasta la resolución de la consulta. Si el contacto deriva en una relación profesional, los datos se incorporan al expediente clínico según los plazos del tratamiento 4.1 del RAT (mínimo 5 años, Ley 41/2002).",
+                    ],
+                    [
+                      "Gestión de citas y agenda a través de Doctoralia (enlace externo desde el Sitio Web)",
+                      "Art. 6.1.b) RGPD: ejecución de medidas precontractuales y del contrato de prestación de servicios. La gestión de datos en Doctoralia se rige por la política de privacidad de Doctoralia Internet S.L.",
+                      "Durante la vigencia de la relación profesional y los plazos legales aplicables.",
+                    ],
+                    [
+                      "Gestión de datos de tráfico web (dirección IP, datos de navegación) por parte de Vercel Inc. como proveedor de hosting — sin acceso de la responsable a estos datos",
+                      "Art. 6.1.f) RGPD: interés legítimo del proveedor de hosting en la seguridad y el funcionamiento del servicio.",
+                      "Conforme a la política de retención de Vercel Inc. (vercel.com/legal/privacy-policy). La responsable no almacena logs de acceso propios.",
+                    ],
+                  ]}
+                />
+                <p>MARÍA VILLALBA LÓPEZ no realiza elaboración de perfiles automatizada ni toma de decisiones automatizadas que produzcan efectos jurídicos significativos sobre el usuario. El Sitio Web no dispone de formularios de contacto que almacenen datos en bases de datos propias, ni utiliza herramientas de analítica web activas.</p>
               </LegalSection>
 
-              <LegalSection title="3. Finalidad y Base Jurídica del Tratamiento">
-                <p>Los datos personales que nos facilitas serán tratados con las siguientes finalidades y bases legales:</p>
-                <ul>
-                  <li><strong>Gestión de consultas y solicitudes de cita</strong> (base legal: consentimiento del interesado al enviar el formulario; artículo 6.1.a del RGPD).</li>
-                  <li><strong>Comunicación con el usuario</strong> para responder a sus mensajes y resolver dudas (base legal: aplicación de medidas precontractuales o interés legítimo; artículo 6.1.b / 6.1.f del RGPD).</li>
-                  <li><strong>Prestación de servicios de asistencia sanitaria (psicología y sexología)</strong>, si se formaliza un proceso de acompañamiento profesional. En este supuesto: Para datos relativos a la salud, la base es la <strong>prestación de asistencia o tratamiento sanitario</strong> sobre la base del derecho de la Unión o de los Estados miembros, y bajo la responsabilidad de un profesional sujeto a la obligación de secreto profesional (<strong>artículo 9.2.h del RGPD</strong>, en relación con la <strong>Ley 41/2002 de Autonomía del Paciente</strong>).</li>
-                </ul>
+              <LegalSection title="3. Destinatarios y Encargados del Tratamiento">
+                <p>Los datos personales facilitados a través del Sitio Web podrán ser comunicados a los siguientes destinatarios en función de la finalidad del tratamiento:</p>
+                <ol>
+                  <li>Vercel Inc. (EE.UU.) — encargado del tratamiento: proveedor de hosting del Sitio Web. Accede exclusivamente a los datos de tráfico web (logs) necesarios para el funcionamiento y la seguridad del servicio.</li>
+                  <li>Meta Platforms Ireland Ltd. (WhatsApp) — cuando el usuario utiliza el botón de WhatsApp del Sitio Web para iniciar contacto, el tratamiento de los datos en la aplicación WhatsApp se rige por la política de privacidad de Meta Platforms Ireland Ltd.</li>
+                  <li>Doctoralia Internet S.L. — cuando el usuario accede a la plataforma de citas a través del enlace del Sitio Web. Doctoralia actúa como responsable independiente conforme a su propia política de privacidad.</li>
+                  <li>DATAIBÉRICALEX S.L. — DPD y consultora de protección de datos. Puede acceder a los datos en el ejercicio de sus funciones como DPD.</li>
+                </ol>
+                <p>Los datos personales no se venden, alquilan ni ceden a terceros con fines comerciales o publicitarios.</p>
               </LegalSection>
 
-              <LegalSection title="4. Conservación de los Datos">
-                <p>Los datos personales se conservarán durante el tiempo necesario para atender tu consulta y, en caso de proceso de acompañamiento profesional, durante el tiempo que establezca la normativa aplicable en materia de documentación clínica (Ley 41/2002, de Autonomía del Paciente), con un mínimo de 5 años desde la última intervención.</p>
-                <p>Una vez finalizada la relación y vencidos los plazos legales de conservación, los datos serán suprimidos de forma segura.</p>
+              <LegalSection title="4. Transferencias Internacionales de Datos">
+                <p>Algunos proveedores utilizados por el Sitio Web tienen sede en países fuera del Espacio Económico Europeo (EEE), lo que implica transferencias internacionales de datos:</p>
+                <ol>
+                  <li>Vercel Inc. (EE.UU.): proveedor de hosting. La transferencia está amparada en el Marco de Privacidad de Datos UE-EE.UU. (Data Privacy Framework, DPF — Decisión de Adecuación de la Comisión Europea de 10 de julio de 2023) y en Cláusulas Contractuales Tipo (CCT). El DPA de Vercel está disponible en vercel.com/legal/dpa.</li>
+                  <li>Meta Platforms Ireland Ltd. / WhatsApp (EE.UU.): si el usuario utiliza el enlace de WhatsApp del Sitio Web, el tratamiento de datos por parte de Meta se ampara en el DPF UE-EE.UU. y Cláusulas Contractuales Tipo. Meta actúa como responsable independiente.</li>
+                </ol>
+                <p>No se realizan otras transferencias internacionales de datos a través del Sitio Web.</p>
               </LegalSection>
 
-              <LegalSection title="5. Destinatarios de los Datos">
-                <p>Los datos personales no serán cedidos ni comunicados a terceros, salvo en los siguientes casos:</p>
-                <ul>
-                  <li>Cuando exista una obligación legal que lo requiera.</li>
-                  <li>Proveedores de servicios tecnológicos necesarios para el funcionamiento del sitio web (ej. servicio de alojamiento web), con quienes se suscribirán los correspondientes contratos de encargado del tratamiento.</li>
-                </ul>
-                <p>En ningún caso se venderán, alquilarán ni cederán tus datos personales a terceros con fines comerciales.</p>
+              <LegalSection title="5. Derechos de los Interesados">
+                <p>En cualquier momento puede ejercer los siguientes derechos reconocidos por el RGPD y la LOPDGDD:</p>
+                <ol>
+                  <li><strong>Derecho de acceso</strong>: conocer qué datos personales tratamos sobre usted.</li>
+                  <li><strong>Derecho de rectificación</strong>: solicitar la corrección de datos inexactos o incompletos.</li>
+                  <li><strong>Derecho de supresión</strong> («derecho al olvido»): solicitar la eliminación de sus datos cuando ya no sean necesarios para la finalidad para la que fueron recogidos.</li>
+                  <li><strong>Derecho a la limitación del tratamiento</strong>: solicitar que el tratamiento de sus datos quede restringido en determinadas circunstancias.</li>
+                  <li><strong>Derecho de oposición</strong>: oponerse al tratamiento basado en el interés legítimo del responsable.</li>
+                  <li><strong>Derecho a la portabilidad</strong>: recibir sus datos en formato estructurado cuando el tratamiento se base en el consentimiento o en un contrato.</li>
+                  <li><strong>Derecho a retirar el consentimiento</strong>: cuando el tratamiento se base en el consentimiento, tiene derecho a retirarlo en cualquier momento sin que ello afecte a la licitud del tratamiento previo.</li>
+                </ol>
+                <p>Para ejercer cualquiera de estos derechos, envíe una solicitud escrita acreditando su identidad a: <a href="mailto:info@vinculatumente.com">info@vinculatumente.com</a> o a la dirección postal: Calle Senda de la Cultura, 7 – 1B, 28806, Alcalá de Henares (Madrid). Recibirá respuesta en el plazo máximo de un mes, prorrogable por dos meses adicionales si la complejidad lo justifica.</p>
               </LegalSection>
 
-              <LegalSection title="6. Tus Derechos">
-                <p>En virtud del RGPD y la LOPDGDD, tienes derecho a:</p>
-                <ul>
-                  <li><strong>Acceso</strong>: obtener confirmación sobre si se están tratando tus datos y acceder a ellos.</li>
-                  <li><strong>Rectificación</strong>: solicitar la corrección de datos inexactos o incompletos.</li>
-                  <li><strong>Supresión</strong> ("derecho al olvido"): solicitar la eliminación de tus datos cuando ya no sean necesarios.</li>
-                  <li><strong>Oposición</strong>: oponerte al tratamiento de tus datos en determinadas circunstancias.</li>
-                  <li><strong>Limitación del tratamiento</strong>: solicitar que se restrinja el tratamiento de tus datos.</li>
-                  <li><strong>Portabilidad</strong>: recibir tus datos en un formato estructurado y de uso común.</li>
-                  <li><strong>Retirar el consentimiento</strong>: en cualquier momento, sin que ello afecte a la licitud del tratamiento previo.</li>
-                </ul>
-                <p>Para ejercer cualquiera de estos derechos, puedes dirigirte por escrito al correo electrónico <a href="mailto:info@vinculatumente.com">info@vinculatumente.com</a>. En cumplimiento de las directrices actuales de la Agencia Española de Protección de Datos (AEPD), no es obligatorio adjuntar sistemáticamente una copia de tu DNI; únicamente te solicitaremos aportar una prueba de identidad (como una copia de tu DNI o equivalente) si existieran dudas razonables sobre tu identidad para poder verificarla de forma segura.</p>
-                <p>Asimismo, tienes derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong> en <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a> si consideras que el tratamiento de tus datos infringe la normativa vigente.</p>
+              <LegalSection title="6. Derecho a Presentar Reclamación ante la AEPD">
+                <p>Si considera que el tratamiento de sus datos personales no se ajusta a la normativa vigente, tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD), autoridad de control competente en España: <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a> — C/ Jorge Juan, 6, 28001 Madrid.</p>
+                <p>Con carácter previo, puede contactar con la Delegada de Protección de Datos para intentar resolver cualquier duda o incidencia: Dataibéricalex S.L. — Avenida Primero de Mayo 38, 9, 46017, Valencia — <a href="mailto:dpo@dataiberica.com">dpo@dataiberica.com</a>.</p>
               </LegalSection>
 
-              <LegalSection title="7. Confidencialidad y Secreto Profesional">
-                <p>Como profesional sanitario/a colegiado/a, el/la titular está sujeto al secreto profesional establecido en el Código Deontológico del Psicólogo y en la Ley de Autonomía del Paciente. Toda la información compartida en el contexto del proceso de acompañamiento profesional es estrictamente confidencial y no podrá ser divulgada sin el consentimiento expreso del paciente, salvo en los supuestos legalmente establecidos.</p>
+              <LegalSection title="7. Menores de Edad">
+                <p>MARÍA VILLALBA LÓPEZ presta servicios psicológicos tanto a adultos como a menores de edad (a través de sus representantes legales). En el caso de que el contacto inicial a través del Sitio Web sea iniciado por un menor de edad sin la supervisión de sus progenitores o tutores legales, se solicitará la acreditación de la representación legal antes de continuar cualquier tratamiento.</p>
+                <p>Los datos de menores de edad recabados en el marco de la relación profesional se tratan con las garantías reforzadas establecidas en el RAT de MARÍA VILLALBA LÓPEZ para el tratamiento 4.1 (Historia Clínica).</p>
               </LegalSection>
 
-              <LegalSection title="8. Seguridad de los Datos">
-                <p>El responsable del tratamiento adopta las medidas técnicas y organizativas apropiadas para garantizar un nivel de seguridad adecuado al riesgo, de conformidad con el artículo 32 del RGPD, con el fin de evitar el acceso no autorizado, la pérdida, alteración o revelación no autorizada de los datos personales.</p>
+              <LegalSection title="8. Actualización de la Política de Privacidad">
+                <p>MARÍA VILLALBA LÓPEZ se reserva el derecho a modificar la presente Política de Privacidad para adaptarla a novedades legislativas, resoluciones de la AEPD o cambios en los servicios del Sitio Web. En caso de cambios sustanciales, se publicará un aviso en el Sitio Web y, cuando corresponda, se solicitará nuevamente el consentimiento. La fecha de la última actualización figura en el encabezado de este documento.</p>
               </LegalSection>
 
             </div>
@@ -123,5 +141,30 @@ function LegalTable({ rows }) {
         ))}
       </tbody>
     </table>
+  );
+}
+
+function DataTable({ headers, rows }) {
+  return (
+    <div style={{ overflowX: 'auto', marginTop: '16px', marginBottom: '16px' }}>
+      <table style={{ width: '100%', minWidth: '700px', borderCollapse: 'collapse' }}>
+        <thead>
+          <tr>
+            {headers.map((h, i) => (
+              <th key={i} style={{ textAlign: 'left', padding: '10px 14px', fontSize: '0.8rem', fontWeight: 700, color: '#fff', backgroundColor: 'var(--accent)', whiteSpace: 'nowrap' }}>{h}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, i) => (
+            <tr key={i} style={{ borderBottom: '1px solid #f0f0f0' }}>
+              {row.map((cell, j) => (
+                <td key={j} style={{ padding: '10px 14px', color: 'var(--text-muted)', fontSize: '0.85rem', verticalAlign: 'top' }}>{cell}</td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
