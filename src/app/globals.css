@@ -915,6 +915,18 @@ footer {
   font-size: 0.97rem;
 }
 
+.legal-content ol {
+  list-style: decimal;
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.legal-content ol li {
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  font-size: 0.97rem;
+}
+
 .legal-content h2 {
   font-size: 1.5rem;
   margin-top: 36px;
