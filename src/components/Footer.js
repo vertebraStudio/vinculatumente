@@ -79,6 +79,12 @@ export default function Footer() {
           <div className="footer-bottom-flex">
             <p>© {new Date().getFullYear()} Vincula Tu Mente — María Villalba López. Todos los derechos reservados.</p>
             <p className="credit-text">Psicóloga y sexóloga en Alcalá de Henares y online en toda España</p>
+            <p className="credit-text">
+              Diseño y desarrollo web por{" "}
+              <a href="https://vertebrastudio.es" target="_blank" rel="noopener noreferrer" className="credit-link">
+                Vertebra Studio
+              </a>
+            </p>
           </div>
         </div>
       </div>
