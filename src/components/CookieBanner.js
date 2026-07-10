@@ -20,14 +20,8 @@ export default function CookieBanner() {
     }
   }, []);
 
-  const handleAccept = () => {
-    localStorage.setItem("vtm-cookie-consent", "accepted");
-    window.dispatchEvent(new Event("cookie-consent-change"));
-    setShowBanner(false);
-  };
-
-  const handleReject = () => {
-    localStorage.setItem("vtm-cookie-consent", "rejected");
+  const handleAcknowledge = () => {
+    localStorage.setItem("vtm-cookie-consent", "acknowledged");
     window.dispatchEvent(new Event("cookie-consent-change"));
     setShowBanner(false);
   };
@@ -41,7 +35,7 @@ export default function CookieBanner() {
         <div className="cookie-banner-content">
           <h4 className="cookie-banner-title">Tu privacidad nos importa</h4>
           <p className="cookie-banner-text">
-            Este sitio web utiliza cookies técnicas necesarias para su funcionamiento y, de forma opcional, cookies de medición para entender cómo se usa la web y mejorarla. Puedes aceptarlas o rechazarlas con las siguientes opciones de igual valor. Consulta más detalles en nuestra{" "}
+            Este sitio web utiliza únicamente cookies técnicas estrictamente necesarias para su correcto funcionamiento. No utilizamos cookies de análisis, personalización ni publicidad. Consulta más detalles en nuestra{" "}
             <Link href="/politica-cookies" className="cookie-policy-link">
               Política de Cookies
             </Link>
@@ -49,19 +43,12 @@ export default function CookieBanner() {
           </p>
         </div>
         <div className="cookie-banner-actions">
-          <button 
-            onClick={handleReject} 
-            className="cookie-btn cookie-btn-secondary"
-            id="btn-reject-cookies"
-          >
-            Rechazar opcionales
-          </button>
-          <button 
-            onClick={handleAccept} 
+          <button
+            onClick={handleAcknowledge}
             className="cookie-btn cookie-btn-primary"
-            id="btn-accept-cookies"
+            id="btn-acknowledge-cookies"
           >
-            Aceptar todas
+            Entendido
           </button>
         </div>
       </div>
