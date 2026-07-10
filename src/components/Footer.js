@@ -81,7 +81,8 @@ export default function Footer() {
             <p className="credit-text">Psicóloga y sexóloga en Alcalá de Henares y online en toda España</p>
             <p className="credit-text">
               Diseño y desarrollo web por{" "}
-              <a href="https://vertebrastudio.es" target="_blank" rel="noopener noreferrer" className="credit-link">
+              <a href="https://vertebrastudio.es" target="_blank" rel="noopener noreferrer" className="credit-link vertebra-credit-link">
+                <img src="/media/vertebraStudioLogo.png" alt="" width="14" height="14" className="vertebra-mark" />
                 Vertebra Studio
               </a>
             </p>
@@ -94,6 +95,9 @@ export default function Footer() {
         .footer-bottom-flex p { margin: 0; }
         .credit-link { color: rgba(255,255,255,0.8) !important; text-decoration: none !important; font-weight: 500 !important; transition: var(--transition) !important; }
         .credit-link:hover { color: var(--primary) !important; }
+        .vertebra-credit-link { display: inline-flex !important; align-items: center !important; gap: 6px !important; }
+        .vertebra-mark { opacity: 0.85; transition: var(--transition); }
+        .vertebra-credit-link:hover .vertebra-mark { opacity: 1; }
         .footer-global { background-color: var(--accent); border-top: none; padding: 60px 0 35px; color: white; }
         .container { padding: 0 80px; }
         .footer-content { display: grid; grid-template-columns: 1.3fr 0.8fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
