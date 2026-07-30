@@ -35,11 +35,22 @@ export async function getAllPosts() {
 }
 
 // Lee un post con su body resuelto.
+// Si el contenido tiene un formato que Keystatic no puede convertir (p. ej.
+// una lista "suelta" pegada desde Word/Docs con líneas en blanco entre
+// viñetas), body() lanza un error. Sin este try/catch, ese único post
+// tumbaba el build entero de Vercel y ninguna página se publicaba — con él,
+// solo ese post queda como "no encontrado" hasta que se corrija el
+// contenido, y el resto del sitio se despliega con normalidad.
 export async function getPostBySlug(slug) {
   const entry = await reader.collections.posts.read(slug);
   if (!entry) return null;
-  const body = await entry.body();
-  return { ...entry, slug, body };
+  try {
+    const body = await entry.body();
+    return { ...entry, slug, body };
+  } catch (err) {
+    console.error(`[posts] No se pudo renderizar el post "${slug}":`, err.message);
+    return null;
+  }
 }
 
 // Formato de fecha legible en español.
