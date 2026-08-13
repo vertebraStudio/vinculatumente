@@ -16,8 +16,6 @@ export default function ContactoPage() {
 
         <ContactHero />
 
-        <ContactBooking />
-
         <section style={{ padding: '80px 5%', backgroundColor: 'var(--white)' }}>
           <div className="therapy-layout">
 
@@ -226,6 +224,8 @@ export default function ContactoPage() {
             </div>
           </div>
         </section>
+
+        <ContactBooking />
 
       </main>
 

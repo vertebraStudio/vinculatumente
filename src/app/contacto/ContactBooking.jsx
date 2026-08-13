@@ -58,7 +58,11 @@ export default function ContactBooking() {
           margin: 0;
         }
         .booking-frame-wrap {
-          max-width: 900px;
+          /* Microsoft Bookings no tiene un modo de escritorio ancho: su
+             contenido se queda centrado en ~640px pase lo que pase con el
+             ancho del iframe. Ajustamos el contenedor a ese ancho real para
+             que no queden huecos vacíos a los lados. */
+          max-width: 640px;
           margin: 0 auto;
           border-radius: 20px;
           overflow: hidden;
