@@ -56,7 +56,7 @@ export default function HomeHero() {
         </p>
 
         <div className="hero-ctas">
-          <Link href="/contacto" className="hero-btn-primary">Reservar mi cita</Link>
+          <Link href="/contacto#reservar" className="hero-btn-primary">Reservar mi cita</Link>
           <Link href="/equipo" className="hero-btn-ghost">Conoce el equipo</Link>
         </div>
 

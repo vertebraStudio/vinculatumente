@@ -97,7 +97,7 @@ export default function Header({ solid = false }) {
             <li><Link href="/blog" onClick={close}>Blog</Link></li>
             <li><Link href="/contacto" onClick={close}>Contacto</Link></li>
             <li className="mobile-cta">
-              <Link href="/contacto" className="btn-cta" onClick={close}>Reservar cita</Link>
+              <Link href="/contacto#reservar" className="btn-cta" onClick={close}>Reservar cita</Link>
             </li>
           </ul>
         </nav>

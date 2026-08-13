@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactHero from "./ContactHero";
+import ContactBooking from "./ContactBooking";
 
 export const metadata = {
   title: "Contacto | Vincula Tu Mente | Psicóloga y Sexóloga en Alcalá de Henares y Online",
@@ -14,6 +15,8 @@ export default function ContactoPage() {
       <main className="therapy-page fade-in">
 
         <ContactHero />
+
+        <ContactBooking />
 
         <section style={{ padding: '80px 5%', backgroundColor: 'var(--white)' }}>
           <div className="therapy-layout">
