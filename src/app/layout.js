@@ -41,8 +41,11 @@ export const metadata = {
     "trauma y apego",
     "terapia online España",
   ],
+  // "./" se resuelve contra la ruta de cada página (canonical a sí misma).
+  // NO poner aquí la URL de la home: todas las páginas sin canonical propio
+  // la heredaban y Google las trataba como duplicados de la portada.
   alternates: {
-    canonical: "https://vinculatumente.es",
+    canonical: "./",
   },
   verification: {
     google: "tpG98MWpesP4v0TGkkXTfcNaBV2aXsC5KVbjCV8ZRDA",
@@ -50,7 +53,7 @@ export const metadata = {
   openGraph: {
     title: "Vincula Tu Mente | María Villalba · Psicóloga y Sexóloga en Alcalá de Henares",
     description: "Un espacio seguro para comprenderte, aceptarte y vivir relaciones más sanas y conscientes. Consulta presencial en Alcalá de Henares y online en toda España.",
-    url: "https://vinculatumente.es",
+    url: "./",
     siteName: "Vincula Tu Mente",
     locale: "es_ES",
     type: "website",
