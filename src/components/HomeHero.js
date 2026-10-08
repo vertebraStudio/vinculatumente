@@ -13,28 +13,31 @@ import Image from 'next/image';
 export default function HomeHero() {
   return (
     <section className="home-hero">
+      {/* Ilustraciones decorativas: sin `priority` para no competir con el
+          texto (que es el LCP). Las ocultas en móvil van en lazy y así el
+          móvil no las descarga; `sizes` refleja el ancho real de cada una. */}
       {/* Trazos de acuarela — fondo de cada polo */}
       <div className="stroke stroke-1" aria-hidden="true">
-        <Image src="/media/brushStroke1.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="540px" priority />
+        <Image src="/media/brushStroke1.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="(max-width: 900px) 220px, 520px" loading="eager" />
       </div>
       <div className="stroke stroke-2" aria-hidden="true">
-        <Image src="/media/brushStroke2.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="500px" priority />
+        <Image src="/media/brushStroke2.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="(max-width: 900px) 200px, 480px" loading="eager" />
       </div>
       <div className="stroke stroke-5" aria-hidden="true">
-        <Image src="/media/brushStroke5.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="300px" priority />
+        <Image src="/media/brushStroke5.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="240px" />
       </div>
 
       {/* Cerebro — esquina superior izquierda */}
       <div className="hero-deco hero-brain" aria-hidden="true">
-        <Image src="/media/brainHero.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="180px" priority />
+        <Image src="/media/brainHero.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="155px" />
       </div>
 
       {/* Flores — protagonistas de cada polo */}
       <div className="hero-deco hero-flower-r" aria-hidden="true">
-        <Image src="/media/flowerHeroRight.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="340px" priority />
+        <Image src="/media/flowerHeroRight.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="300px" />
       </div>
       <div className="hero-deco hero-flower-l" aria-hidden="true">
-        <Image src="/media/flowerHeroLeft.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="340px" priority />
+        <Image src="/media/flowerHeroLeft.png" alt="" fill style={{ objectFit: 'contain', mixBlendMode: 'multiply' }} sizes="(max-width: 900px) 150px, 310px" loading="eager" />
       </div>
 
       {/* Contenido centrado */}

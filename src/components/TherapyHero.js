@@ -1,12 +1,12 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 // ============================================================
 // HERO DE PÁGINA DE TERAPIA — banda compacta.
 // La foto forma parte del fondo (mitad derecha, borde asimétrico).
-// Para poner la foto real, define background-image en .hero-bg-photo:
-//   background: url('/media/[foto].jpg') center/cover;
+// Se pasa con la prop `photo` (ruta en /public/media).
 // ============================================================
 
 export default function TherapyHero({ category, title, titleEm, desc, photo, phIcon = '🖼️', phLabel = 'Foto de terapia', phDesc = 'Imagen representativa de esta especialidad.' }) {
@@ -26,8 +26,12 @@ export default function TherapyHero({ category, title, titleEm, desc, photo, phI
         className="hero-bg-photo"
         role="img"
         aria-label={phLabel}
-        style={photo ? { backgroundImage: `url('${photo}')`, backgroundSize: 'cover', backgroundPosition: 'center' } : undefined}
       >
+        {/* next/image y no background-image: así Vercel la redimensiona y
+            la sirve en WebP/AVIF (el original de Adultos pesa 4,6 MB). */}
+        {photo && (
+          <Image src={photo} alt="" fill priority sizes="(max-width: 860px) 360px, 52vw" style={{ objectFit: 'cover' }} />
+        )}
         {!photo && (
           <span className="hero-bg-ph">
             <span className="hero-bg-icon">{phIcon}</span>
@@ -69,6 +73,7 @@ export default function TherapyHero({ category, title, titleEm, desc, photo, phI
           width: 52%;
           background: linear-gradient(140deg, #E7D6E5 0%, #CBADC7 58%, #B58FAE 100%);
           clip-path: url(#therapyLiquidEdge);
+          overflow: hidden;
           display: flex;
           align-items: center;
           justify-content: center;

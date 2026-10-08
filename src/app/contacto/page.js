@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactHero from "./ContactHero";
 import ContactBooking from "./ContactBooking";
+import Image from "next/image";
 
 export const metadata = {
   title: "Contacto | Vincula Tu Mente | Psicóloga y Sexóloga en Alcalá de Henares y Online",
@@ -170,7 +171,7 @@ export default function ContactoPage() {
               {/* Perfil */}
               <div style={{ backgroundColor: 'var(--white)', border: '1px solid #eadce6', borderRadius: '16px', padding: '24px', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '16px' }}>
-                  <img src="/media/vinculatumenteLogo.jpg" alt="Vincula Tu Mente" style={{ width: '52px', height: '52px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0, mixBlendMode: 'multiply' }} />
+                  <Image src="/media/vinculatumenteLogo.jpg" alt="Vincula Tu Mente" width={52} height={52} style={{ width: '52px', height: '52px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0, mixBlendMode: 'multiply' }} />
                   <div>
                     <p style={{ fontWeight: 600, fontSize: '0.95rem', color: 'var(--text)', margin: 0 }}>María Villalba</p>
                     <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', margin: 0 }}>Psicóloga y sexóloga</p>
