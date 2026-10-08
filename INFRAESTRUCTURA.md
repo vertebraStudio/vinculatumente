@@ -148,6 +148,12 @@ npm run dev        # http://localhost:3000
   resuelve contra la ruta de cada página. No poner la URL de la home: hasta
   oct-2026 estaba así y las páginas sin canonical propio (terapias, contacto,
   legales) se declaraban duplicadas de la portada y Google no las indexaba.
+- **`StyledJsxRegistry` envuelve el `<body>` en `layout.js`. No quitarlo.**
+  Sin él, los `<style jsx>` no van en el HTML del servidor: la web se pinta
+  sin estilos y todo salta al cargar el JS (CLS 1,0 en la home).
+- **Imágenes siempre con `next/image`**, nunca `<img>` ni `background-image`
+  con rutas de `/public/media`: esas se sirven tal cual (hay originales de
+  4-6 MB) y no pasan por la optimización de Vercel.
 - **Posts borrados/renombrados → `redirects()` en `next.config.js`.** Si se
   borra o se cambia el slug de un post ya publicado, añadir ahí la redirección
   al post vigente para no dejar un 404.
