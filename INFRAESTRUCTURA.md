@@ -144,6 +144,13 @@ npm run dev        # http://localhost:3000
 - **`outputFileTracingIncludes`** incluye `src/content/**` en el bundle
   serverless de Vercel; sin esto el reader no encuentra los posts en producción.
 - El panel `/keystatic` está marcado **noindex** y sin el chrome del sitio.
+- **Canonical en `layout.js` = `"./"`** (igual que `openGraph.url`). Next lo
+  resuelve contra la ruta de cada página. No poner la URL de la home: hasta
+  oct-2026 estaba así y las páginas sin canonical propio (terapias, contacto,
+  legales) se declaraban duplicadas de la portada y Google no las indexaba.
+- **Posts borrados/renombrados → `redirects()` en `next.config.js`.** Si se
+  borra o se cambia el slug de un post ya publicado, añadir ahí la redirección
+  al post vigente para no dejar un 404.
 
 ---
 
