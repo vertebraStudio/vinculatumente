@@ -4,6 +4,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTop from "@/components/ScrollToTop";
 import CookieBanner from "@/components/CookieBanner";
+import StyledJsxRegistry from "@/components/StyledJsxRegistry";
 
 // ============================================================
 // FUENTES — servidas desde el CDN de Vercel (sin petición a Google)
@@ -125,11 +126,13 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <ScrollReveal />
-        {children}
-        <WhatsAppButton />
-        <ScrollToTop />
-        <CookieBanner />
+        <StyledJsxRegistry>
+          <ScrollReveal />
+          {children}
+          <WhatsAppButton />
+          <ScrollToTop />
+          <CookieBanner />
+        </StyledJsxRegistry>
       </body>
     </html>
   );
