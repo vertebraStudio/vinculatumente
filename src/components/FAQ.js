@@ -7,28 +7,28 @@ import { useState } from 'react';
 // ============================================================
 const faqs = [
   {
-    question: "¿Atiendes online o de forma presencial?",
-    answer: "Ambas. Tengo consulta presencial en Alcalá de Henares y también ofrezco sesiones online por videollamada para que puedas conectarte desde cualquier punto de España, con la misma cercanía y confidencialidad."
+    question: "¿Atendéis online o de forma presencial?",
+    answer: "Ambas. Tenemos consulta presencial en Alcalá de Henares y también ofrecemos sesiones online por videollamada para que puedas conectarte desde cualquier punto de España, con la misma cercanía y confidencialidad."
   },
   {
     question: "¿Cómo puedo pedir mi primera cita?",
-    answer: "Puedes escribirme por WhatsApp, llamarme o enviarme un email a info@vinculatumente.com. Te responderé lo antes posible y resolveremos juntxs cualquier duda antes de empezar, sin compromiso."
+    answer: "Puedes escribirnos por WhatsApp, llamarnos o enviarnos un email a info@vinculatumente.com. Te responderemos lo antes posible y resolveremos juntxs cualquier duda antes de empezar, sin compromiso."
   },
   {
     question: "¿Qué duración tienen las sesiones?",
     answer: "Las sesiones suelen durar unos 50-60 minutos. La frecuencia la ajustamos a tu situación y a tu ritmo, sin prisas."
   },
   {
-    question: "¿En qué puedes ayudarme?",
-    answer: "Con personas adultas trabajo ansiedad, autoestima, duelo y gestión emocional; relaciones, vínculos y sexualidad; trauma y apego mediante EMDR; y perspectiva de género y diversidad. Con niñas, niños y adolescentes ofrezco acompañamiento emocional adaptado a cada etapa del desarrollo, integrando a la familia en el proceso."
+    question: "¿En qué podéis ayudarme?",
+    answer: "Con personas adultas trabajamos ansiedad, autoestima, duelo y gestión emocional; relaciones, vínculos y sexualidad; trauma y apego mediante EMDR; y perspectiva de género y diversidad. Con niñas, niños y adolescentes ofrecemos acompañamiento emocional adaptado a cada etapa del desarrollo, integrando a la familia en el proceso."
   },
   {
-    question: "¿Atiendes sesiones de pareja y relaciones afectivas?",
-    answer: "Sí. Acompaño todo tipo de vínculos afectivos: parejas, relaciones no monógamas, vínculos en transformación o en crisis. No hace falta etiquetarse ni ajustarse a un modelo concreto de relación. Trabajamos la comunicación, la intimidad, el deseo y los límites desde un enfoque afirmativo e inclusivo."
+    question: "¿Atendéis sesiones de pareja y relaciones afectivas?",
+    answer: "Sí. Acompañamos todo tipo de vínculos afectivos: parejas, relaciones no monógamas, vínculos en transformación o en crisis. No hace falta etiquetarse ni ajustarse a un modelo concreto de relación. Trabajamos la comunicación, la intimidad, el deseo y los límites desde un enfoque afirmativo e inclusivo."
   },
   {
-    question: "¿Trabajas con niñas, niños y adolescentes?",
-    answer: "Sí. Acompaño a menores y adolescentes en su desarrollo y bienestar emocional, integrando a la familia en el proceso con pautas y orientación."
+    question: "¿Trabajáis con niñas, niños y adolescentes?",
+    answer: "Sí. Acompañamos a menores y adolescentes en su desarrollo y bienestar emocional, integrando a la familia en el proceso con pautas y orientación."
   },
   {
     question: "¿La consulta de sexología es un espacio seguro?",
@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     question: "¿Qué precio tienen las sesiones?",
-    answer: "Escríbeme por WhatsApp o email y te informo de las tarifas actualizadas y de las modalidades disponibles según lo que necesites."
+    answer: "Escríbenos por WhatsApp o email y te informamos de las tarifas actualizadas y de las modalidades disponibles según lo que necesites."
   },
 ];
 

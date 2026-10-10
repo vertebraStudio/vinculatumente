@@ -172,10 +172,10 @@ export default function TalleresPage() {
         <section style={{ background: 'linear-gradient(135deg, var(--accent) 0%, #8B5E86 100%)', padding: '80px 5%', textAlign: 'center' }}>
           <div className="container" style={{ maxWidth: '680px' }}>
             <h2 style={{ fontFamily: "var(--font-playfair), serif", fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', color: '#fff', marginBottom: '16px' }}>
-              ¿Quieres que diseñe un taller para tu organización?
+              ¿Quieres que diseñemos un taller para tu organización?
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.88)', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '36px' }}>
-              Cuéntame qué necesitáis — el contexto, el grupo y los objetivos — y te propongo un formato adaptado.
+              Cuéntanos qué necesitáis — el contexto, el grupo y los objetivos — y te proponemos un formato adaptado.
             </p>
             <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a

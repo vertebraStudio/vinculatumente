@@ -44,7 +44,7 @@ export default function InfantoJuvenilPage() {
           introTitle="Crecer con apoyo y seguridad"
           introParas={[
             "La infancia y la adolescencia están llenas de cambios que no siempre son fáciles de transitar. Un espacio terapéutico cuidado ayuda a niñas, niños y jóvenes a entender lo que sienten y a desarrollar recursos para su día a día.",
-            "Trabajo con un enfoque cercano y respetuoso, integrando a la familia en el proceso para que el acompañamiento continúe también en casa.",
+            "Trabajamos con un enfoque cercano y respetuoso, integrando a la familia en el proceso para que el acompañamiento continúe también en casa.",
           ]}
           senales={senales}
           herramientas={herramientas}

@@ -33,9 +33,9 @@ export default function Footer() {
             <h3 className="footer-title-styled">Web</h3>
             <ul className="footer-nav-links">
               <li><Link href="/">Inicio</Link></li>
-              <li><Link href="/equipo">Sobre mí</Link></li>
+              <li><Link href="/equipo">Equipo</Link></li>
               <li><Link href="/#terapias">Sesiones</Link></li>
-              <li><Link href="/#compromiso">Cómo trabajo</Link></li>
+              <li><Link href="/#compromiso">Cómo trabajamos</Link></li>
               <li><Link href="/talleres">Talleres</Link></li>
               <li><Link href="/blog">Blog</Link></li>
               <li><Link href="/#faq">Preguntas frecuentes</Link></li>

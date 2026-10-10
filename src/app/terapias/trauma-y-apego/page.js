@@ -44,7 +44,7 @@ export default function TraumaApegoPage() {
           introTitle="Lo que duele también se puede sanar"
           introParas={[
             "El trauma no es solo lo que nos pasó, sino la huella que dejó en cómo sentimos y nos relacionamos. Con un acompañamiento cuidado y a tu ritmo, esas heridas pueden integrarse y dejar de condicionar tu presente.",
-            "Trabajo desde la terapia EMDR y un enfoque centrado en el apego, creando un espacio seguro donde reconstruir la confianza, contigo y con quienes te rodean.",
+            "Trabajamos desde la terapia EMDR y un enfoque centrado en el apego, creando un espacio seguro donde reconstruir la confianza, contigo y con quienes te rodean.",
           ]}
           senales={senales}
           herramientas={herramientas}

@@ -77,7 +77,7 @@ export default async function BlogIndexPage({ searchParams }) {
               <div className="blog-empty">
                 {query
                   ? <p>No hay artículos que coincidan con <strong>"{(await searchParams)?.q}"</strong>. Prueba con otra búsqueda.</p>
-                  : <p>Pronto compartiré aquí los primeros artículos. Mientras tanto, puedes seguirme en <a href="https://www.instagram.com/vinculatumente/" target="_blank" rel="noopener noreferrer">@vinculatumente</a>.</p>
+                  : <p>Pronto compartiremos aquí los primeros artículos. Mientras tanto, puedes seguirnos en <a href="https://www.instagram.com/vinculatumente/" target="_blank" rel="noopener noreferrer">@vinculatumente</a>.</p>
                 }
               </div>
             ) : (

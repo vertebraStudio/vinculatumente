@@ -25,10 +25,10 @@ export default function ContactoPage() {
 
               <div className="reveal">
                 <h2 style={{ fontFamily: "var(--font-playfair), serif", fontSize: '1.8rem', fontWeight: 600, marginBottom: '20px', color: 'var(--text)' }}>
-                  ¿Cómo puedo ayudarte?
+                  ¿Cómo podemos ayudarte?
                 </h2>
                 <p style={{ lineHeight: '1.9', fontSize: '1.05rem', marginBottom: '16px' }}>
-                  Si tienes alguna pregunta antes de tu primera cita o simplemente quieres saber más sobre cómo trabajo, no dudes en escribirme. Elige la vía que te resulte más cómoda: respondo personalmente a cada mensaje.
+                  Si tienes alguna pregunta antes de tu primera cita o simplemente quieres saber más sobre cómo trabajamos, no dudes en escribirnos. Elige la vía que te resulte más cómoda: respondemos personalmente a cada mensaje.
                 </p>
                 <p style={{ lineHeight: '1.9', fontSize: '1.05rem' }}>
                   Dar el primer paso no tiene por qué ser difícil. A veces, un mensaje es todo lo que se necesita para empezar. No estás solx en esto.
@@ -57,7 +57,7 @@ export default function ContactoPage() {
                     <div>
                       <p style={{ fontWeight: 600, fontSize: '1.05rem', color: 'var(--text)', margin: '0 0 6px' }}>WhatsApp</p>
                       <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: 'var(--text-muted)', margin: 0 }}>
-                        Escríbeme en cualquier momento. Suelo responder de forma inmediata o en un plazo máximo de 24 horas.
+                        Escríbenos en cualquier momento. Solemos responder de forma inmediata o en un plazo máximo de 24 horas.
                       </p>
                     </div>
                     <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--accent)', marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '4px' }}>
@@ -204,7 +204,7 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <p style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--text)', margin: '0 0 2px' }}>Disponibilidad</p>
-                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: 0, lineHeight: 1.6 }}>Contáctame y buscamos un horario que se adapte a ti.</p>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: 0, lineHeight: 1.6 }}>Contáctanos y buscamos un horario que se adapte a ti.</p>
                   </div>
                 </div>
               </div>
@@ -215,7 +215,7 @@ export default function ContactoPage() {
                   ¿Empezamos?
                 </h3>
                 <p style={{ fontSize: '0.9rem', lineHeight: '1.7', color: 'rgba(255,255,255,0.85)', marginBottom: '20px' }}>
-                  Escríbeme por WhatsApp — es la forma más rápida de contactar y resolver cualquier duda inicial.
+                  Escríbenos por WhatsApp — es la forma más rápida de contactar y resolver cualquier duda inicial.
                 </p>
                 <a href="https://wa.me/34604807200" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', padding: '13px 20px', backgroundColor: 'rgba(255,255,255,0.15)', border: '1.5px solid rgba(255,255,255,0.5)', borderRadius: '50px', color: 'white', fontWeight: 500, fontSize: '0.9rem', textDecoration: 'none' }}>
                   Escribir por WhatsApp →

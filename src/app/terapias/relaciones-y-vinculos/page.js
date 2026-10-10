@@ -44,7 +44,7 @@ export default function RelacionesVinculosPage() {
           introTitle="Reaprender a vincularte"
           introParas={[
             "La forma en que nos relacionamos dice mucho de nuestra historia. A veces repetimos dinámicas que nos alejan de lo que queremos, sin saber muy bien por qué. Aquí trabajamos para comprenderlas y transformarlas.",
-            "Desde un enfoque cercano y libre de juicios, te acompaño a vincularte de una manera más consciente: contigo en primer lugar, y también con tu pareja, tu familia y tus amistades.",
+            "Desde un enfoque cercano y libre de juicios, te acompañamos a vincularte de una manera más consciente: contigo en primer lugar, y también con tu pareja, tu familia y tus amistades.",
           ]}
           senales={senales}
           herramientas={herramientas}

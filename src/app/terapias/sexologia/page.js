@@ -44,7 +44,7 @@ export default function SexologiaPage() {
           introTitle="Tu bienestar sexual también importa"
           introParas={[
             "La sexualidad forma parte de quienes somos, pero rara vez encontramos un lugar donde hablar de ella con libertad. Aquí puedes hacerlo: sin tabúes, sin culpa y con información rigurosa.",
-            "Como sexóloga, te acompaño a comprender tu deseo, resolver dificultades y vivir tu sexualidad de forma plena, respetuosa y consciente, sea cual sea tu identidad u orientación.",
+            "Desde la sexología, te acompañamos a comprender tu deseo, resolver dificultades y vivir tu sexualidad de forma plena, respetuosa y consciente, sea cual sea tu identidad u orientación.",
           ]}
           senales={senales}
           herramientas={herramientas}

@@ -78,7 +78,7 @@ export default async function Home() {
             <div className="areas-cards-grid">
               {[
                 { href:'/terapias/adultos', label:'Adultos', desc:'Acompañamiento psicológico adaptado a tus necesidades emocionales, relacionales y personales.', photo:'/media/adultosHeader.jpg' },
-                { href:'/terapias/relaciones-y-vinculos', label:'Relaciones y vínculos', desc:'Te acompaño a construir relaciones más sanas, conscientes y auténticas contigo y con los demás.', photo:'/media/relacionesHeader.jpg' },
+                { href:'/terapias/relaciones-y-vinculos', label:'Relaciones y vínculos', desc:'Te acompañamos a construir relaciones más sanas, conscientes y auténticas contigo y con los demás.', photo:'/media/relacionesHeader.jpg' },
                 { href:'/terapias/infanto-juvenil', label:'Infanto-juvenil', desc:'Apoyo emocional y terapéutico para niñas, niños y adolescentes en su desarrollo y bienestar.', photo:'/media/infantoHeader.jpg' },
                 { href:'/terapias/trauma-y-apego', label:'Trauma y apego', desc:'Trabajo especializado para sanar heridas, regular emociones y construir apegos seguros (EMDR).', photo:'/media/imagenDeprueba3.jpg' },
                 { href:'/terapias/sexologia', label:'Sexología', desc:'Exploras tu sexualidad desde el respeto, el placer y la información, sin juicios y con rigor.', photo:'/media/sexologiaHeader.jpg' },
@@ -158,7 +158,7 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* CÓMO TRABAJO / MI COMPROMISO */}
+        {/* CÓMO TRABAJAMOS / NUESTRO COMPROMISO */}
         <section id="compromiso" className="compromiso">
           <span className="soft-blob" aria-hidden="true" />
           <div className="container" style={{ position:'relative', zIndex:2 }}>
