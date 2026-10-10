@@ -31,7 +31,7 @@ export default function AvisoLegalPage() {
                   ["N.I.F.", "41618060C"],
                   ["Número de colegiada", "M-43581 — Colegio Oficial de Psicólogos de Madrid"],
                   ["Domicilio profesional", "Calle Senda de la Cultura, 7 – 1B, 28806, Alcalá de Henares (Madrid)"],
-                  ["Teléfono", "+34 667 236 523"],
+                  ["Teléfono", "+34 604 80 72 00"],
                   ["Correo electrónico", "info@vinculatumente.com"],
                   ["Actividad profesional", "Psicología y Sexología"],
                   ["Plataforma web", "Web estática (Keystatic CMS) — Alojada en Vercel Inc."],

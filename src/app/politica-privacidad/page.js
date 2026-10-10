@@ -32,7 +32,7 @@ export default function PrivacidadPage() {
                   ["Nº Colegiada", "M-43581 — Colegio Oficial de Psicólogos de Madrid"],
                   ["Domicilio profesional", "Calle Senda de la Cultura, 7 – 1B, 28806, Alcalá de Henares (Madrid)"],
                   ["Correo electrónico", "info@vinculatumente.com"],
-                  ["Teléfono", "+34 667 236 523"],
+                  ["Teléfono", "+34 604 80 72 00"],
                   ["DPD (Delegado de Protección de Datos)", "Dataibéricalex S.L. — Avenida Primero de Mayo 38, 9, 46017, Valencia — dpo@dataiberica.com"],
                 ]} />
                 <p>MARÍA VILLALBA LÓPEZ ha designado voluntariamente como Delegado de Protección de Datos (DPD) a DATAIBÉRICALEX S.L., en atención a que su actividad implica el tratamiento de datos de salud de categoría especial (Art. 9 RGPD), con el fin de reforzar las garantías de protección de datos de sus pacientes.</p>
